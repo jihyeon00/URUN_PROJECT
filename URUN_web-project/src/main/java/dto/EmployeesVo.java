@@ -4,6 +4,8 @@ public class EmployeesVo {
 	String Employee_ID;
 	String Employee_Name;
 	String Employee_Email;
+	String Employee_Division;
+	
 	public String getEmployee_ID() {
 		return Employee_ID;
 	}

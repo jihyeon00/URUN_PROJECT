@@ -2,7 +2,7 @@ package dto;
 
 public class SKUVo {
 	String Stock_Keeping;
-	int SKU_Company_code;
+	int SKU_Company_ID;
 	String SKU_Company_input_date;
 	
 	public String getStock_Keeping() {
@@ -11,11 +11,11 @@ public class SKUVo {
 	public void setStock_Keeping(String stock_Keeping) {
 		Stock_Keeping = stock_Keeping;
 	}
-	public int getSKU_Company_code() {
-		return SKU_Company_code;
+	public int getSKU_Company_ID() {
+		return SKU_Company_ID;
 	}
-	public void setSKU_Company_code(int sKU_Company_code) {
-		SKU_Company_code = sKU_Company_code;
+	public void setSKU_Company_ID(int sKU_Company_ID) {
+		SKU_Company_ID = sKU_Company_ID;
 	}
 	public String getSKU_Company_input_date() {
 		return SKU_Company_input_date;
