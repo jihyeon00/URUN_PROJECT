@@ -23,3 +23,6 @@
 hs_err_pid*
 replay_pid*
 /.metadata/
+
+# .DS_Store 파일 삭제
+.DS_Store
