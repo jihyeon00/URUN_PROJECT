@@ -1,20 +1,26 @@
 package dto;
 
-public class MemberVo {
-	String member_ID;
-	String member_PW;
+public class MemberVO {
+	int MEMBER_ID;
+	String MEMBER_PW;
+	int MEMBER_Employee_ID;
 	
-	public String getMember_ID() {
-		return member_ID;
+	public int getMEMBER_ID() {
+		return MEMBER_ID;
 	}
-	public void setMember_ID(String member_ID) {
-		this.member_ID = member_ID;
+	public void setMEMBER_ID(int mEMBER_ID) {
+		MEMBER_ID = mEMBER_ID;
 	}
-	public String getMember_PW() {
-		return member_PW;
+	public String getMEMBER_PW() {
+		return MEMBER_PW;
 	}
-	public void setMember_PW(String member_PW) {
-		this.member_PW = member_PW;
+	public void setMEMBER_PW(String mEMBER_PW) {
+		MEMBER_PW = mEMBER_PW;
 	}
-	
+	public int getMEMBER_Employee_ID() {
+		return MEMBER_Employee_ID;
+	}
+	public void setMEMBER_Employee_ID(int mEMBER_Employee_ID) {
+		MEMBER_Employee_ID = mEMBER_Employee_ID;
+	}
 }

@@ -30,4 +30,5 @@ public class CompanyVo {
 	public void setCompany_division(String company_division) {
 		Company_division = company_division;
 	}
+	
 }
