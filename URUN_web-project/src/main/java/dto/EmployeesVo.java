@@ -4,6 +4,8 @@ public class EmployeesVo {
 	String Employee_ID;
 	String Employee_Name;
 	String Employee_Email;
+	String Employee_Division;
+	
 	public String getEmployee_ID() {
 		return Employee_ID;
 	}
@@ -22,6 +24,11 @@ public class EmployeesVo {
 	public void setEmployee_Email(String employee_Email) {
 		Employee_Email = employee_Email;
 	}
-	
+	public String getEmployee_Division() {
+		return Employee_Division;
+	}
+	public void setEmployee_Division(String employee_Division) {
+		Employee_Division = employee_Division;
+	}
 	
 }
