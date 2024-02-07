@@ -1,4 +1,3 @@
-
 body{
 
 	font-family: 'Noto Sans KR', sans-serif;
@@ -6,18 +5,17 @@ body{
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background:white;
+	background:url("../images/6.jpg") no-repeat center;
 	background-size: cover;
 
 	
 }
 .sign-form{
-position: absolute;
+position: fiex;
 left: 460px;
 right: 460px;
 top: 114px;
 bottom: 113px;
-
 background-color: white;
 
 }
@@ -183,8 +181,8 @@ background-color: white;
 .text-area:first-child{margin-top: 0;}
 .text-area input {
 	
-	width: 860px;
- 	height: 491px;
+	width: 800px;
+ 	height: 400px;
  	font-size: 50px; color: #999;
  	text-align:left;
  	cursor: url(foo,png)4 12,auto;
@@ -212,7 +210,7 @@ background-color: white;
 	text-align: right;
 	}
 .sign-btn button {
-	width: 30%; height: 50px;
+	width: 100%; height: 50px;
 	background: blue;
 	color: #fff;
 	font-size: 20px;
@@ -220,8 +218,5 @@ background-color: white;
 	border-radius: 15px;
 	cursor: pointer;
 }
-
-
-
 
 	

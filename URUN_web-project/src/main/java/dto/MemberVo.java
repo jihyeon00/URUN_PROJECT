@@ -1,6 +1,6 @@
 package dto;
 
-public class MemberVO {
+public class MemberVo {
 	int MEMBER_ID;
 	String MEMBER_PW;
 	int MEMBER_Employee_ID;
