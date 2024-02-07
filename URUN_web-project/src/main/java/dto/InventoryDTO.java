@@ -1,6 +1,6 @@
 package dto;
 
-public class InventoryVo {
+public class InventoryDTO {
 	int INVENTORY_ID;
 	int INVENTORY_MATERIAL_ID;
 	int INVENTORY_ITEM_ID;
@@ -9,6 +9,14 @@ public class InventoryVo {
 	int INVENTORY_WORK_ID;
 	int INVENTORY_Quantity;
 	String INVENTORY_Warehouse;
+	
+	
+	String IB_Complete_Date;
+	String OB_Complete_Date;
+	String Company_Name;
+	String ITEM_NAME;
+	String MATERIAL_NAME;
+	
 	
 	public int getINVENTORY_ID() {
 		return INVENTORY_ID;
@@ -58,4 +66,36 @@ public class InventoryVo {
 	public void setINVENTORY_Warehouse(String iNVENTORY_Warehouse) {
 		INVENTORY_Warehouse = iNVENTORY_Warehouse;
 	}
+	public String getIB_Complete_Date() {
+		return IB_Complete_Date;
+	}
+	public void setIB_Complete_Date(String iB_Complete_Date) {
+		IB_Complete_Date = iB_Complete_Date;
+	}
+	public String getOB_Complete_Date() {
+		return OB_Complete_Date;
+	}
+	public void setOB_Complete_Date(String oB_Complete_Date) {
+		OB_Complete_Date = oB_Complete_Date;
+	}
+	public String getCompany_Name() {
+		return Company_Name;
+	}
+	public void setCompany_Name(String company_Name) {
+		Company_Name = company_Name;
+	}
+	public String getITEM_NAME() {
+		return ITEM_NAME;
+	}
+	public void setITEM_NAME(String iTEM_NAME) {
+		ITEM_NAME = iTEM_NAME;
+	}
+	public String getMATERIAL_NAME() {
+		return MATERIAL_NAME;
+	}
+	public void setMATERIAL_NAME(String mATERIAL_NAME) {
+		MATERIAL_NAME = mATERIAL_NAME;
+	}
+	
+
 }
