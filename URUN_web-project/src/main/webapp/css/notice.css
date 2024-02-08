@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+h1 { 
+    font-weight: border; 
+    height: 50px;
+    text-align: left;
+    padding: 20px;
+    }
+.hr1 { 
+    border: 0;
+    height: 2px;;
+    background:  white;}
+    .grey { 
+     color: grey;}
+     #strong { font-weight: 900;}
+
+            table {
+            width: 100%;
+            border-top: 1px solid #d3d3d3;
+            border-collapse: collapse;
+            
+            }
+            th { background-color: white ; 
+            border-top: 3px solid white;
+            font-size: 18px;
+           
+            }
+            th, td {
+            border-bottom: 1px solid #d3d3d3;
+            padding: 10px;
+  
+            }
+
+  .greylist {
+  width: 50px;
+  height: 30px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  background: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  }
+  .rightbottom {
+  width: 80px;
+  height: 30px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  background: white;
+  border: solid 2px black;
+  border-radius: 5px;
+  }
+
+.left {text-align: left;}
+.rightbottom {  float: right;}
+.center { text-align: center;
+                    
+}
+
+a {color:black;
+text-decoration-line : none;}
