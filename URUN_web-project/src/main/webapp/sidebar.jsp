@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css?after">
+    <link rel="stylesheet" href="./css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script defer src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/main.js"></script>
@@ -16,19 +16,6 @@
 </head>
 <body>
 <%@ include file="./header.jsp" %>
-<script>
-/* 왼쪽 사이드 메뉴 스크립트 */
-$(document).ready(function(){
-    // 왼쪽메뉴 드롭다운
-    $(".sub_menu ul.small_menu").hide();
-    $(".sub_menu ul.big_menu").click(function () {
-        // 현재 클릭한 메뉴를 제외한 다른 메뉴의 하위 메뉴 닫기
-        $(".sub_menu ul.big_menu").not(this).find(".small_menu").slideUp(300);
-
-        $("ul", this).slideToggle(300);
-    });
-});
-</script>
 	<div id="wrapper">
 	    <div class="topbar"">
 	    	<!-- 왼쪽 서브 메뉴 -->
