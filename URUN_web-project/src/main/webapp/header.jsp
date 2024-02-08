@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/main.js"></script>
 </head>
 <body>
 <header>
