@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css?after">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/IBSelect.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script defer src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <title>URUN</title>
+    <title>URUN-입고 예정 정보 등록</title>
  
 </head>
 <body>
@@ -20,33 +21,42 @@
 		<div class="title">
 			<h1>|  입고 예정 정보 등록</h1>
 	    </div>
-		<div class="container">
+		<div class="container container-IB">
 			<div class="inner inner-IB">
-				<form action="" class="" id="">
+				<form action="./IB-INSERT.jsp" method="post" id="form-IB-INSERT">
 					<div class="write">
 						<div class="IB-Insert">
 							<div class="IB-name">공급처ID</div>
-	            			<div><input type="text" name="IB_Company_ID" id="IB_Company_ID" placeholder="공급처ID"></div>
+	            			<div><input type="text" name="IB_Company_ID" id="IB_Company_ID" placeholder="공급처ID" autocomplete="off" required></div>
 						</div>
 						<div class="IB-Insert">
 							<div class="IB-name">자재ID</div>
-	             			<div><input type="text" name="IB_MATERIAL_ID" id="IB_MATERIAL_ID" placeholder="자재ID"></div>
+	             			<div><input type="text" name="IB_MATERIAL_ID" id="IB_MATERIAL_ID" placeholder="자재ID" autocomplete="off" required></div>
 						</div>
 						<div class="IB-Insert">
 							<div class="IB-name">공급수량</div>
-	            			<div><input type="text" name="" id="IB_Quantity" placeholder="공급수량"></div>
+	            			<div><input type="text" name="IB_Quantity" id="IB_Quantity" placeholder="공급수량" autocomplete="off" required></div>
 						</div>
 						<div class="IB-Insert">
 							<div class="IB-name">공급예정날짜</div>
-		            		<div><input type="text" name="IB_Expected_Date" id="IB_Expected_Date" placeholder="공급예정날짜"></div>
+		            		<div><input class="IB-name-date" type="date" name="IB_Expected_Date" id="IB_Expected_Date" placeholder='날짜를 선택해주세요.' autocomplete="off" required></div>
 						</div>
 						<div class="IB-Insert">
-			        		<input type="submit" value="등록" class="btn btn-light" onClick="">
+			        		<input id="btn-insert" type="submit" value="등록" class="btn btn-light" onClick="javascript: IBInsert();">
 		       			</div>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
+	<script>
+    	function IBInsert() {
+    		if (confirm('등록하시겠습니까?')) {
+    			return
+    		} else {
+    			 return false;
+    		}
+    	}
+    </script>
 </body>
 </html>

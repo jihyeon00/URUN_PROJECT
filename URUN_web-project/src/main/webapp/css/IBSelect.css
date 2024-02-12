@@ -1,0 +1,389 @@
+@charset "UTF-8";
+
+/* 입고예정정보등록 */
+.title{
+	position:absolute;
+	top: 160px;
+	left: 230px;
+	min-width:500px;
+	color: black; 
+	font-size: 30px; 
+	font-family: Inter; 
+	font-weight: 700; 
+	word-wrap: break-word;
+}
+.container.container-IB{
+	display: flex;
+	justify-content: center;
+	width:100%;
+	height: 100%;
+	padding-top: 250px;
+ 	min-width:1000px;
+}
+.inner.inner-IB {
+	min-width:500px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	gap: 50px;
+	
+}
+.write{
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 22px;
+}
+.write .IB-Insert{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.write .IB-Insert .IB-name{
+	width: 150px;
+}
+.write .IB-Insert .IB-name-date{
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write .IB-Insert input[type="text"]{
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* 입고 현황 */
+.container.container-IB-Select{
+	position: absolute;
+	top: 230px;
+	left: 170px;
+	width: 1800px;
+ 	min-width:1200px;
+ 	height: 850px;
+}
+.IB-Select-menu{
+	width: 1100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.IB-Select-menu .Select-menu {
+	border-bottom: 1px solid #333333; 
+	width: 1000px;
+	height: 60px;
+	display: flex;
+}
+.IB-Select-menu .Select-item {
+	display: flex;
+	flex-grow: 1;
+}
+.IB-Select-menu .Select-item:hover{
+	border-bottom: 7px solid #D9D9D9;
+}
+.btn-Select {
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 22px;
+	border: none;
+	background-color: transparent;
+}
+.IB-Select{
+	position: absolute;
+	top: 80px;
+	left: 60px;
+	width: 1250px;
+}
+.IB-Select table, 
+.IB-Select td, 
+.IB-Select th {
+  border : 1px solid black;
+  border-collapse : collapse;
+}
+.IB-Select .IB-Select-view .IB-Select-view-menu{
+	height: 50px;
+	font-weight: 600;
+	vertical-align : middle;
+}
+.IB-Select .IB-Select-view td{
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 18px;
+}
+
+/* 입고 수정 */
+.container.container-IB-update{
+ 	display: flex;
+	justify-content: center;
+	width:100%;
+	height: 100%;
+	padding-top: 250px;
+ 	min-width:1250px; 
+}
+.inner.inner-IB-update {
+	min-width:400px;
+	width:750px;
+	display: flex;
+	justify-content: center;
+}
+.write-IB-update{
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 22px;
+}
+.write-IB-update .IB-Update{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.write-IB-update .IB-Update .IB-name{
+	width: 150px;
+}
+.write-IB-update .IB-Update .IB-name-date{
+	padding: 10px;
+	width: 200px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+.write-IB-update .IB-Update input[type="text"]{
+	padding: 10px;
+	width: 200px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+.write-IB-update .IB-Update .IB-Status-name{
+	padding: 10px;
+	width: 200px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+.write-IB-update .IB-Update #IB_Note{
+	padding: 10px;
+	width: 570px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* 출고예정정보등록 */
+.container.container-OB{
+	display: flex;
+	justify-content: center;
+	width:100%;
+	height: 100%;
+	padding-top: 250px;
+ 	min-width:1000px;
+}
+.inner.inner-OB {
+	min-width:500px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	gap: 50px;
+	
+}
+.write{
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 22px;
+}
+.write .OB-Insert{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.write .OB-Insert .OB-name{
+	width: 150px;
+}
+.write .OB-Insert .OB-name-date{
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write .OB-Insert input[type="text"]{
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* 출고 현황 */
+.container.container-OB-Select{
+	position: absolute;
+	top: 230px;
+	left: 170px;
+	width: 1800px;
+ 	min-width:1200px;
+ 	height: 850px;
+}
+.OB-Select-menu{
+	width: 1100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.OB-Select-menu .Select-menu {
+	border-bottom: 1px solid #333333; 
+	width: 1000px;
+	height: 60px;
+	display: flex;
+}
+.OB-Select-menu .Select-item {
+	display: flex;
+	flex-grow: 1;
+}
+.OB-Select-menu .Select-item:hover{
+	border-bottom: 7px solid #D9D9D9;
+}
+.OB-Select{
+	position: absolute;
+	top: 80px;
+	left: 60px;
+	width: 1250px;
+}
+.OB-Select table, 
+.OB-Select td, 
+.OB-Select th {
+  border : 1px solid black;
+  border-collapse : collapse;
+}
+.OB-Select .OB-Select-view .OB-Select-view-menu{
+	height: 50px;
+	font-weight: 600;
+	vertical-align : middle;
+}
+.OB-Select .OB-Select-view td{
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 18px;
+}
+
+/* 출고 수정 */
+.container.container-OB-update{
+ 	display: flex;
+	justify-content: center;
+	width:100%;
+	height: 100%;
+	padding-top: 250px;
+ 	min-width:1250px; 
+}
+.inner.inner-OB-update {
+	min-width:400px;
+	width:700px;
+	display: flex;
+	justify-content: center;
+}
+.write-OB-update{
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 22px;
+}
+.write-OB-update .OB-Update{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.write-OB-update .OB-Update .OB-name{
+	width: 130px;
+}
+.write-OB-update .OB-Update .OB-name-date{
+	padding: 10px;
+	width: 175px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+.write-OB-update .OB-Update input[type="text"]{
+	padding: 10px;
+	width: 500px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+.write-OB-update .OB-Update .OB-Status-name{
+	padding: 10px;
+	width: 500px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}
+.write-OB-update .OB-Update #OB_Note{
+	padding: 10px;
+	width: 500px;
+	background: #ECF0F8; 
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter; 
+	font-weight: 400;
+	font-size: 20px;
+}

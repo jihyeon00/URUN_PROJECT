@@ -17,15 +17,15 @@
 <body>
 <%@ include file="./header.jsp" %>
 	<div id="wrapper">
-	    <div class="topbar"">
+	    <div class="topbar">
 	    	<!-- 왼쪽 서브 메뉴 -->
 			<div class="left_sub_menu">
 				<div class="sub_menu">
 					<ul class="big_menu">
-						<li>공지사항<i class="arrow fas fa-angle-right"></i></li>
+						<li>공지사항</li>
 					</ul>
 					<ul class="big_menu">
-						<li>재고<i class="arrow fas fa-angle-right"></i></li>
+						<li>재고</li>
 						<ul class="small_menu">
 							<li><a href="#">자재 재고 조회</a></li>
 							<li><a href="#">제품 재고 조회</a></li>
@@ -49,15 +49,15 @@
 					<ul class="big_menu">
 						<li>입고 - IB</li>
 						<ul class="small_menu">
-							<li><a href="#">입고 현황</a></li>
-							<li><a href="#">입고 등록</a></li>
+							<li><a href="./IBSelect.jsp">입고 현황</a></li>
+							<li><a href="./IBInsertForm.jsp">입고 등록</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
 	  					<li>출고 - OB</li>
 						<ul class="small_menu">
-							<li><a href="#">출고 현황</a></li>
-							<li><a href="#">출고 등록</a></li>
+							<li><a href="./OBSelect.jsp">출고 현황</a></li>
+							<li><a href="./OBInsertForm.jsp">출고 등록</a></li>
 						</ul>
 					</ul>
 				</div>
