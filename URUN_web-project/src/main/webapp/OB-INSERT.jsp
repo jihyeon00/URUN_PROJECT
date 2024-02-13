@@ -59,7 +59,7 @@ try {
 
 %>	
 <script>
-	location.href = './main.jsp';
+	location.href = './OBSelect.jsp';
 </script>
 
 </body>

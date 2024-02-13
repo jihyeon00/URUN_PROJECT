@@ -23,7 +23,7 @@
 	    </div>
 		<div class="container container-OB">
 			<div class="inner inner-OB">
-				<form action="./OB-INSERT.jsp" method="post" id="form-OB-INSERT">
+				<form action="./OB-INSERT.jsp" method="post" id="form-OB-INSERT" onSubmit="return false">
 					<div class="write">
 						<div class="OB-Insert">
 							<div class="OB-name">납품처ID</div>
@@ -42,7 +42,7 @@
 		            		<div><input class="OB-name-date" type="date" name="OB_Expected_Date" id="OB_Expected_Date" autocomplete="off" required></div>
 						</div>
 						<div class="OB-Insert">
-			        		<input id="btn-insert" type="submit" value="등록" class="btn btn-light" onClick="javascript: OBInsert();">
+			        		<input id="btn-insert" type="submit" value="등록" class="btn btn-light" onClick="javascript: OBInsert();" style="width: 100px; height: 40px; border: 1px solid #999; font-size: 18px;">
 		       			</div>
 					</div>
 				</form>
@@ -52,7 +52,7 @@
 	<script>
     	function OBInsert() {
     		if (confirm('등록하시겠습니까?')) {
-    			return
+    			document.getElementById('form-OB-INSERT').submit();
     		} else {
     			 return false;
     		}

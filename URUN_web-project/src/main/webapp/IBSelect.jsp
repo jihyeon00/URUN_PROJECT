@@ -87,12 +87,12 @@ if (IBWhere == null) {
 								+ "i.IB_ID,"
 								+ "c.Company_Name,"
 								+ "m.MATERIAL_NAME,"
-								+ "i.IB_Expected_Date,"
+								+ "to_char(i.IB_Expected_Date,'yyyy-mm-dd') as IB_Expected_Date,"
 								+ "i.IB_Complete_Date,"
 								+ "i.IB_Quantity,"
 								+ "i.IB_Test_Quantity,"
 								+ "i.IB_Defective_Quantity,"
-								+ "NVL(i.IB_Defective_Quantity / DECODE(i.IB_Test_Quantity, 0, null, i.IB_Test_Quantity), 0) AS IB_defect_rate"
+								+ "round(NVL(i.IB_Defective_Quantity / DECODE(i.IB_Test_Quantity, 0, null, i.IB_Test_Quantity), 0),3) AS IB_defect_rate"
 								+ " FROM IB i, MATERIAL m, COMPANY c"
 								+ " WHERE i.IB_Company_ID = c.Company_ID"
 								+ " AND i.IB_MATERIAL_ID = m.MATERIAL_ID"
@@ -127,7 +127,7 @@ if (IBWhere == null) {
 						<td><%=IB_defect_rate%></td>
 						<td>
 							<!-- 입고 수정 버튼 -->
-							<button style="cursor: pointer;"class="btn btn-light" onClick="javascript: IBupdate(<%=rs.getInt("IB_ID")%>);">수정</button>
+							<button style="cursor: pointer; border: 1px solid #999;"class="btn btn-light" onClick="javascript: IBupdate(<%=rs.getInt("IB_ID")%>);">수정</button>
 						</td>
 					</tr>
 				<% 		 		

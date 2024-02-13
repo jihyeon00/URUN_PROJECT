@@ -62,7 +62,7 @@ try {
 
 %>
 <script>
-	location.href = './main.jsp';
+	location.href = './IBSelect.jsp';
 </script>
 
 </body>

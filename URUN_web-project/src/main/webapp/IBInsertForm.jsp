@@ -17,13 +17,13 @@
 </head>
 <body>
 <%@ include file="./sidebar.jsp" %>
-	<div class="container-IB">
+	<div class="container-IB-box">
 		<div class="title">
 			<h1>|  입고 예정 정보 등록</h1>
 	    </div>
 		<div class="container container-IB">
 			<div class="inner inner-IB">
-				<form action="./IB-INSERT.jsp" method="post" id="form-IB-INSERT">
+				<form action="./IB-INSERT.jsp" method="post" id="form-IB-INSERT" onSubmit="return false">
 					<div class="write">
 						<div class="IB-Insert">
 							<div class="IB-name">공급처ID</div>
@@ -42,7 +42,7 @@
 		            		<div><input class="IB-name-date" type="date" name="IB_Expected_Date" id="IB_Expected_Date" placeholder='날짜를 선택해주세요.' autocomplete="off" required></div>
 						</div>
 						<div class="IB-Insert">
-			        		<input id="btn-insert" type="submit" value="등록" class="btn btn-light" onClick="javascript: IBInsert();">
+			        		<input id="btn-insert" type="submit" value="등록" class="btn btn-light" onClick="javascript: IBInsert();" style="width: 100px; height: 40px; border: 1px solid #999; font-size: 18px;">
 		       			</div>
 					</div>
 				</form>
@@ -52,9 +52,9 @@
 	<script>
     	function IBInsert() {
     		if (confirm('등록하시겠습니까?')) {
-    			return
+    			document.getElementById('form-IB-INSERT').submit();
     		} else {
-    			 return false;
+    			return false;
     		}
     	}
     </script>

@@ -49,7 +49,7 @@ try {
 								+ "IB_Test_Quantity,"
 								+ "IB_Defective_Quantity,"
 								+ "IB_Defective_Date," 
-								+ "IB_Expected_Date,"
+								+ "to_char(IB_Expected_Date,'yyyy-mm-dd') as IB_Expected_Date,"
 								+ "IB_Complete_Date,"
 								+ "IB_Status, "
 								+ "IB_Note"
@@ -86,7 +86,7 @@ try {
 	    </div>
 		<div class="container container-IB-update">
 			<div class="inner inner-IB-update">
-				<form action="./IB-UPDATE.jsp?num=<%=num %>" method="post" id="form-IB-Update">
+				<form action="./IB-UPDATE.jsp?num=<%=num %>" method="post" id="form-IB-Update" onSubmit="return false">
 					<div class="write-IB-update">
 						<div class="IB-Update">
 							<div class="IB-name">공급처ID</div>
@@ -139,7 +139,7 @@ try {
 	            			<div><input class="IB-Update-Note" type="text" name="IB_Note" id="IB_Note" value="<%=IB_Note %>"></div>
 						</div>
 						<div class="IB-Update">
-			        		<input id="btn-insert" type="submit" value="수정" class="btn btn-light" onClick="javascript: prevCheckTextBox();">
+			        		<input id="btn-insert" type="submit" value="수정" class="btn btn-light" onClick="javascript: prevCheckTextBox();" style="width: 100px; height: 40px; border: 1px solid #999; font-size: 18px;">
 		       			</div>
 					</div>
 				</form>
@@ -149,7 +149,7 @@ try {
 	<script>
     	function prevCheckTextBox() {
     		if (confirm('수정하시겠습니까?')) {
-    			return
+    			document.getElementById('form-IB-Update').submit();
     		} else {
     			 return false;
     		}

@@ -27,19 +27,19 @@ String sql = null;
 try {
 	num = request.getParameter("num");
 	
-	OB_Complete_Date = request.getParameter("OB_Complete_Date-Date")+request.getParameter("OB_Complete_Date-time");
+	OB_Complete_Date = request.getParameter("OB_Complete_Date-date")+request.getParameter("OB_Complete_Date-time");
 	OB_Status = request.getParameter("OB_Status");
 	OB_Note = request.getParameter("OB_Note");
 	
 	sql = "UPDATE OB"
-		+ " SET OB_Complete_Date = to_timestamp(?,'YYYY-MM-DD HH24:MI:SS')"
-		+ " OB_Status = ?"
-		+ " OB_Note = ?"
-		+ " WHERE OB_ID ="+num;
+		+ " SET OB_Status = ? ,"
+			+ " OB_Complete_Date = to_TIMESTAMP(?,'YYYY-MM-DD HH24:MI:SS'),"
+			+ " OB_Note = ?"
+		+ " WHERE OB_ID = "+ num ;
 	conn = DBManager.getConnection();
 	pstmt = conn.prepareStatement(sql);
-	pstmt.setString(1, OB_Complete_Date);
-	pstmt.setString(2, OB_Status);
+	pstmt.setString(1, OB_Status);
+	pstmt.setString(2, OB_Complete_Date);
 	pstmt.setString(3, OB_Note);
 	
 	pstmt.executeUpdate();
@@ -50,7 +50,7 @@ try {
 
 %>
 <script>
-	location.href = './main.jsp';
+	location.href = './OBSelect.jsp';
 </script>
 
 </body>
