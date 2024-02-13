@@ -61,8 +61,7 @@
 				<div class="searchDetail">
 					<div>
 						<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value="<%= searchText %>">
-						<a class="search" href="javascript: searchText();" 
-						style="border: 1px solid #999; padding: 5px; border-radius: 5px; background-color: white;">검색</a>
+						<a class="search" id="button" href="javascript: searchText();">검색</a>
 					</div>
 				</div>
 			</div>
@@ -71,7 +70,7 @@
 
 		
 		<!-- 조회 테이블 -->
-		<div class="inventorySelect">
+		<div class="selectTable">
 		<table>
 				<colgroup>
 					<col style="width: 25%" />

@@ -1,10 +1,16 @@
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>전체 BOM 관리</title>
+<title>상세 BOM 관리</title>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/main.css">
+<script src="./js/jquery-3.7.1.min.js"></script>
+<script src="./js/main.js"></script>
 </head>
 <body>
 <%@ page import="util.DBManager"%>
@@ -14,74 +20,86 @@
 <% request.setCharacterEncoding("UTF-8");%>
 
 <%
-
 	String searchText = request.getParameter("search");
-
 	if (searchText == null) {
 		searchText = "";
 	}
 	
+	String exception = request.getParameter("exception");
+	
+	int bomNum = Integer.parseInt(request.getParameter("bomNum"));
+	
+	BomDAO bDAO = new BomDAO();
+	List<BomDTO> listAllBom = bDAO.selectAllBom(searchText);
+	List<BomDTO> listOneBom = bDAO.selectOneBom(bomNum, searchText);
+
 %>
 
 <!-- 메인화면 -->
 	<div class="wrap">
 		<div class="title">
 			<span style="font-weight: 800;">| </span> <span
-				style="font-weight: 800;">전체 BOM 관리</span>
+				style="font-weight: 800;">상세 BOM 관리</span>
 		</div>
 		<div class="searchBox">
 			<div class="searchBoxDiv">
 				<div class="searchDetail">
 					<div>
 						<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value="<%= searchText %>">
-						<a class="search" href="javascript: searchText();" 
-						style="border: 1px solid #999; padding: 5px; border-radius: 5px; background-color: white;">검색</a>
+						<a class="search" id="button" href="javascript: searchText();">검색</a>
+						<a></a>
 					</div>
 				</div>
 			</div>
 			<br>
 		</div>
-				<!-- 조회 테이블 -->
-		<div class="inventorySelect oneBomManagement">
-		<table>
-				<colgroup>
-					<col style="width: 10%" />
-					<col style="width: 15%" />
-					<col style="width: 47%" />
-					<col style="width: 10%" />
-					<col style="width: 10%" />
-					<col style="width: 8%" />
-				</colgroup>
-				<thead>
-					<tr>
-						<th>제품ID</th>
-						<th>제품명</th>
-						<th>자재명</th>
-						<th>컬러</th>
-						<th>사이즈</th>
-						<th>   </th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>10000000</td>
-						<td>NBPZDF702B</td>
-						<td>3</td>
-						<td>WHITE</td>
-						<td>250</td>
-						<td><a href="">삭제</a></td>
-					</tr>
-				</tbody>
-			</table>
+		<!-- 조회 테이블 -->
+		<div class="selectTable">
+			<table>
+					<colgroup>
+						<col style="width: 8%" />
+						<col style="width: 15%" />
+						<col style="width: 47%" />
+						<col style="width: 10%" />
+						<col style="width: 10%" />
+						<col style="width: 10%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>자재코드</th>
+							<th>자재명</th>
+							<th>용도</th>
+							<th>수량</th>
+							<th>   </th>
+						</tr>
+					</thead>
+					<tbody>
+					<%for(int i=0;i<listOneBom.size();i++) {%>
+						<tr>
+							<td><%=listOneBom.get(i).getROWNUM() %></td>
+							<td><%=listOneBom.get(i).getMATERIAL_ID() %></td>
+							<td><%=listOneBom.get(i).getMATERIAL_NAME()%></td>
+							<td><%=listOneBom.get(i).getMATERIAL_USES() %></td>
+							<td><%=listOneBom.get(i).getBOM_MATERIAL_QUANTITY() %></td>
+							<td><a id="button" href="javascript: materialDelete(<%=listOneBom.get(i).getMATERIAL_ID()%>)">삭제</a></td>
+						</tr>
+					<%} %>
+					</tbody>
+				</table>
+			</div>
 		</div>
-		
-		
-		</div>
-
 <script>
 	function searchText() {
-		location.href = "./itemInventorySelect.jsp?search=" + $('#search-text').val();
+		var url = document.location.href;
+		location.href = url+ "&search=" + $('#search-text').val();
 	}
+	function materialDelete(deleteMaterialNum) {
+		if (confirm('정말 삭제하시겠습니까?')) {
+			location.href = "./deleteOneBomMaterial.jsp?bomNum="+<%=bomNum%>+"&deleteMaterialNum="+ deleteMaterialNum;
+		}
+	}
+	
 </script>
 </body>
 </html>

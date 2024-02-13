@@ -17,15 +17,15 @@
 <body>
 <%@ include file="./header.jsp" %>
 	<div id="wrapper">
-	    <div class="topbar">
+	    <div class="topbar"">
 	    	<!-- 왼쪽 서브 메뉴 -->
 			<div class="left_sub_menu">
 				<div class="sub_menu">
 					<ul class="big_menu">
-						<li>공지사항</li>
+						<li>공지사항<i class="arrow fas fa-angle-right"></i></li>
 					</ul>
 					<ul class="big_menu">
-						<li>재고</li>
+						<li>재고<i class="arrow fas fa-angle-right"></i></li>
 						<ul class="small_menu">
 							<li><a href="./materialInventorySelect.jsp">자재 재고 조회</a></li>
 							<li><a href="./itemInventorySelect.jsp">제품 재고 조회</a></li>
@@ -34,16 +34,16 @@
 					<ul class="big_menu">
 						<li>생산</li>
 						<ul class="small_menu">
-							<li><a href="./PROCESSInsertForm.jsp">생산 계획 등록</a></li>
+							<li><a href="#">생산 계획 관리</a></li>
 							<li><a href="#">생산 작업 관리</a></li>
-							<li><a href="./Production_defect_status.jsp">생산 불량 현황</a></li>
+							<li><a href="#">생산 불량 현황</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
 						<li>BOM</li>
 						<ul class="small_menu">
-							<li><a href="#">BOM 관리</a></li>
-							<li><a href="#">BOM 등록</a></li>
+							<li><a href="./allBomManagement.jsp">BOM 관리</a></li>
+							<li><a href="./bomRegistration.jsp">BOM 등록</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
