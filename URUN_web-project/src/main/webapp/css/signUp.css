@@ -179,7 +179,7 @@ background-color: white;
 	}
 
 .text-area:first-child{margin-top: 0;}
-.text-area input {
+.text-area textarea {
 	
 	width: 800px;
  	height: 400px;
