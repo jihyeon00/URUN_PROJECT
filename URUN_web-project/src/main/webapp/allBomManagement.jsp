@@ -1,3 +1,4 @@
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -5,6 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>전체 BOM 관리</title>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/main.css">
+<script src="./js/jquery-3.7.1.min.js"></script>
+<script src="./js/main.js"></script>
 </head>
 <body>
 <%@ page import="util.DBManager"%>
@@ -16,10 +21,16 @@
 <%
 
 	String searchText = request.getParameter("search");
+	
 
 	if (searchText == null) {
 		searchText = "";
 	}
+	
+	String cp = request.getContextPath();
+	
+	BomDAO bDAO = new BomDAO();
+	List<BomDTO> listAllBom = bDAO.selectAllBom(searchText);
 	
 %>
 
@@ -34,43 +45,44 @@
 				<div class="searchDetail">
 					<div>
 						<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value="<%= searchText %>">
-						<a class="search" href="javascript: searchText();" 
-						style="border: 1px solid #999; padding: 5px; border-radius: 5px; background-color: white;">검색</a>
+						<a class="search" id="button" href="javascript: searchText();" >검색</a>
 					</div>
 				</div>
 			</div>
 			<br>
 		</div>
 				<!-- 조회 테이블 -->
-		<div class="inventorySelect allBomManagement">
+		<div class="selectTable">
 		<table>
 				<colgroup>
+					<col style="width: 5%" />
 					<col style="width: 10%" />
-					<col style="width: 15%" />
-					<col style="width: 47%" />
-					<col style="width: 10%" />
-					<col style="width: 10%" />
+					<col style="width: 14%" />
+					<col style="width: 55%" />
+					<col style="width: 8%" />
 					<col style="width: 8%" />
 				</colgroup>
 				<thead>
 					<tr>
+						<th>BOMID</th>
 						<th>제품ID</th>
 						<th>제품명</th>
 						<th>자재명</th>
 						<th>컬러</th>
 						<th>사이즈</th>
-						<th>11</th>
 					</tr>
 				</thead>
 				<tbody>
+				<%for(int i=0;i<listAllBom.size();i++) {%>
 					<tr>
-						<td>10000000</td>
-						<td>NBPZDF702B</td>
-						<td>3asdasdasd</td>
-						<td>WHITE</td>
-						<td>250</td>
-						<td>11111</td>
+						<td><%=listAllBom.get(i).getBOM_ID()%></td>
+						<td><%=listAllBom.get(i).getBOM_ITEM_ID()%></td>
+						<td><%=listAllBom.get(i).getITEM_NAME()%></td>
+						<td><a style="color:black;" href="./oneBomManagement.jsp?bomNum=<%=listAllBom.get(i).getBOM_ID()%>"><%=listAllBom.get(i).getMaterialNameList()%></a></td>
+						<td><%=listAllBom.get(i).getITEM_COLOR()%></td>
+						<td><%=listAllBom.get(i).getITEM_SIZE()%></td>
 					</tr>
+				<%} %>
 				</tbody>
 			</table>
 		</div>
@@ -80,7 +92,7 @@
 
 <script>
 	function searchText() {
-		location.href = "./itemInventorySelect.jsp?search=" + $('#search-text').val();
+		location.href = "./allBomManagement.jsp?search=" + $('#search-text').val();
 	}
 </script>
 </body>

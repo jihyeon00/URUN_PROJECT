@@ -12,11 +12,28 @@ public class BomDTO {
 	private String MATERIAL_NAME;
 	private String MATERIAL_USES;
 	
+	private String materialNameList;
+	
+	
 	private String ITEM_ID;
 	private String ITEM_NAME;
 	private String ITEM_COLOR;
 	private int ITEM_SIZE;
 	
+	private int ROWNUM;
+	
+	public int getROWNUM() {
+		return ROWNUM;
+	}
+	public void setROWNUM(int rOWNUM) {
+		ROWNUM = rOWNUM;
+	}
+	public String getMaterialNameList() {
+		return materialNameList;
+	}
+	public void setMaterialNameList(String materialNameList) {
+		this.materialNameList = materialNameList;
+	}
 	
 	public String getBOM_ID() {
 		return BOM_ID;
