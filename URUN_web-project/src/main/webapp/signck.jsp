@@ -75,7 +75,7 @@
 <!-- 성공 케이스 html/css/js -->
 <script>
 	alert('회원가입이 성공적으로 등록되었습니다.');	// 1
-	location.href = '<%= request.getContextPath() %>./login.jsp';
+	location.href = '<%= request.getContextPath() %>/login.jsp';
 </script>
 <%
 	} else {									// 공지사항 글 등록이 실패할 경우
@@ -96,7 +96,3 @@
 	
 </body>
 </html>
-
-
-
-

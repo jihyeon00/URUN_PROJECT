@@ -12,16 +12,19 @@
     
 </head>
 <body>
+
+
+
     <section class="login-form">
         <h1>URUN</h1>
-        <form action="">
+        <form action="loginck.jsp"method="post">
             <div class="int-area">
-                <input type="text" name="id" id="id"
+                <input type="text" name="MEMBERID" id="id"
                     autocomplete="off" required>
                     <label for="id">사원 번호</label>
             </div>
             <div class="int-area">
-                <input type="password" name="pw" id="pw"
+                <input type="password" name="MEMBERPW" id="pw"
                     autocomplete="off" required>
                     <label for="pw">Password</label>
             </div>
@@ -56,6 +59,7 @@
         });
         
         </script>
+
 
 </body>
 </html>
