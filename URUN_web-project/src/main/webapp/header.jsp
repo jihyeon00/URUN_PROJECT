@@ -1,4 +1,4 @@
-<%@page import="dto.headerDTO"%>
+<%@page import="dto.MemberDTO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -15,26 +15,27 @@
         <script src="./js/main.js"></script>
 </head>
 <body>
+<% request.setCharacterEncoding("UTF-8"); %>
 <header>
 	<div class="header">
 		<div class="header-inner">
-			<form action="./main.jsp">
+			<div>
 				<div class="logoBox"><a href="./main.jsp">URUN</a></div>
 				<div class="loginInfo">
 				<%
-					request.setCharacterEncoding("UTF-8");
-					headerDAO hDao = new headerDAO();
-					List<headerDTO> listHeader = hDao.selectMemberInfo();
-					int memberId = listHeader.get(0).getMEMBER_ID();
-					String employeeName= listHeader.get(0).getEmployee_Name();
+					if(session.getAttribute("MEMBER_ID") == null){
+						out.println("<a href='./signIn.jsp'>로그인</a>");
+					} else {
+						String MEMBER_ID = (String)session.getAttribute("MEMBER_ID");
+						String employeeName = (String)session.getAttribute("employeeName");
 				%>
-					<span><%= memberId%></span>(<%=employeeName %>)님 안녕하세요.
-							<input type="button" class="btn btn-light" value="로그아웃"/>
-					
+						<span><%=MEMBER_ID%></span>(<%=employeeName %>)님 안녕하세요.
+							<input type="button" class="btn btn-light" value="로그아웃" onclick='location.href="./logOut.jsp"'/>
+				<%
+					}
+				%>
 				</div>
-			</form>
-			
-			
+			</div>
 		</div>
 	</div>
 </header>

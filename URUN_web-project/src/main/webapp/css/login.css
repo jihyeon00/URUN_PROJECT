@@ -28,18 +28,22 @@ body::before {
 	margin: 50px;
 	padding: 50px;
 	background-color: white;
+	border-radius: 10px;
 }
-.login-form h1 {
-	font-size: 32px; color: blue;
+.login-form .centerUrun {
+	font-size: 40px; 
+	color: blue;
 	text-align: center;
 	margin-bottom: 60px;
+	font-weight: 600;
 }
 .int-area {
 	width: 400px; position: relative;
 	margin-top: 20px;
 }
 .int-area:first-child {
-	margin-top: 0;}
+	margin-top: 0;
+}
 .int-area input {
 	width: 100%;
 	padding: 20px 10px 10px;
@@ -71,10 +75,12 @@ body::before {
 	font-size: 13px; color: #166cea;
 }
 .btn-area {
-	margin-top: 30px;}
+	margin-top: 30px;
+}
 
-.btn-area button {
-	width: 100%; height: 50px;
+.btn-area input[type="submit"]{
+	width: 100%; 
+	height: 50px;
 	background: blue;
 	color: #fff;
 	font-size: 20px;
@@ -82,12 +88,70 @@ body::before {
 	border-radius: 15px;
 	cursor: pointer;
 }
-.caption {
-	margin-top: 20px;
+.signUp {
+	margin-top: 30px;
+	margin-bottom: -15px;
 	text-align: right;
-	
 }
-.caption a{
-	font-size: 15px; color: blue;
+
+.signUp a {
+	font-size: 20px;
+	color: blue;
+	font-weight: 700;
 	text-decoration: none;
+}
+
+.chk_box { 
+	display: block; 
+	position: relative; 
+	padding-left: 25px; 
+	margin-bottom: 10px; 
+	cursor: pointer; 
+	font-size: 14px; 
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none; 
+	margin-top: 20px;
+}
+
+/* 기본 체크박스 숨기기 */
+.chk_box input[type="checkbox"] {
+	display: none; 
+}
+
+/* 선택되지 않은 체크박스 스타일 꾸미기 */
+.on { 
+	width: 20px;
+	height: 20px; 
+	background: #fff; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	border: 1px solid #999;
+}
+
+/* 선택된 체크박스 스타일 꾸미기 */
+.chk_box input[type="checkbox"]:checked + .on {
+	background-color: blue; 
+}
+.on:after { 
+	content: ""; 
+	position: absolute;
+	display: none; 
+}
+.chk_box input[type="checkbox"]:checked + .on:after {
+	display: block;
+}
+.on:after { 
+	width: 6px; 
+	height: 10px; 
+	border: solid #fff; 
+	border-width: 0 2px 2px 0; 
+	-webkit-transform: rotate(45deg); 
+	-ms-transform: rotate(45deg); 
+	transform: rotate(45deg); 
+	position: absolute; 
+	left: 6px; 
+	top: 2px; 
 }
