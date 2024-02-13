@@ -24,9 +24,9 @@
 				<%
 					request.setCharacterEncoding("UTF-8");
 					headerDAO hDao = new headerDAO();
-					List<headerDTO> list = hDao.selectMemberInfo();
-					int memberId = list.get(0).getMEMBER_ID();
-					String employeeName= list.get(0).getEmployee_Name();
+					List<headerDTO> listHeader = hDao.selectMemberInfo();
+					int memberId = listHeader.get(0).getMEMBER_ID();
+					String employeeName= listHeader.get(0).getEmployee_Name();
 				%>
 					<span><%= memberId%></span>(<%=employeeName %>)님 안녕하세요.
 							<input type="button" class="btn btn-light" value="로그아웃"/>

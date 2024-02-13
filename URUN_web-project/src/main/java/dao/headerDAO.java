@@ -32,7 +32,7 @@ public class headerDAO {
 		try {
 			sql = "SELECT e.EMPLOYEE_ID ,m.MEMBER_EMPLOYEE_ID, e.EMPLOYEE_NAME"
 					+ " FROM EMPLOYEES e LEFT join MEMBER m on e.EMPLOYEE_ID=m.MEMBER_EMPLOYEE_ID"
-					+ " WHERE e.EMPLOYEE_ID=10000008";
+					+ " WHERE e.EMPLOYEE_ID=10000009";
 			conn = DBManager.getConnection();
 			pstmt=conn.prepareStatement(sql);
 			

@@ -1,23 +1,29 @@
 package dto;
 
 public class InventoryDTO {
-	int INVENTORY_ID;
-	int INVENTORY_MATERIAL_ID;
-	int INVENTORY_ITEM_ID;
-	int INVENTORY_IB_ID;
-	int INVENTORY_OB_ID;
-	int INVENTORY_WORK_ID;
-	int INVENTORY_Quantity;
-	String INVENTORY_Warehouse;
+	private int INVENTORY_ID;
+	private int INVENTORY_MATERIAL_ID;
+	private int INVENTORY_ITEM_ID;
+	private int INVENTORY_IB_ID;
+	private int INVENTORY_OB_ID;
+	private int INVENTORY_WORK_ID;
+	private int INVENTORY_Quantity;
+	private String INVENTORY_Warehouse;
+	
+	private String ITEM_ID;
+	private String ITEM_NAME;
+	private String ITEM_COLOR;
+	private int ITEM_SIZE;
 	
 	
-	String IB_Complete_Date;
-	String OB_Complete_Date;
-	String Company_Name;
-	String ITEM_NAME;
-	String MATERIAL_NAME;
+	private String MATERIAL_ID;
+	private String MATERIAL_NAME;
+	private String MATERIAL_USES;
 	
 	
+	private int sumINVENTORY;
+
+
 	public int getINVENTORY_ID() {
 		return INVENTORY_ID;
 	}
@@ -66,23 +72,11 @@ public class InventoryDTO {
 	public void setINVENTORY_Warehouse(String iNVENTORY_Warehouse) {
 		INVENTORY_Warehouse = iNVENTORY_Warehouse;
 	}
-	public String getIB_Complete_Date() {
-		return IB_Complete_Date;
+	public String getITEM_ID() {
+		return ITEM_ID;
 	}
-	public void setIB_Complete_Date(String iB_Complete_Date) {
-		IB_Complete_Date = iB_Complete_Date;
-	}
-	public String getOB_Complete_Date() {
-		return OB_Complete_Date;
-	}
-	public void setOB_Complete_Date(String oB_Complete_Date) {
-		OB_Complete_Date = oB_Complete_Date;
-	}
-	public String getCompany_Name() {
-		return Company_Name;
-	}
-	public void setCompany_Name(String company_Name) {
-		Company_Name = company_Name;
+	public void setITEM_ID(String iTEM_ID) {
+		ITEM_ID = iTEM_ID;
 	}
 	public String getITEM_NAME() {
 		return ITEM_NAME;
@@ -90,12 +84,40 @@ public class InventoryDTO {
 	public void setITEM_NAME(String iTEM_NAME) {
 		ITEM_NAME = iTEM_NAME;
 	}
+	public String getITEM_COLOR() {
+		return ITEM_COLOR;
+	}
+	public void setITEM_COLOR(String iTEM_COLOR) {
+		ITEM_COLOR = iTEM_COLOR;
+	}
+	public int getITEM_SIZE() {
+		return ITEM_SIZE;
+	}
+	public void setITEM_SIZE(int iTEM_SIZE) {
+		ITEM_SIZE = iTEM_SIZE;
+	}
+	public String getMATERIAL_ID() {
+		return MATERIAL_ID;
+	}
+	public void setMATERIAL_ID(String mATERIAL_ID) {
+		MATERIAL_ID = mATERIAL_ID;
+	}
 	public String getMATERIAL_NAME() {
 		return MATERIAL_NAME;
 	}
 	public void setMATERIAL_NAME(String mATERIAL_NAME) {
 		MATERIAL_NAME = mATERIAL_NAME;
 	}
-	
-
+	public String getMATERIAL_USES() {
+		return MATERIAL_USES;
+	}
+	public void setMATERIAL_USES(String mATERIAL_USES) {
+		MATERIAL_USES = mATERIAL_USES;
+	}
+	public int getSumINVENTORY() {
+		return sumINVENTORY;
+	}
+	public void setSumINVENTORY(int sumINVENTORY) {
+		this.sumINVENTORY = sumINVENTORY;
+	}
 }

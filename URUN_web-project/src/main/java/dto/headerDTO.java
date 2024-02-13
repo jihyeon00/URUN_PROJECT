@@ -1,8 +1,8 @@
 package dto;
 
 public class headerDTO {
-	int MEMBER_ID;
-	String Employee_Name;
+	private int MEMBER_ID;
+	private String Employee_Name;
 	
 	public int getMEMBER_ID() {
 		return MEMBER_ID;
