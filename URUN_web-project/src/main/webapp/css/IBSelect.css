@@ -1,43 +1,48 @@
 @charset "UTF-8";
 
 /* 입고예정정보등록 */
-.title{
-	position:absolute;
+.title {
+	position: absolute;
 	top: 160px;
 	left: 230px;
-	min-width:500px;
-	color: black; 
-	font-size: 30px; 
-	font-family: Inter; 
-	font-weight: 700; 
+	min-width: 500px;
+	color: black;
+	font-size: 30px;
+	font-family: Inter;
+	font-weight: 700;
 	word-wrap: break-word;
 }
-.container.container-IB{
+.title h1 a{
+	color: black;
+}
+.container.container-IB {
 	display: flex;
 	justify-content: center;
-	width:100%;
+	width: 100%;
 	height: 100%;
 	padding-top: 250px;
- 	min-width:1000px;
+	min-width: 1000px;
 }
+
 .inner.inner-IB {
-	min-width:500px;
+	min-width: 500px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	flex-direction: column;
 	gap: 50px;
-	
 }
-.write{
+
+.write {
 	display: flex;
 	gap: 20px;
 	flex-direction: column;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 22px;
 }
-.write .IB-Insert{
+
+.write .IB-Insert {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -45,191 +50,208 @@
 	gap: 50px;
 }
 
-.write .IB-Insert .IB-name{
+.write .IB-Insert .IB-name {
 	width: 150px;
 }
-.write .IB-Insert .IB-name-date{
+
+.write .IB-Insert .IB-name-date {
 	padding: 10px;
 	width: 350px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
 
-.write .IB-Insert input[type="text"]{
+.write .IB-Insert input[type="text"] {
 	padding: 10px;
 	width: 350px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
 
 /* 입고 현황 */
-.container.container-IB-Select{
+.container.container-IB-Select {
 	position: absolute;
 	top: 230px;
 	left: 170px;
 	width: 1800px;
- 	min-width:1200px;
- 	height: 850px;
+	min-width: 1200px;
 }
-.IB-Select-menu{
+
+.IB-Select-menu {
 	width: 1100px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
 .IB-Select-menu .Select-menu {
-	border-bottom: 1px solid #333333; 
+	border-bottom: 1px solid #333333;
 	width: 1000px;
 	height: 60px;
 	display: flex;
 }
+
 .IB-Select-menu .Select-item {
 	display: flex;
 	flex-grow: 1;
 }
-.IB-Select-menu .Select-item:hover{
+
+.IB-Select-menu .Select-item:hover {
 	border-bottom: 7px solid #D9D9D9;
 }
+
 .btn-Select {
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 22px;
 	border: none;
 	background-color: transparent;
 }
-.IB-Select{
+
+.IB-Select {
 	position: absolute;
 	top: 80px;
 	left: 60px;
-	width: 1250px;
+	padding-bottom: 20px;
+	height: auto;
 }
-.IB-Select table, 
-.IB-Select td, 
-.IB-Select th {
-  border : 1px solid black;
-  border-collapse : collapse;
+
+.IB-Select table, .IB-Select td, .IB-Select th {
+	border: 1px solid black;
+	border-collapse: collapse;
 }
-.IB-Select .IB-Select-view .IB-Select-view-menu{
+
+.IB-Select .IB-Select-view .IB-Select-view-menu {
 	height: 50px;
 	font-weight: 600;
-	vertical-align : middle;
+	vertical-align: middle;
 }
-.IB-Select .IB-Select-view td{
-	font-family: Inter; 
+
+.IB-Select .IB-Select-view td {
+	font-family: Inter;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 /* 입고 수정 */
-.container.container-IB-update{
- 	display: flex;
+.container.container-IB-update {
+	display: flex;
 	justify-content: center;
-	width:100%;
+	width: 100%;
 	height: 100%;
 	padding-top: 250px;
- 	min-width:1250px; 
+	min-width: 1250px;
 }
+
 .inner.inner-IB-update {
-	min-width:400px;
-	width:750px;
+	min-width: 400px;
+	width: 750px;
 	display: flex;
 	justify-content: center;
 }
-.write-IB-update{
+
+.write-IB-update {
 	display: flex;
 	gap: 20px;
 	justify-content: center;
 	flex-wrap: wrap;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 22px;
 }
-.write-IB-update .IB-Update{
+
+.write-IB-update .IB-Update {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
-.write-IB-update .IB-Update .IB-name{
+.write-IB-update .IB-Update .IB-name {
 	width: 150px;
 }
-.write-IB-update .IB-Update .IB-name-date{
+
+.write-IB-update .IB-Update .IB-name-date {
 	padding: 10px;
 	width: 200px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
-.write-IB-update .IB-Update input[type="text"]{
+
+.write-IB-update .IB-Update input[type="text"] {
 	padding: 10px;
 	width: 200px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
-.write-IB-update .IB-Update .IB-Status-name{
+
+.write-IB-update .IB-Update .IB-Status-name {
 	padding: 10px;
 	width: 200px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
-.write-IB-update .IB-Update #IB_Note{
+
+.write-IB-update .IB-Update #IB_Note {
 	padding: 10px;
 	width: 570px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
 
 /* 출고예정정보등록 */
-.container.container-OB{
+.container.container-OB {
 	display: flex;
 	justify-content: center;
-	width:100%;
+	width: 100%;
 	height: 100%;
 	padding-top: 250px;
- 	min-width:1000px;
+	min-width: 1000px;
 }
+
 .inner.inner-OB {
-	min-width:500px;
+	min-width: 500px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	flex-direction: column;
 	gap: 50px;
-	
 }
-.write{
+
+.write {
 	display: flex;
 	gap: 20px;
 	flex-direction: column;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 22px;
 }
-.write .OB-Insert{
+
+.write .OB-Insert {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -237,153 +259,320 @@
 	gap: 50px;
 }
 
-.write .OB-Insert .OB-name{
+.write .OB-Insert .OB-name {
 	width: 150px;
 }
-.write .OB-Insert .OB-name-date{
+
+.write .OB-Insert .OB-name-date {
 	padding: 10px;
 	width: 350px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
 
-.write .OB-Insert input[type="text"]{
+.write .OB-Insert input[type="text"] {
 	padding: 10px;
 	width: 350px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
 
 /* 출고 현황 */
-.container.container-OB-Select{
+.container.container-OB-Select {
 	position: absolute;
 	top: 230px;
 	left: 170px;
 	width: 1800px;
- 	min-width:1200px;
- 	height: 850px;
+	min-width: 1200px;
+	height: auto;
 }
-.OB-Select-menu{
+
+.OB-Select-menu {
 	width: 1100px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
 .OB-Select-menu .Select-menu {
-	border-bottom: 1px solid #333333; 
+	border-bottom: 1px solid #333333;
 	width: 1000px;
 	height: 60px;
 	display: flex;
 }
+
 .OB-Select-menu .Select-item {
 	display: flex;
 	flex-grow: 1;
 }
-.OB-Select-menu .Select-item:hover{
+
+.OB-Select-menu .Select-item:hover {
 	border-bottom: 7px solid #D9D9D9;
 }
-.OB-Select{
+
+.OB-Select {
 	position: absolute;
 	top: 80px;
 	left: 60px;
-	width: 1250px;
+	height: auto;
 }
-.OB-Select table, 
-.OB-Select td, 
-.OB-Select th {
-  border : 1px solid black;
-  border-collapse : collapse;
+
+.OB-Select table, .OB-Select td, .OB-Select th {
+	border: 1px solid black;
+	border-collapse: collapse;
 }
-.OB-Select .OB-Select-view .OB-Select-view-menu{
+
+.OB-Select .OB-Select-view .OB-Select-view-menu {
 	height: 50px;
 	font-weight: 600;
-	vertical-align : middle;
+	vertical-align: middle;
 }
-.OB-Select .OB-Select-view td{
-	font-family: Inter; 
+
+.OB-Select .OB-Select-view td {
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 18px;
 }
 
 /* 출고 수정 */
-.container.container-OB-update{
- 	display: flex;
+.container.container-OB-update {
+	display: flex;
 	justify-content: center;
-	width:100%;
+	width: 100%;
 	height: 100%;
 	padding-top: 250px;
- 	min-width:1250px; 
+	min-width: 1250px;
 }
+
 .inner.inner-OB-update {
-	min-width:400px;
-	width:700px;
+	min-width: 400px;
+	width: 700px;
 	display: flex;
 	justify-content: center;
 }
-.write-OB-update{
+
+.write-OB-update {
 	display: flex;
 	gap: 20px;
 	justify-content: center;
 	flex-wrap: wrap;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 22px;
 }
-.write-OB-update .OB-Update{
+
+.write-OB-update .OB-Update {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
-.write-OB-update .OB-Update .OB-name{
+.write-OB-update .OB-Update .OB-name {
 	width: 130px;
 }
-.write-OB-update .OB-Update .OB-name-date{
+
+.write-OB-update .OB-Update .OB-name-date {
 	padding: 10px;
 	width: 175px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
-.write-OB-update .OB-Update input[type="text"]{
+
+.write-OB-update .OB-Update input[type="text"] {
 	padding: 10px;
 	width: 500px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
-.write-OB-update .OB-Update .OB-Status-name{
+
+.write-OB-update .OB-Update .OB-Status-name {
 	padding: 10px;
 	width: 500px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
 }
-.write-OB-update .OB-Update #OB_Note{
+
+.write-OB-update .OB-Update #OB_Note {
 	padding: 10px;
 	width: 500px;
-	background: #ECF0F8; 
+	background: #ECF0F8;
 	border: 1px solid #999;
 	border-radius: 10px;
-	font-family: Inter; 
+	font-family: Inter;
 	font-weight: 400;
 	font-size: 20px;
+}
+
+/* 주간생산계획 등록 */
+.container.container-PROCESS {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 250px;
+	min-width: 1000px;
+}
+
+.inner.inner-PROCESS {
+	min-width: 500px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.write {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.write .PROCESS-Insert {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.write .PROCESS-Insert .PROCESS-name {
+	width: 150px;
+}
+
+.write .PROCESS-Insert .PROCESS-name-date {
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write .PROCESS-Insert input[type="text"] {
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+/* 생산불량 현황 */
+.container.container-status {
+	position: absolute;
+	top: 230px;
+	left: 170px;
+	width: 1800px;
+	min-width: 1200px;
+	height: auto;
+}
+
+.status-Select-menu {
+	position: absolute;
+	left: 60px;
+	border: 1px solid #333333;
+	width: 1250px;
+	height: 190px;
+	background-color: #ECECEC;
+	border-radius: 10px;
+}
+
+.status-Select-menu .Select-menu {
+	width: 1200px;
+	height: 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.status-Select-menu .Select-menu .Select-item {
+	margin-top: 10px;
+	width: 570px;
+	display: flex;
+	flex-grow: 1;
+	height:50px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+	position: relative;
+}
+.status-Select-menu .Select-menu .Select-item  input[type="text"]  {
+	padding: 10px;
+	width: 220px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+.status-Select-menu .Select-menu .Select-item .status-name{
+	width: 120px;
+} 
+.status-Select-menu .Select-menu .Select-item .status-name-date {
+	padding: 10px;
+	width: 220px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+.status-Select-menu .Select-menu .Select-item .Select-item-btn{
+	position: absolute;
+	right :30px;
+}
+
+.status-Select {
+	position: absolute;
+	top: 210px;
+	left: 60px;
+	width: 1250px;
+	height: auto;
+}
+
+.status-Select table, .status-Select td, .status-Select th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.status-Select .status-Select-view .status-Select-view-menu {
+	height: 50px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.status-Select .status-Select-view td {
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 18px;
 }

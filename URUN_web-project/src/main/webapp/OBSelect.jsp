@@ -112,7 +112,7 @@ if (OBWhere == null) {
 						<td><%=OB_Complete_Date%></td>
 						<td>
 							<!-- 출고 수정 버튼 -->
-							<button style="cursor: pointer;"class="btn btn-light" onClick="javascript: OBupdate(<%=rs.getInt("OB_ID")%>);">수정</button>
+							<button style="cursor: pointer; border: 1px solid #999;"class="btn btn-light" onClick="javascript: OBupdate(<%=rs.getInt("OB_ID")%>);">수정</button>
 						</td>
 					</tr>
 				<% 		 		

@@ -29,8 +29,6 @@
   	String OB_ITEM_ID = "";
   	String OB_Quantity = "";
   	String OB_Expected_Date = "";
-  	String OB_Complete_Date = "";
-  	String OB_Status = "";
   	String OB_Note = "";
 
 	Connection conn = null;
@@ -43,9 +41,7 @@ try {
  	rs = stmt.executeQuery("SELECT OB_Company_ID, "
  								+ "OB_ITEM_ID,"
  								+ "OB_Quantity,"
-								+ "OB_Expected_Date,"
-								+ "OB_Complete_Date,"
-								+ "OB_Status," 
+								+ "to_char(OB_Expected_Date,'yyyy-mm-dd') as OB_Expected_Date,"
 								+ "OB_Note"
 						+ " FROM OB"
 						+ " WHERE OB_ID = " + num
@@ -56,8 +52,6 @@ try {
 	 	OB_ITEM_ID = Integer.toString(rs.getInt("OB_ITEM_ID"));
 	 	OB_Quantity = Integer.toString(rs.getInt("OB_Quantity"));
 	 	OB_Expected_Date = rs.getString("OB_Expected_Date");
-	 	OB_Complete_Date = rs.getString("OB_Complete_Date");
-		OB_Status = rs.getString("OB_Status");
 		OB_Note = rs.getString("OB_Note");
 
 	}
@@ -77,7 +71,7 @@ try {
 	    </div>
 		<div class="container container-OB-update">
 			<div class="inner inner-OB-update">
-				<form action="./OB-UPDATE.jsp?num=<%=num %>" method="post" id="form-OB-Update">
+				<form action="./OB-UPDATE.jsp?num=<%=num %>" method="post" id="form-OB-Update" onSubmit="return false">
 					<div class="write-OB-update">
 						<div class="OB-Update">
 							<div class="OB-name">납품처ID</div>
@@ -97,7 +91,7 @@ try {
 						</div>
 						<div class="OB-Update">
 							<div class="OB-name">납품완료일</div>
-	            			<div><input class="OB-name-date" type="date" name="OB_Complete_Date-Date" id="OB_Complete_Date-Date" value="<%=OB_Complete_Date%>" autocomplete="off"></div>
+	            			<div><input class="OB-name-date" type="date" name="OB_Complete_Date-date" id="OB_Complete_Date-date" value="" autocomplete="off" required></div>
 						</div>
 						<div class="OB-Update">
 							<div class="OB-name">완료시간</div>
@@ -116,7 +110,7 @@ try {
 	            			<div><input class="OB-Update-Note" type="text" name="OB_Note" id="OB_Note" value="<%=OB_Note %>"></div>
 						</div>
 						<div class="OB-Update">
-			        		<input id="btn-insert" type="submit" value="수정" class="btn btn-light" onClick="javascript: prevCheckTextBox();">
+			        		<input id="btn-insert" type="submit" value="수정" class="btn btn-light" onClick="javascript: prevCheckTextBox();"style="width: 100px; height: 40px; border: 1px solid #999; font-size: 18px;">
 		       			</div>
 					</div>
 				</form>
@@ -126,7 +120,7 @@ try {
 	<script>
     	function prevCheckTextBox() {
     		if (confirm('수정하시겠습니까?')) {
-    			return
+    			document.getElementById('form-OB-Update').submit();
     		} else {
     			 return false;
     		}
