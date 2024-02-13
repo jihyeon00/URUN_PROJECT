@@ -23,9 +23,9 @@
 	  <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
 	  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
 	     <script defer src="./js/pro.js"></script>
+	     <script defer src="./js/ck_button.js"></script>
 	   
 	  
-	    
 	  
 </head>
 
@@ -34,30 +34,28 @@
 
 <section class= "sign-form">
 	<h1>회원가입</h1>
-	<form action="signck.jsp" method="post" id=signckfrom name="singck"onSubmit="return false" enctype="multipart/form-data" 
-
- 
-	>
+	<form action="signck.jsp" method="post" id="signckfrom" name="singck"onSubmit="return false">
 	<!-- 사원아이디 -->
 	
 	<div class="int-area">
     	<b>사원번호</b>
-        <input type="text" name="USERID" id="USERID"
-           autocomplete="off" required>
-          <label for="USERID">사원 번호</label>
-          <button type="button" onClick="">조회</button>
+        <input type="NUMBER" name="MEMBERID" id="USERID"
+           autocomplete="off" required onkeydown="inputIdChk()">
+          <label for="MEMBERID">사원 번호</label>
+   		<button type="button" name=check_butto id="check_button"  onClick="location.href='./idck.jsp'">조회</button>
+   		 
    	 </div>
    	     
    	 <div class="int-area1">
        <b>비밀번호</b>
-       <input type="password" name="USERPASSWORD1" id="USERPASSWORD1"
+       <input type="password" name="MEMBERPW" id="USERPASSWORD1"
           autocomplete="off" required>
-          <label for="USERPASSWORD">비밀번호</label>
+          <label for="MEMBERPW">비밀번호</label>
  
    	</div>
    	   <div class="int-area2">
        <b>비밀번호확인</b>
-        <input type="password" name="USERPASSWORD2" id="USERPASSWORD2"
+        <input type="password" id="USERPASSWORD2"
             autocomplete="off" required>
             <label for="USERPASSWORD">비밀번확인</label>
             
@@ -74,7 +72,8 @@
 
 	      <!-- 회원가입 버튼 -->
       <div class="sign-btn">
-     		<button type="button" onClick="javascript: prevCheckTextBox();">회원가입</button>
+     		<button type="button" onClick="prevCheckTextBox();">회원가입</button>
+     		<input type="button" value="취소"onClick="location.href='./login.jsp'">
 	     
       </div>
       
@@ -88,12 +87,20 @@
     			
     			return;
     		}
-    		if ($('#USERID').val().length < 5) { // 이름 관련 dom	
-    			alert('이름을 5자 이내로 입력해 주세요.');	// 이름 5자 이내로 입력하라고 팝업 뜸.
+    		if ($('#USERID').val().length < 8) { // 이름 관련 dom	
+    			alert('이름을 8자로 입력해 주세요.');	// 이름 5자 이내로 입력하라고 팝업 뜸.
     			$('#USERID').focus();		// 이름 입력 칸으로 포커스 이동
     			
     			return;
     		}
+    		if ($('#USERID').val().length > 8) { // 이름 관련 dom	
+    			alert('이름을 8자로 입력해 주세요.');	// 이름 5자 이내로 입력하라고 팝업 뜸.
+    			$('#USERID').focus();		// 이름 입력 칸으로 포커스 이동
+    			
+    			return;
+    		}
+    				
+
     		if (!$('#USERPASSWORD1').val()) {	// 패스워드 관련 dom
     			alert('패스워드를 입력하세요.');	// 패스워드 입력하라고 팝업 뜸.
     			$('#USERPASSWORD1').focus();		// 패스워드 입력 칸으로 포커스 이동
@@ -102,8 +109,14 @@
     		}
     		
      		
-    		if ($('#USERPASSWORD1').val().length < 8) { // 패스워드 관련 dom	
-    			alert('비밀번호를 8자 이상로 입력해 주세요.');	// 패스워드  8자 이내로 입력하라고 팝업 뜸.
+    		if ($('#USERPASSWORD1').val().length <6 ) { // 패스워드 관련 dom	
+    			alert('비밀번호를 6자 이상 10자 이내로 입력해 주세요.');	// 패스워드  8자 이내로 입력하라고 팝업 뜸.
+    			$('#USERPASSWORD1').focus();
+    			
+    			return;								// 이름 입력 칸으로 포커스 이동
+    		}
+      		if ($('#USERPASSWORD1').val().length >10 ) { // 패스워드 관련 dom	
+    			alert('비밀번호를 6자 이상 10자 이내로 입력해 주세요.');	// 패스워드  8자 이내로 입력하라고 팝업 뜸.
     			$('#USERPASSWORD1').focus();
     			
     			return;								// 이름 입력 칸으로 포커스 이동
@@ -121,29 +134,46 @@
         			
         			return;
     		
-    
-    		}
-    		if (!$('#checkbox1').val()) {	// 약관동의체크 관련 dom
-    			alert('체크박스를 클릭하세요.');	// 약관동의체크 입력하라고 팝업 뜸.
-    			$('#checkbox1').focus();		// 약관동의체크 입력 칸으로 포커스 이동
-    			
-    			return;
-    		}
-    	
+       		}
+       		if (!$('#checkbox1').val()) {	// 약관동의체크 관련 dom
+       			alert('체크박스를 클릭하세요.');	// 약관동의체크 입력하라고 팝업 뜸.
+       			$('#checkbox1').focus();		// 약관동의체크 입력 칸으로 포커스 이동
+       			
+       			return;
+       		}
+   			
+
+			//if($('#check_butto').value != "idCheck"){
+			//	alert("아이디 조회 해주세요.");
+				
+			//	return;
+				
+			//}
+ 
     			
     		// 실제 form의 action의 값으로 전송
    			document.getElementById('signckfrom').submit();
     	}
+  	
+		// 아이디 중복체크 화면open
+		function openIdChk(){
+		
+			window.name = "parentForm";
+			window.open("./idck.jsp",
+					"chkForm", "width=500, height=300, resizable = no, scrollbars = no");	
+		}
+
+		// 아이디 입력창에 값 입력시 hidden에 idUncheck를 세팅한다.
+		// 이렇게 하는 이유는 중복체크 후 다시 아이디 창이 새로운 아이디를 입력했을 때
+		// 다시 중복체크를 하도록 한다.
+		function inputIdChk(){
+			document.userInfo.idDuplication.value ="idUncheck";
+		}
+		
     </script>
-     <script>
-     function idCheck(){
-    	 
-     }
-     </script>
-    
+
 </section>
 
 
-	
 </body>
 </html>
