@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+
+
+
 /* 입고예정정보등록 */
 .title {
 	position: absolute;
@@ -76,6 +79,8 @@
 	font-size: 20px;
 }
 
+
+
 /* 입고 현황 */
 .container.container-IB-Select {
 	position: absolute;
@@ -123,19 +128,30 @@
 	padding-bottom: 20px;
 	height: auto;
 }
-
-.IB-Select table, .IB-Select td, .IB-Select th {
+.IB-Select .IB-Select-view{
+	width: 1000px;
+	text-align: center;
+}
+.IB-Select .IB-Select-view table,
+.IB-Select .IB-Select-view td {
 	border: 1px solid black;
 	border-collapse: collapse;
+}
+.IB-Select .IB-Select-view tr:nth-child(even) td {
+  background: #eaeaed;
 }
 
 .IB-Select .IB-Select-view .IB-Select-view-menu {
 	height: 50px;
-	font-weight: 600;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 16px;
 	vertical-align: middle;
 }
 
 .IB-Select .IB-Select-view td {
+	height: 50px;
+	vertical-align: middle;
 	font-family: Inter;
 	font-weight: 400;
 	font-size: 16px;
@@ -324,22 +340,36 @@
 	left: 60px;
 	height: auto;
 }
-
-.OB-Select table, .OB-Select td, .OB-Select th {
+.OB-Select .OB-Select-view{
+	width: 1000px;
+	text-align: center;
+}
+.OB-Select .OB-Select-view table, .IB-Select td {
 	border: 1px solid black;
 	border-collapse: collapse;
 }
-
+.OB-Select .OB-Select-view tr:nth-child(even) td {
+  background: #eaeaed;
+}
 .OB-Select .OB-Select-view .OB-Select-view-menu {
 	height: 50px;
-	font-weight: 600;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 16px;
 	vertical-align: middle;
 }
-
 .OB-Select .OB-Select-view td {
+	height: 50px;
+	vertical-align: middle;
 	font-family: Inter;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 16px;
+}
+
+.OB-Select .OB-Select-view table,
+.OB-Select .OB-Select-view td{
+	border: 1px solid black;
+	border-collapse: collapse;
 }
 
 /* 출고 수정 */
@@ -506,7 +536,7 @@
 }
 
 .status-Select-menu .Select-menu {
-	width: 1200px;
+	/* width: 1200px; */
 	height: 50px;
 	display: flex;
 	flex-wrap: wrap;
@@ -560,19 +590,160 @@
 	height: auto;
 }
 
-.status-Select table, .status-Select td, .status-Select th {
+
+.status-Select .status-Select-view{
+	width: 1250px;
+	text-align: center;
+}
+.status-Select .status-Select-view table,
+.status-Select .status-Select-view td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.status-Select .status-Select-view tr:nth-child(even) td {
+  background: #eaeaed;
+}
+.status-Select .status-Select-view .statu-Select-view-menu {
+	height: 50px;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.status-Select .status-Select-view td {
+	height: 50px;
+	vertical-align: middle;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.status-Select .status-Select-view table,
+.status-Select .status-Select-view td{
 	border: 1px solid black;
 	border-collapse: collapse;
 }
 
-.status-Select .status-Select-view .status-Select-view-menu {
-	height: 50px;
-	font-weight: 600;
-	vertical-align: middle;
-}
 
-.status-Select .status-Select-view td {
+/* 생산작업관리 */
+.status-Select-b{
+	display: flex;
+}
+.status-Select .status-Select-b .status-Select-case{
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid #333;
+	min-width: 620px;
+	width: 620px;
+	height: 280px;
+	margin-bottom: 40px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box{
+	margin: 7px;
+	border: 1px solid #333;
+	width: 600px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-name{
+	border: 1px solid #333;
+	width: 600px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 18px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-detail-box{
+	display: flex;
+	flex-wrap: wrap;
+	width: 600px;
+	height: 40px;
+	border-bottom: 1px solid #333;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-detail-box .status-Select-detail{
+	border: 1px solid #333;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	width: 149.5px;
+	height: 40px;
 	font-family: Inter;
 	font-weight: 400;
 	font-size: 18px;
 }
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-detail-box .status-Select-detail .detail-box-date{
+	width: 125px;
+	height: 35px;
+	border: 0px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-detail-box .status-Select-detail .detail-box-option {
+	width: 125px;
+	height: 35px;
+	border: 0px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-btn{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-content: center;
+	height: 50px;
+	width: 600px;
+	border: 1px solid #333;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-btn .btn{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-btn .btn input[type="submit"]{
+	width: 100px; height: 40px; border: 1px solid #999; font-size: 20px; border-radius: 0;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-btn .btn input[type="button"]{
+	width: 130px; height: 40px; border: 1px solid #999; font-size: 20px; border-radius: 0;
+}
+.status-Select .work-insert-box{
+	margin-left: 10px;
+	width: 400px;
+	height: 280px;
+	display: none;
+}
+.status-Select .work-insert-box .work-insert-case{
+	width: 400px;
+	height: 280px;
+	border: 1px solid #333;
+	display: flex;
+	flex-wrap: wrap;
+}
+.status-Select .work-insert-box .work-insert-case .work-insert-detail{
+	width:400px;
+	border: 1px solid #333;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.status-Select .work-insert-box .work-insert-case .work-insert-detail .detail-text{
+	width: 210px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 18px;
+}
+.status-Select .work-insert-box .work-insert-case .work-insert-detail .detail-name{
+	width: 180px;
+	height: 50px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+}
+
+

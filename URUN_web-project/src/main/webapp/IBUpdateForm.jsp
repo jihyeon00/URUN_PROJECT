@@ -33,7 +33,7 @@
   	String IB_Defective_Date = "";
   	String IB_Expected_Date = "";
   	String IB_Complete_Date = "";
-  	String B_Status = "";
+  	String IB_Status = "";
   	String IB_Note = "";
 
 	Connection conn = null;
@@ -50,7 +50,7 @@ try {
 								+ "IB_Defective_Quantity,"
 								+ "IB_Defective_Date," 
 								+ "to_char(IB_Expected_Date,'yyyy-mm-dd') as IB_Expected_Date,"
-								+ "IB_Complete_Date,"
+								+ "to_char(IB_Complete_Date,'yyyy-mm-dd') as IB_Complete_Date,"
 								+ "IB_Status, "
 								+ "IB_Note"
 						+ " FROM IB"
@@ -66,7 +66,7 @@ try {
 		IB_Defective_Date = rs.getString("IB_Defective_Date");
 		IB_Expected_Date = rs.getString("IB_Expected_Date");
 		IB_Complete_Date = rs.getString("IB_Complete_Date");
-		B_Status = rs.getString("IB_Status");
+		IB_Status = rs.getString("IB_Status");
 		IB_Note = rs.getString("IB_Note");
 
 	}
@@ -111,6 +111,7 @@ try {
 						<div class="IB-Update">
 							<div class="IB-name">진행상태</div>
 	            			<select class="IB-Status-name" name="IB_Status" id="IB_Status" >
+	            				<option value="<%=IB_Status%>"><%=IB_Status%></option>
 								<option value="입고요청">입고요청</option>
 								<option value="부분입고">부분입고</option>
 								<option value="입고완료">입고완료</option>
@@ -132,7 +133,7 @@ try {
 						</div>
 						<div class="IB-Update">
 							<div class="IB-name">입고완료시간</div>
-	            			<div><input class="IB-name-date" type="time" name="IB_Complete_Date-time" id="IB_Complete_Date-time" value="<%=IB_Complete_Date%>" autocomplete="off"></div>
+	            			<div><input class="IB-name-date" type="time" name="IB_Complete_Date-time" id="IB_Complete_Date-time" autocomplete="off"></div>
 						</div>
 						<div class="IB-Update">
 							<div class="IB-name">비고</div>
