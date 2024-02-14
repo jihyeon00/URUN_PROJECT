@@ -29,6 +29,8 @@
   	String OB_ITEM_ID = "";
   	String OB_Quantity = "";
   	String OB_Expected_Date = "";
+  	String OB_Complete_Date = "";
+  	String OB_Status = "";
   	String OB_Note = "";
 
 	Connection conn = null;
@@ -42,6 +44,8 @@ try {
  								+ "OB_ITEM_ID,"
  								+ "OB_Quantity,"
 								+ "to_char(OB_Expected_Date,'yyyy-mm-dd') as OB_Expected_Date,"
+								+ "to_char(OB_Complete_Date,'yyyy-mm-dd') as OB_Complete_Date,"
+								+ "OB_Status,"
 								+ "OB_Note"
 						+ " FROM OB"
 						+ " WHERE OB_ID = " + num
@@ -52,6 +56,8 @@ try {
 	 	OB_ITEM_ID = Integer.toString(rs.getInt("OB_ITEM_ID"));
 	 	OB_Quantity = Integer.toString(rs.getInt("OB_Quantity"));
 	 	OB_Expected_Date = rs.getString("OB_Expected_Date");
+	 	OB_Complete_Date = rs.getString("OB_Complete_Date");
+	 	OB_Status = rs.getString("OB_Status");
 		OB_Note = rs.getString("OB_Note");
 
 	}
@@ -91,15 +97,16 @@ try {
 						</div>
 						<div class="OB-Update">
 							<div class="OB-name">납품완료일</div>
-	            			<div><input class="OB-name-date" type="date" name="OB_Complete_Date-date" id="OB_Complete_Date-date" value="" autocomplete="off" required></div>
+	            			<div><input class="OB-name-date" type="date" name="OB_Complete_Date-date" id="OB_Complete_Date-date" value="<%= OB_Complete_Date %>" autocomplete="off" required></div>
 						</div>
 						<div class="OB-Update">
 							<div class="OB-name">완료시간</div>
-	            			<div><input class="OB-name-date" type="time" name="OB_Complete_Date-time" id="OB_Complete_Date-time" value="" autocomplete="off"></div>
+	            			<div><input class="OB-name-date" type="time" name="OB_Complete_Date-time" id="OB_Complete_Date-time"  autocomplete="off"></div>
 						</div>
 						<div class="OB-Update">
 							<div class="OB-name">진행상태</div>
 	            			<select class="OB-Status-name" name="OB_Status" id="OB_Status" >
+	            				<option value="<%=OB_Status %>"><%=OB_Status %></option>
 								<option value="출고예정">출고예정</option>
 								<option value="출고진행중">출고진행중</option>
 								<option value="출고완료">출고완료</option>
