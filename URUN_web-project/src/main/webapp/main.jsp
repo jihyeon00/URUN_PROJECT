@@ -1,3 +1,4 @@
+<%@page import="dto.NoticeDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,6 +17,71 @@
 </head>
 <body>
 <%@ include file="./sidebar.jsp" %>
-
+<%
+	request.setCharacterEncoding("UTF-8");
+	
+	NoticeDAO nDAO = new NoticeDAO();
+	List<NoticeDTO> listNoticeFetch = nDAO.selectNoticeFetch();
+	
+	
+%>
+	<div class="wrap">
+		<div class="title">
+			<span style="font-weight: 800;">| </span> 
+			<span style="font-weight: 800;">공지사항</span>
+		</div>
+			<div class="selectTable" style="width: 70%;">
+				<table>
+						<colgroup>
+							<col style="width: 10%" />
+							<col style="width: 40%" />
+							<col style="width: 20%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>번호</th>
+								<th>제목</th>
+								<th>날짜</th>
+							</tr>
+						</thead>
+						<tbody>
+						<%for(int i=0;i<listNoticeFetch.size();i++) {%>
+					<tr>
+						<td><%=listNoticeFetch.get(i).getNOTICE_ID()%></td>
+						<td><a style="color:black;" href="./NoticeDetail.jsp?num=<%=listNoticeFetch.get(i).getNOTICE_ID()%>"><%=listNoticeFetch.get(i).getNOTICE_TITLE()%></a></td>
+						<td><%=listNoticeFetch.get(i).getNOTICE_REGDATE().substring(0, 10) %></td>
+					</tr>
+					<%} %>
+						</tbody>
+					</table>
+				</div>
+		<div class="title">
+			<span style="font-weight: 800;">| </span> 
+			<span style="font-weight: 800;">생산현황</span>
+		</div>
+		<div class="selectTable">
+			<table>
+					<colgroup>
+						<col style="width: 10%" />
+						<col style="width: 40%" />
+						<col style="width: 20%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>날짜</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	</div>
 </body>
 </html>

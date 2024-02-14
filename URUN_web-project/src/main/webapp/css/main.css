@@ -121,14 +121,14 @@ a {
 /* 내용이 있는 화면 */
 .wrap{
 	width: 70%;
-  margin-left: 300px;
-  padding-top: 220px;
+  margin-left: 245px;
+  padding-top: 145px;
 	
 }
 
 /* 제목 */
 .wrap .title{
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	
 }
 
@@ -212,49 +212,60 @@ a {
 	min-width: 810px;
 	height: auto;
 }
+.noticeList{
+	margin-top:40px;
+	margin-bottom:40px;
+	font-family: Inter; 
+  font-weight: 400;
+  font-size: 15px;
+	border-radius: 6px;
+	font-size: 15px;
+	min-width: 810px;
+	height: auto;
+}
 
 /* 조회 테이블 */
 
-table {
+.selectTable table {
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
   
 }
-th,
-td {
+.selectTable th,
+.selectTable td {
   padding: 6px 15px;
   height: 37px;
   text-align: center;
   vertical-align: middle;
   
 }
-th {
+.selectTable th {
   background: #ECECEC;
   color: #000;
   font-weight:700;
   text-align: center;
 }
-tr:first-child th:first-child {
+.selectTable tr:first-child th:first-child {
   border-top-left-radius: 6px;
 }
-tr:first-child th:last-child {
+.selectTable tr:first-child th:last-child {
   border-top-right-radius: 6px;
 }
-td {
+.selectTable td {
   border-right: 1px solid #c6c9cc;
   border-bottom: 1px solid #c6c9cc;
 }
-td:first-child {
+.selectTable td:first-child {
   border-left: 1px solid #c6c9cc;
 }
-tr:nth-child(even) td {
+.selectTable tr:nth-child(even) td {
   background: #eaeaed;
 }
-tr:last-child td:first-child {
+.selectTable tr:last-child td:first-child {
   border-bottom-left-radius: 6px;
 }
-tr:last-child td:last-child {
+.selectTable tr:last-child td:last-child {
   border-bottom-right-radius: 6px;
 }
 
@@ -263,4 +274,68 @@ tr:last-child td:last-child {
 	padding-top: 20px;
 	display: flex;
 	justify-content: center;
+}
+
+/* 공지사항 */
+.noticeList table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem auto;
+  background-color: white;
+}
+
+.noticeList thead{
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+.noticeList td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.noticeList th {
+  padding: 8px;
+  text-align: left;
+  text-align: center;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.noticeList tbody tr:hover {
+  background-color: #d3d3d3;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.noticeList th:nth-child(1),
+.noticeList td:nth-child(1) {
+  width: 15%;
+}
+
+.noticeList th:nth-child(2),
+.noticeList td:nth-child(2) {
+  width: 55%;
+}
+
+.noticeList th:nth-child(3),
+.noticeList td:nth-child(3) {
+  width: 30%;
+}
+
+.noticeList th, td {
+  border-left: none;
+  border-right: none;
+}
+ 
+.noticeList input[type="button"]{
+	width: 70px;
+  padding: 3px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-size:18px;
+  float: right;
 }
