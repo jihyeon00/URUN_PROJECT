@@ -21,7 +21,7 @@
 			<div class="left_sub_menu">
 				<div class="sub_menu">
 					<ul class="big_menu">
-						<li>공지사항<i class="arrow fas fa-angle-right"></i></li>
+						<li><a href="./NoticeList.jsp">공지사항</a></li>
 					</ul>
 					<ul class="big_menu">
 						<li>재고<i class="arrow fas fa-angle-right"></i></li>
@@ -33,9 +33,9 @@
 					<ul class="big_menu">
 						<li>생산</li>
 						<ul class="small_menu">
-							<li><a href="#">생산 계획 관리</a></li>
-							<li><a href="#">생산 작업 관리</a></li>
-							<li><a href="#">생산 불량 현황</a></li>
+							<li><a href="./PROCESS_management.jsp">생산 계획 관리</a></li>
+							<li><a href="./PROCESSInsertForm.jsp">생산 작업 관리</a></li>
+							<li><a href="./Production_defect_status.jsp">생산 불량 현황</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
