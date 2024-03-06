@@ -525,7 +525,7 @@
 	min-width: 1200px;
 	height: auto;
 }
-
+/* 생산불량 현황 검색메뉴 */
 .status-Select-menu {
 	position: absolute;
 	left: 60px;
@@ -535,14 +535,12 @@
 	background-color: #ECECEC;
 	border-radius: 10px;
 }
-
 .status-Select-menu .Select-menu {
 	width: 1000px;
 	height: 50px;
 	display: flex;
 	flex-wrap: wrap;
 }
-
 .status-Select-menu .Select-menu .Select-item {
 	right: 20px;
 	margin-top: 10px;
@@ -559,7 +557,6 @@
 .status-Select-menu .Select-menu .Select-item:nth-child(2){flex-grow: 3;}
 .status-Select-menu .Select-menu .Select-item:nth-child(3){flex-grow: 1;}
 .status-Select-menu .Select-menu .Select-item:nth-child(4){flex-grow: 3;}
-
 
 .status-Select-menu .Select-menu .Select-item  input[type="text"]  {
 	padding: 10px;
@@ -589,7 +586,6 @@
 	font-size: 20px;
 	
 }
-
 .status-Select-menu .Select-menu .Select-item .status-name-date {
 	padding: 10px;
 	width: 200px;
@@ -603,7 +599,7 @@
 	position: absolute;
 	right :30px;
 }
-
+/* 검색내용 */
 .status-Select {
 	position: absolute;
 	top: 210px;
@@ -611,7 +607,6 @@
 	width: 1000px;
 	height: auto;
 }
-
 .status-Select .status-Select-view{
 	width: 1000px;
 	text-align: center;
@@ -638,7 +633,6 @@
 	font-weight: 400;
 	font-size: 16px;
 }
-
 .status-Select .status-Select-view table,
 .status-Select .status-Select-view td{
 	border: 1px solid black;
