@@ -132,6 +132,8 @@ function materialDelete(deleteMaterialNum) {
 }
 function materialInsert(insertMaterialNum) {
 	var str1 = prompt("필요 자재수량을 입력해주세요","");
+	if (str1 == null) return false; 
+
 	var quantity = Number(str1);
 	location.href = "./insertOneBomMaterial.jsp?bomNum="+<%=searchText%>+"&quantity="+ quantity +"&insertMaterialNum="+ insertMaterialNum;
 }
