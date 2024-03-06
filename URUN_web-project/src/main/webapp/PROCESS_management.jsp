@@ -181,13 +181,13 @@ if(search_ITEM_ID == null){
 									<input class="detail-box-date" type="date" name="PROCESS_END_DATE" id="PROCESS_END_DATE" autocomplete="off" value="<%=PROCESS_END_DATE %>"></div>
 								</div>
 								<div class="status-Select-btn">
-									<div class="btn"><input id="btn-insert" type="submit" value="수정" class="btn btn-light" onClick="javascript: prevCheckTextBox(<%=PROCESS_ID %>);"></div>
-									<div class="btn"><input id="btn-insert" type="button" value="당일작업등록" class="btn btn-light" onClick="javascript: btnClick(<%=PROCESS_ID %>)"></div>
+									<div class="btn"><input id="btn-insert" type="submit" value="수정" class="btn btn-light" onClick="javascript: prevCheckTextBox(<%=PROCESS_ID %>);" /></div>
+									<div class="btn"><input id="btn-insert" type="button" value="당일작업등록" class="btn btn-light" onClick="javascript: btnClick(<%=PROCESS_ID %>)" /></div>
 								</div>
 							</div>
 						</form>
 					</div>
-					<%-- <div class="work-insert-box" id="work_Insert_box">
+					<!-- <div class="work-insert-box" id="work_Insert_box">
 						<form action="">
 							<div class="work-insert-case">
 								<div class="work-insert-detail">
@@ -211,7 +211,7 @@ if(search_ITEM_ID == null){
 								</div>
 							</div>
 						</form>
-					</div> --%>
+					</div> -->
 				</div>
 				
 <% 		 		
@@ -240,6 +240,7 @@ if(search_ITEM_ID == null){
 			return false;
 		}
 	}
+	
 	function workprevCheckTextBox(num) {
 		if (confirm('등록하시겠습니까?')) {
 			const idNameForm = 'form-work-insert' + num;
@@ -248,18 +249,21 @@ if(search_ITEM_ID == null){
 			return false;
 		}
 	}
-	function btnClick(num) {
-		  const workInsertBox = document.getElementById('work_Insert_box');
-		  
-		  
-		  /* const workInsertBox = 'work_Insert_box' + num;
-		  document.getElementById('workInsertBox'); */
-		  /* if(workInsertBox.style.display === 'block') {
-			  workInsertBox.style.display = 'none';
-		  }else {
-			  workInsertBox.style.display = 'block';
-		  } */
-		}
+	
+	function btnClick(num) 		
+		const WORK_Plan_Quantity = prompt("당일계획수량을 입력해주세요","");
+		if (WORK_Plan_Quantity == null) return false; 
+		const WORK_ITEM_Quantity = prompt("당일생산수량을 입력해주세요","");
+		if (WORK_ITEM_Quantity == null) return false; 
+		const WORK_Defective_Quantity = prompt("당일불량수량을 입력해주세요","");
+		if (WORK_Defective_Quantity == null) return false; 
+		const WORK_Defective_Reason = prompt("불량사유를 입력해주세요",""); 
+		if (WORK_Defective_Reason == null) return false; 
+		
+		location.href = "./insertWorkProcess.jsp?PROCESS_ID="+ num +"&WORK_Plan_Quantity="+ WORK_Plan_Quantity 
+				+"&WORK_ITEM_Quantity="+ WORK_ITEM_Quantity +"&WORK_Defective_Quantity="+ WORK_Defective_Quantity
+				+"&WORK_Defective_Reason="+WORK_Defective_Reason;
+	}
 </script>
 </body>
 </html>
