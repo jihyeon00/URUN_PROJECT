@@ -201,7 +201,7 @@ a {
 /* 제품/재고 조회 테이블 담은 div */
 
 .selectTable{
-	margin-top:40px;
+	margin-top:20px;
 	margin-bottom:40px;
 	font-family: Inter; 
   font-weight: 400;
@@ -213,7 +213,7 @@ a {
 	height: auto;
 }
 .noticeList{
-	margin-top:40px;
+	margin-top:20px;
 	margin-bottom:40px;
 	font-family: Inter; 
   font-weight: 400;

@@ -62,19 +62,34 @@
 		<div class="selectTable">
 			<table>
 					<colgroup>
-						<col style="width: 10%" />
-						<col style="width: 40%" />
-						<col style="width: 20%" />
+						<col style="width: 11%" />
+						<col style="width: 15%" />
+						<col style="width: 11%" />
+						<col style="width: 13%" />
+						<col style="width: 14%" />
+						<col style="width: 14%" />
+						<col style="width: 11%" />
+						<col style="width: 11%" />
 					</colgroup>
 					<thead>
 						<tr>
-							<th>번호</th>
-							<th>제목</th>
-							<th>날짜</th>
+							<th>제품ID</th>
+							<th>제품명</th>
+							<th>수주량</th>
+							<th>총계획수량</th>
+							<th>당일계획수량</th>
+							<th>당일생산수량</th>
+							<th>불량수량</th>
+							<th>불량율</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
+							<td>11111111</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
