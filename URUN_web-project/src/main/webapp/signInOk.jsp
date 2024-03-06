@@ -29,11 +29,9 @@
 		session.setAttribute("employeeName", employeeName);
 		
 		response.sendRedirect("./main.jsp");
- 	} 
+	} else {
+		out.println("<script>alert('로그인에 실패하였습니다.'); location.href='./signIn.jsp';</script>");
+	}
 %>
-<script type="text/javascript">
-alert("로그인에 실패하였습니다.");
-location.href='./signIn.jsp';
-</script>
 </body>
 </html>
