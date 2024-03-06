@@ -515,12 +515,13 @@
 	font-weight: 400;
 	font-size: 20px;
 }
+
 /* 생산불량 현황 */
 .container.container-status {
 	position: absolute;
 	top: 230px;
 	left: 170px;
-	width: 1800px;
+	width: 1200px;
 	min-width: 1200px;
 	height: auto;
 }
@@ -529,36 +530,40 @@
 	position: absolute;
 	left: 60px;
 	border: 1px solid #333333;
-	width: 1250px;
+	width: 1000px;
 	height: 190px;
 	background-color: #ECECEC;
 	border-radius: 10px;
 }
 
 .status-Select-menu .Select-menu {
-	/* width: 1200px; */
+	width: 1000px;
 	height: 50px;
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .status-Select-menu .Select-menu .Select-item {
+	right: 20px;
 	margin-top: 10px;
-	width: 570px;
+	width: 350px;
 	display: flex;
 	flex-grow: 1;
-	height:50px;
+	height: 50px;
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
-	font-family: Inter;
-	font-weight: 400;
-	font-size: 20px;
 	position: relative;
 }
+.status-Select-menu .Select-menu .Select-item:nth-child(1){flex-grow: 1;}
+.status-Select-menu .Select-menu .Select-item:nth-child(2){flex-grow: 3;}
+.status-Select-menu .Select-menu .Select-item:nth-child(3){flex-grow: 1;}
+.status-Select-menu .Select-menu .Select-item:nth-child(4){flex-grow: 3;}
+
+
 .status-Select-menu .Select-menu .Select-item  input[type="text"]  {
 	padding: 10px;
-	width: 220px;
+	width: 200px;
 	border: 1px solid #999;
 	border-radius: 5px;
 	font-family: Inter;
@@ -566,11 +571,28 @@
 	font-size: 20px;
 }
 .status-Select-menu .Select-menu .Select-item .status-name{
-	width: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 130px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
 } 
+.status-Select-menu .Select-menu .Select-item .status-Date-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+	
+}
+
 .status-Select-menu .Select-menu .Select-item .status-name-date {
 	padding: 10px;
-	width: 220px;
+	width: 200px;
 	border: 1px solid #999;
 	border-radius: 5px;
 	font-family: Inter;
@@ -586,13 +608,12 @@
 	position: absolute;
 	top: 210px;
 	left: 60px;
-	width: 1250px;
+	width: 1000px;
 	height: auto;
 }
 
-
 .status-Select .status-Select-view{
-	width: 1250px;
+	width: 1000px;
 	text-align: center;
 }
 .status-Select .status-Select-view table,

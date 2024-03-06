@@ -49,7 +49,7 @@ if(search_ITEM_ID == null){
 							<div><input type="text" placeholder="제품명을 입력하세요" value="<%= search_ITEM_NAME %>" name="search_ITEM_NAME" id="search_ITEM_NAME" autocomplete="off" ></div>
 						</div>
 						<div class="Select-item">
-							<div class="status-name">생산시작날짜</div>
+							<div class="status-Date-name">생산시작날짜</div>
 							<div><input class="status-name-date" type="date"name="search_START_DATE1" id="search_START_DATE1" autocomplete="off" ></div>
 							<div> ~ </div>
 							<div><input class="status-name-date" type="date"name="search_START_DATE2" id="search_START_DATE2" autocomplete="off" ></div>
@@ -59,7 +59,7 @@ if(search_ITEM_ID == null){
 							<div><input type="text" placeholder="제품코드를 입력하세요" value="<%= search_ITEM_ID %>" name="search_ITEM_ID" id="search_ITEM_ID" autocomplete="off" ></div>
 						</div>
 						<div class="Select-item">
-							<div class="status-name">생산종료날짜</div>
+							<div class="status-Date-name">생산종료날짜</div>
 							<div><input class="status-name-date" type="date"name="search_END_DATE1" id="search_END_DATE1" autocomplete="off" ></div>
 							<div> ~ </div>
 							<div><input class="status-name-date" type="date"name="search_END_DATE2" id="search_END_DATE2" autocomplete="off" ></div>
