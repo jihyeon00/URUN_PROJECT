@@ -11,7 +11,22 @@ public class NoticeDTO {
 	private String EMPLOYEE_ID;
 	private String EMPLOYEE_NAME;
 	
+	private int MinNoticeId;
+	private int MaxNoticeId;
 	
+	
+	public int getMinNoticeId() {
+		return MinNoticeId;
+	}
+	public void setMinNoticeId(int minNoticeId) {
+		MinNoticeId = minNoticeId;
+	}
+	public int getMaxNoticeId() {
+		return MaxNoticeId;
+	}
+	public void setMaxNoticeId(int maxNoticeId) {
+		MaxNoticeId = maxNoticeId;
+	}
 	public String getNOTICE_ID() {
 		return NOTICE_ID;
 	}

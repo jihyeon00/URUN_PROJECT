@@ -23,7 +23,7 @@ public class DBManager {
 			String PASSWORD = "123454";
 
 			conn = DriverManager.getConnection(JDBC_URL , USER, PASSWORD);
-			System.out.println("연결되었습니다.");
+			// System.out.println("연결되었습니다.");
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

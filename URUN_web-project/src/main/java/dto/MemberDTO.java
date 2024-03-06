@@ -7,8 +7,16 @@ public class MemberDTO {
 	
 	private String EMPLOYEE_ID;
 	private String EMPLOYEE_NAME;
+	private String EMPLOYEE_DIVISON;
 	
 	
+	
+	public String getEMPLOYEE_DIVISON() {
+		return EMPLOYEE_DIVISON;
+	}
+	public void setEMPLOYEE_DIVISON(String eMPLOYEE_DIVISON) {
+		EMPLOYEE_DIVISON = eMPLOYEE_DIVISON;
+	}
 	public String getMEMBER_ID() {
 		return MEMBER_ID;
 	}

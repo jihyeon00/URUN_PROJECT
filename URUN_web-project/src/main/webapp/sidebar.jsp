@@ -21,7 +21,7 @@
 			<div class="left_sub_menu">
 				<div class="sub_menu">
 					<ul class="big_menu">
-						<li><a href="./NoticeList.jsp">공지사항</a></li>
+						<li><a href="./NoticeList.jsp" style="color:#333">공지사항</a></li>
 					</ul>
 					<ul class="big_menu">
 						<li>재고<i class="arrow fas fa-angle-right"></i></li>

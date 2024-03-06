@@ -17,10 +17,6 @@
 	int MEMBER_ID = 0;
  
 	String MEMBER_PW = "";
-	
-
-	
-
 
 	String JDBC_URL = "jdbc:oracle:thin:@1.220.247.78:1522/ORCL";
 	String USER = "semi_project4";

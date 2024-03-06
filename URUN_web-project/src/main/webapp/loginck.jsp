@@ -20,7 +20,7 @@
         try {
         	
         	  MEMBER_ID = Integer.parseInt(request.getParameter("MEMBERID"));
-      	  MEMBER_PW = request.getParameter("MEMBERPW");
+      	   	  MEMBER_PW = request.getParameter("MEMBERPW");
       	  
               Class.forName("oracle.jdbc.driver.OracleDriver");
               Connection conn = DriverManager.getConnection(jdbcUrl, dbUser, dbPassword);

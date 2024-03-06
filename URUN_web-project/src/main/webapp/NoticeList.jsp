@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="util.DBManager"%>
-<%@page import="dto.NoticeDTO"%>
-<%@page import="dao.NoticeDAO"%>
+<%@page import="dto.*"%>
+<%@page import="dao.*"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +19,26 @@
 
 	String num = request.getParameter("num");
 	NoticeDAO nDAO = new NoticeDAO();
-	List<NoticeDTO> listNotice = nDAO.selectNoticeAll();
+	MemberDAO mDAO = new MemberDAO();
+	
+	int totalCnt = nDAO.getTotalNotice();
+	int pageSize = 10 ;
+	
+	String pageNum = request.getParameter("pageNum");
+	if(pageNum == null){
+		pageNum = "1";
+	}
+	int currentPage = Integer.parseInt(pageNum);
+	int startRow = (currentPage - 1) * pageSize + 1;
+	int pageCnt = currentPage * pageSize;
+	
+	List<NoticeDTO> listNotice = nDAO.selectNoticeAll(startRow, pageCnt);
+
+	
+	String MEMBER_ID = request.getParameter("MEMBER_ID");
+	
+	List<MemberDTO> selectMember = mDAO.selectMemberInfo(MEMBER_ID);
+	
 %>
 
 <!-- 메인화면 -->
@@ -33,7 +51,7 @@
 			<table>
 				<colgroup>
 					<col style="width: 10%" />
-					<col style="width: 75%" />
+					<col style="width: 60%" />
 					<col style="width: 15%" />
 				</colgroup>
 				<thead>
@@ -53,13 +71,43 @@
 					<%} %>
 				</tbody>			
 			</table>
-			<input type="button" value="등록" onclick="javascript: insertNotice()"/>
+			<div class="paging">
+				<%if(totalCnt !=0){ 
+					int pageCount = totalCnt / pageSize + ( totalCnt % pageSize == 0 ? 0 : 1);
+					
+					int pageBlock = 10;
+					int startPage=((currentPage-1)/pageBlock)*pageBlock+1;
+					
+					int endPage = startPage + pageBlock -1;
+					if(endPage>pageCount){
+						endPage=pageCount;
+					}
+					%>
+						<nav aria-label="Page navigation example" id="pagingNav">
+						  <ul class="pagination">
+					<% if(startPage>pageBlock){ %>
+						    <li class="page-item">
+						      <a class="page-link" href="./NoticeList.jsp?pageNum=<%=startPage-pageBlock%>" aria-label="Previous">
+						        <span aria-hidden="true">&laquo;</span>
+						      </a>
+							<%}
+								 for(int i=startPage;i<=endPage;i++){ %>
+									<li class="page-item"><a class="page-link" href="<%=request.getRequestURL()%>?pageNum=<%=i%>"><%=i %></a></li>
+								<%} %>
+				    
+					<% if(endPage<pageCount){ %>
+					    <li class="page-item">
+					      <a class="page-link" href="./NoticeList.jsp?pageNum=<%=startPage+pageBlock%>" aria-label="Next">
+					        <span aria-hidden="true">&raquo;</span>
+					      </a>
+					    </li>
+							<%} %>
+					<%}%>
+						</ul>
+					</nav>
+			</div>
+			<input type="button" value="등록" onclick="location.href='./NoticeInsertForm.jsp';"/>
 		</div>
 	</div>
-<script>
-	function insertNotice() {
-		
-	}
-</script>
 </body>
 </html>
