@@ -104,7 +104,7 @@ if(search_ITEM_ID == null){
 								+ "to_char(p.PROCESS_START_DATE,'yyyy-mm-dd') as PROCESS_START_DATE, "
 								+ "to_char(p.PROCESS_END_DATE,'yyyy-mm-dd') as PROCESS_END_DATE "
 						+ " FROM PROCESS p, WORK w, ITEM i"
-						+ " WHERE p.PROCESS_ID = w.WORK_PROCESS_ID"
+						+ " WHERE p.PROCESS_ID = w.WORK_PROCESS_ID(+)"
 						+ 	" AND p.PROCESS_ITEM_ID = i.ITEM_ID"
 						+ " GROUP BY w.WORK_PROCESS_ID, p.PROCESS_Status, i.ITEM_NAME, p.PROCESS_ITEM_ID, p.PROCESS_ID, "
 						+ 		   " p.PROCESS_Plan_Quantity, p.PROCESS_START_DATE, p.PROCESS_END_DATE"
