@@ -93,7 +93,7 @@ if(search_ITEM_ID == null){
 								+ "to_char(p.PROCESS_START_DATE,'yyyy-mm-dd') as PROCESS_START_DATE, "
 								+ "to_char(p.PROCESS_END_DATE,'yyyy-mm-dd') as PROCESS_END_DATE "
 						+ " FROM PROCESS p, WORK w, ITEM i"
-						+ " WHERE p.PROCESS_ID = w.WORK_PROCESS_ID"
+						+ " WHERE p.PROCESS_ID = w.WORK_PROCESS_ID(+)"
 						+ 	" AND p.PROCESS_ITEM_ID = i.ITEM_ID"
 						+ " GROUP BY w.WORK_PROCESS_ID, p.PROCESS_Status, i.ITEM_NAME, p.PROCESS_ITEM_ID, p.PROCESS_ID,p.PROCESS_LINE , "
 						+ 		   " p.PROCESS_Plan_Quantity, p.PROCESS_START_DATE, p.PROCESS_END_DATE"
@@ -187,7 +187,7 @@ if(search_ITEM_ID == null){
 							</div>
 						</form>
 					</div>
-					<div class="work-insert-box" id="work_Insert_box">
+					<%-- <div class="work-insert-box" id="work_Insert_box">
 						<form action="">
 							<div class="work-insert-case">
 								<div class="work-insert-detail">
@@ -211,7 +211,7 @@ if(search_ITEM_ID == null){
 								</div>
 							</div>
 						</form>
-					</div>
+					</div> --%>
 				</div>
 				
 <% 		 		
@@ -250,13 +250,15 @@ if(search_ITEM_ID == null){
 	}
 	function btnClick(num) {
 		  const workInsertBox = document.getElementById('work_Insert_box');
+		  
+		  
 		  /* const workInsertBox = 'work_Insert_box' + num;
 		  document.getElementById('workInsertBox'); */
-		  if(workInsertBox.style.display === 'block') {
+		  /* if(workInsertBox.style.display === 'block') {
 			  workInsertBox.style.display = 'none';
 		  }else {
 			  workInsertBox.style.display = 'block';
-		  }
+		  } */
 		}
 </script>
 </body>
