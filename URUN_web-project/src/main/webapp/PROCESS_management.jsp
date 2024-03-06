@@ -250,7 +250,7 @@ if(search_ITEM_ID == null){
 		}
 	}
 	
-	function btnClick(num) 		
+	function btnClick(num){
 		const WORK_Plan_Quantity = prompt("당일계획수량을 입력해주세요","");
 		if (WORK_Plan_Quantity == null) return false; 
 		const WORK_ITEM_Quantity = prompt("당일생산수량을 입력해주세요","");
