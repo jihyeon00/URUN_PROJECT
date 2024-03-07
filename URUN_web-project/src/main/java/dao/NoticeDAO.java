@@ -195,8 +195,6 @@ public class NoticeDAO {
 					minId = rs.getInt("minId");
 					noticeDTO.setMinNoticeId(minId);
 					
-					System.out.println(minId);
-					
 					list.add(noticeDTO);
 				}
 				
@@ -209,12 +207,9 @@ public class NoticeDAO {
 				rs = pstmt.executeQuery();
 				
 				if(rs.next()) {
-					System.out.println(rs.getString("notice_title"));
-					
 					noticeDTO.setNOTICE_TITLE(rs.getString("notice_title"));
 					list.add(noticeDTO);
 				}
-				
 			} catch (Exception e) {
 				System.out.println("setMinNoticeId() 오류입니다." + e);
 			} 
@@ -250,7 +245,6 @@ public class NoticeDAO {
 					maxId = rs.getInt("maxId");
 					if(maxId!=0) {
 						noticeDTO.setMaxNoticeId(maxId);
-						System.out.println(maxId);
 					} else {
 						System.out.println("maxId가 0입니다.");
 					}
@@ -267,8 +261,6 @@ public class NoticeDAO {
 				rs = pstmt.executeQuery();
 				
 				if(rs.next()) {
-					System.out.println(rs.getString("notice_title"));
-					
 					noticeDTO.setNOTICE_TITLE(rs.getString("notice_title"));
 					list.add(noticeDTO);
 				}
@@ -280,6 +272,45 @@ public class NoticeDAO {
 			
 			return list;
 			
+		}
+		
+		// 글쓰기
+		public int noticeInsert(String MEMBER_ID, NoticeDTO noticeDTO) {
+			
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			
+			String sql = null;
+			
+			int insert = 0;
+			int intMemberId = Integer.parseInt(MEMBER_ID);
+			
+			try {
+				sql= "INSERT INTO NOTICE (NOTICE_TITLE, NOTICE_CONTENT,NOTICE_MEMBER_ID) VALUES (?,?,?)";
+				
+				conn = DBManager.getConnection();
+				
+				pstmt=conn.prepareStatement(sql);
+				String title= noticeDTO.getNOTICE_TITLE();
+				String content= noticeDTO.getNOTICE_TITLE();
+				
+				if(title!=null&&content!=null) {
+					pstmt.setString(1, noticeDTO.getNOTICE_TITLE());
+					pstmt.setString(2, noticeDTO.getNOTICE_CONTENT());
+					pstmt.setInt(3, intMemberId);
+					
+					insert = pstmt.executeUpdate();
+				} else {
+					System.out.println("null 값이 존재합니다.");
+				}
+				
+			
+			} catch (Exception e) {
+				System.out.println("noticeInsert() 오류입니다." + e);
+			} 
+			DBManager.IUDClose(conn, pstmt);
+		
+			return insert;
 		}
 
 }
