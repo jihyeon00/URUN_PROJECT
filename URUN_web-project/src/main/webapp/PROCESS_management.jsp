@@ -79,7 +79,7 @@ if(search_ITEM_ID == null){
 					String sql = null;
 					
 					try {
-					 	sql = "SELECT p.PROCESS_Status, i.ITEM_NAME, p.PROCESS_ID, p.PROCESS_ITEM_ID, p.PROCESS_Plan_Quantity, p.PROCESS_LINE ,"
+				 	sql = "SELECT p.PROCESS_Status, i.ITEM_NAME, p.PROCESS_ID, p.PROCESS_ITEM_ID, p.PROCESS_Plan_Quantity, p.PROCESS_LINE ,"
 								/* PROCESS_ID 의 (총 생산수, 총 불량수, 불량률) */
 								+ "SUM(w.WORK_Item_Quantity) as WORK_Item_Quantity, SUM(w.WORK_Defective_Quantity) as WORK_Defective_Quantity,"
 								+ "round(NVL(SUM(w.WORK_Defective_Quantity)/DECODE(SUM(w.WORK_Item_Quantity), 0, null, SUM(w.WORK_Item_Quantity)), 0),3) AS PROCESS_defect_rate, "
@@ -90,7 +90,6 @@ if(search_ITEM_ID == null){
 						+ " GROUP BY w.WORK_PROCESS_ID, p.PROCESS_Status, i.ITEM_NAME, p.PROCESS_ITEM_ID, p.PROCESS_ID,p.PROCESS_LINE , "
 						+ 		   " p.PROCESS_Plan_Quantity, p.PROCESS_START_DATE, p.PROCESS_END_DATE"
 					 	+ " HAVING 1=1";
-					 	
 					 	// 제품 이름 검색
 						if(search_ITEM_NAME != null && search_ITEM_NAME != "") {
 							sql += " AND ITEM_NAME LIKE '%" + search_ITEM_NAME + "%'"; }
@@ -98,12 +97,15 @@ if(search_ITEM_ID == null){
 						if(search_ITEM_ID != null && search_ITEM_ID != "") {
 							sql += " AND PROCESS_ITEM_ID LIKE '%" + search_ITEM_ID + "%'"; }
 					 	// 생산시작날짜 검색 to_date(?,'YYYY-MM-DD')
-						if(search_START_DATE1 != null && search_START_DATE1 != "" && search_START_DATE2 != null && search_START_DATE2 != "") {
-							sql += " AND PROCESS_START_DATE BETWEEN TO_DATE('"+search_START_DATE1+"','yyyy-mm-dd') AND TO_DATE('"+search_START_DATE2+"','yyyy-mm-dd')"; }
+						if(search_START_DATE1 != null && search_START_DATE1 != "" 
+							&& search_START_DATE2 != null && search_START_DATE2 != "") {
+							sql += " AND PROCESS_START_DATE BETWEEN TO_DATE('"+search_START_DATE1+
+									"','yyyy-mm-dd') AND TO_DATE('"+search_START_DATE2+"','yyyy-mm-dd')"; }
 					 	// 생산종료날짜 검색
-						if(search_END_DATE1 != null && search_END_DATE1 != "" && search_END_DATE1 != null && search_END_DATE1 != "") {
-							sql += " AND PROCESS_END_DATE BETWEEN to_date('"+search_END_DATE1+"','yyyy-mm-dd') AND to_date('"+search_END_DATE2+"','yyyy-mm-dd')"; }
-					 	
+						if(search_END_DATE1 != null && search_END_DATE1 != "" 
+							&& search_END_DATE2 != null && search_END_DATE2 != "") {
+							sql += " AND PROCESS_END_DATE BETWEEN to_date('"+search_END_DATE1+
+									"','yyyy-mm-dd') AND to_date('"+search_END_DATE2+"','yyyy-mm-dd')"; }
 						sql += " ORDER BY p.PROCESS_ID DESC";
 					 	
 					 	conn = DBManager.getConnection();

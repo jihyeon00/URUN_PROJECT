@@ -112,21 +112,16 @@ if(search_ITEM_ID == null){
 					 	
 					 	// 제품 이름 검색
 						if(search_ITEM_NAME != null && search_ITEM_NAME != "") {
-							sql += " AND ITEM_NAME LIKE '%" + search_ITEM_NAME + "%'";
-						}
+							sql += " AND ITEM_NAME LIKE '%" + search_ITEM_NAME + "%'";}
 					 	// 제품 코드 검색
 						if(search_ITEM_ID != null && search_ITEM_ID != "") {
-							sql += " AND PROCESS_ITEM_ID LIKE '%" + search_ITEM_ID + "%'";
-						}
+							sql += " AND PROCESS_ITEM_ID LIKE '%" + search_ITEM_ID + "%'";}
 					 	// 생산시작날짜 검색 to_date(?,'YYYY-MM-DD')
 						if(search_START_DATE1 != null && search_START_DATE1 != "" && search_START_DATE2 != null && search_START_DATE2 != "") {
-							sql += " AND PROCESS_START_DATE BETWEEN TO_DATE('"+search_START_DATE1+"','yyyy-mm-dd') AND TO_DATE('"+search_START_DATE2+"','yyyy-mm-dd')";
-						}
+							sql += " AND PROCESS_START_DATE BETWEEN TO_DATE('"+search_START_DATE1+"','yyyy-mm-dd') AND TO_DATE('"+search_START_DATE2+"','yyyy-mm-dd')";}
 					 	// 생산종료날짜 검색
-						if(search_END_DATE1 != null && search_END_DATE1 != "" && search_END_DATE1 != null && search_END_DATE1 != "") {
-							sql += " AND PROCESS_END_DATE BETWEEN to_date('"+search_END_DATE1+"','yyyy-mm-dd') AND to_date('"+search_END_DATE2+"','yyyy-mm-dd')";
-						}
-						
+						if(search_END_DATE1 != null && search_END_DATE1 != "" && search_END_DATE2 != null && search_END_DATE2 != "") {
+							sql += " AND PROCESS_END_DATE BETWEEN to_date('"+search_END_DATE1+"','yyyy-mm-dd') AND to_date('"+search_END_DATE2+"','yyyy-mm-dd')";}
 						sql += " ORDER BY p.PROCESS_ID DESC";
 					 	
 					 	conn = DBManager.getConnection();
