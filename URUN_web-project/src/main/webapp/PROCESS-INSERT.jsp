@@ -41,7 +41,7 @@ try {
 
 %>	
 <script>
-	location.href = './main.jsp';
+	location.href = './PROCESS_management.jsp';
 </script>
 
 </body>
