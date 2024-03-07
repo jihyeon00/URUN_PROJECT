@@ -83,20 +83,13 @@ if (IBWhere == null) {
 					try {
 						conn = DBManager.getConnection();
 						stmt = conn.createStatement();
-					 	rs = stmt.executeQuery("SELECT i.IB_Status,"
-								+ "i.IB_ID,"
-								+ "c.Company_Name,"
-								+ "m.MATERIAL_NAME,"
+					 	rs = stmt.executeQuery(
+					 			"SELECT i.IB_Status, i.IB_ID, c.Company_Name, m.MATERIAL_NAME,"
 								+ "to_char(i.IB_Expected_Date,'yyyy-mm-dd') as IB_Expected_Date,"
-								+ "i.IB_Complete_Date,"
-								+ "i.IB_Quantity,"
-								+ "i.IB_Test_Quantity,"
-								+ "i.IB_Defective_Quantity,"
+								+ "i.IB_Complete_Date, i.IB_Quantity, i.IB_Test_Quantity, i.IB_Defective_Quantity,"
 								+ "round(NVL(i.IB_Defective_Quantity / DECODE(i.IB_Test_Quantity, 0, null, i.IB_Test_Quantity), 0),3) AS IB_defect_rate"
 								+ " FROM IB i, MATERIAL m, COMPANY c"
-								+ " WHERE i.IB_Company_ID = c.Company_ID"
-								+ " AND i.IB_MATERIAL_ID = m.MATERIAL_ID"
-								+ " AND i.IB_Status Like '%" + IBWhere + "%'"
+								+ " WHERE i.IB_Company_ID = c.Company_ID AND i.IB_MATERIAL_ID = m.MATERIAL_ID AND i.IB_Status Like '%" + IBWhere + "%'"
 								+ " ORDER BY IB_ID DESC");
 					 while(rs.next()) {
 						 String IB_Status = rs.getString("IB_Status");

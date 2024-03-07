@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="util.DBManager"%>
-<%@page import="dto.*"%>
-<%@page import="dao.*"%>
 <!DOCTYPE html>
 <html>
 <head>

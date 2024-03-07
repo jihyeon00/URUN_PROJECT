@@ -9,6 +9,22 @@ public class MemberDTO {
 	private String EMPLOYEE_NAME;
 	private String EMPLOYEE_DIVISON;
 	
+	private int empCount;
+	private int memCount;
+	
+	public int getEmpCount() {
+		return empCount;
+	}
+	public void setEmpCount(int empCount) {
+		this.empCount = empCount;
+	}
+	public int getMemCount() {
+		return memCount;
+	}
+	public void setMemCount(int memCount) {
+		this.memCount = memCount;
+	}
+	
 	
 	
 	public String getEMPLOYEE_DIVISON() {
