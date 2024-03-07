@@ -50,9 +50,9 @@ if(search_ITEM_ID == null){
 						</div>
 						<div class="Select-item">
 							<div class="status-Date-name">생산시작날짜</div>
-							<div><input class="status-name-date" type="date"name="search_START_DATE1" id="search_START_DATE1" autocomplete="off" ></div>
+							<div><input class="status-name-date" type="date"name="search_START_DATE1" id="search_START_DATE1" autocomplete="off" value="<%= search_START_DATE1 %>"></div>
 							<div> ~ </div>
-							<div><input class="status-name-date" type="date"name="search_START_DATE2" id="search_START_DATE2" autocomplete="off" ></div>
+							<div><input class="status-name-date" type="date"name="search_START_DATE2" id="search_START_DATE2" autocomplete="off" value="<%= search_START_DATE2 %>"></div>
 						</div>
 						<div class="Select-item">
 							<div class="status-name">제품코드</div>
@@ -60,9 +60,9 @@ if(search_ITEM_ID == null){
 						</div>
 						<div class="Select-item">
 							<div class="status-Date-name">생산종료날짜</div>
-							<div><input class="status-name-date" type="date"name="search_END_DATE1" id="search_END_DATE1" autocomplete="off" ></div>
+							<div><input class="status-name-date" type="date"name="search_END_DATE1" id="search_END_DATE1" autocomplete="off" value="<%= search_END_DATE1 %>"></div>
 							<div> ~ </div>
-							<div><input class="status-name-date" type="date"name="search_END_DATE2" id="search_END_DATE2" autocomplete="off" ></div>
+							<div><input class="status-name-date" type="date"name="search_END_DATE2" id="search_END_DATE2" autocomplete="off" value="<%= search_END_DATE2 %>"></div>
 						</div>
 						<div class="Select-item">
 							<div class="Select-item-btn"><input id="btn-insert" type="submit" value="검색" class="btn btn-light" onClick="javascript: search();" style="width: 100px; height: 40px; border: 1px solid #999; font-size: 20px;"></div>
