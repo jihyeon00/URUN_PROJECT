@@ -23,7 +23,7 @@
 	    </div>
 		<div class="container container-PROCESS">
 			<div class="inner inner-PROCESS">
-				<form action="./PROCESS-INSERT.jsp" method="post" id="form-PROCESS-INSERT">
+				<form action="./PROCESS-INSERT.jsp" method="post" id="form-PROCESS-INSERT" onSubmit="return false">
 					<div class="write">
 						<div class="PROCESS-Insert">
 							<div class="PROCESS-name">제품코드</div>
@@ -52,7 +52,7 @@
 	<script>
     	function PROCESSInsert() {
     		if (confirm('등록하시겠습니까?')) {
-    			return
+    			document.getElementById('form-PROCESS-INSERT').submit();
     		} else {
     			 return false;
     		}

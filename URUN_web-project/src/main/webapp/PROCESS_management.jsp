@@ -50,9 +50,9 @@ if(search_ITEM_ID == null){
 						</div>
 						<div class="Select-item">
 							<div class="status-name">생산시작날짜</div>
-							<div><input class="status-name-date" type="date"name="search_START_DATE1" id="search_START_DATE1" autocomplete="off" ></div>
+							<div><input class="status-name-date" type="date"name="search_START_DATE1" id="search_START_DATE1" autocomplete="off" value="<%= search_START_DATE1 %>"></div>
 							<div> ~ </div>
-							<div><input class="status-name-date" type="date"name="search_START_DATE2" id="search_START_DATE2" autocomplete="off" ></div>
+							<div><input class="status-name-date" type="date"name="search_START_DATE2" id="search_START_DATE2" autocomplete="off" value="<%= search_START_DATE2 %>"></div>
 						</div>
 						<div class="Select-item">
 							<div class="status-name">제품코드</div>
@@ -60,9 +60,9 @@ if(search_ITEM_ID == null){
 						</div>
 						<div class="Select-item">
 							<div class="status-name">생산종료날짜</div>
-							<div><input class="status-name-date" type="date"name="search_END_DATE1" id="search_END_DATE1" autocomplete="off" ></div>
+							<div><input class="status-name-date" type="date"name="search_END_DATE1" id="search_END_DATE1" autocomplete="off" value="<%= search_END_DATE1 %>"></div>
 							<div> ~ </div>
-							<div><input class="status-name-date" type="date"name="search_END_DATE2" id="search_END_DATE2" autocomplete="off" ></div>
+							<div><input class="status-name-date" type="date"name="search_END_DATE2" id="search_END_DATE2" autocomplete="off" value="<%= search_END_DATE2 %>"></div>
 						</div>
 						<div class="Select-item">
 							<div class="Select-item-btn"><input id="btn-insert" type="submit" value="검색" class="btn btn-light" onClick="javascript: search();" style="width: 100px; height: 40px; border: 1px solid #999; font-size: 20px;"></div>
@@ -115,7 +115,7 @@ if(search_ITEM_ID == null){
 						if(search_END_DATE1 != null && search_END_DATE1 != "" && search_END_DATE1 != null && search_END_DATE1 != "") {
 							sql += " AND PROCESS_END_DATE BETWEEN to_date('"+search_END_DATE1+"','yyyy-mm-dd') AND to_date('"+search_END_DATE2+"','yyyy-mm-dd')";
 						}
-						
+					 	
 						sql += " ORDER BY p.PROCESS_ID DESC";
 					 	
 					 	conn = DBManager.getConnection();
@@ -177,7 +177,7 @@ if(search_ITEM_ID == null){
 									<div class="status-Select-detail">생산시작날짜</div>
 									<div class="status-Select-detail"><%=PROCESS_START_DATE %></div>
 									<div class="status-Select-detail">생산종료날짜</div>
-									<div class="status-Select-detail"><%-- <%=PROCESS_END_DATE %> --%>
+									<div class="status-Select-detail">
 									<input class="detail-box-date" type="date" name="PROCESS_END_DATE" id="PROCESS_END_DATE" autocomplete="off" value="<%=PROCESS_END_DATE %>"></div>
 								</div>
 								<div class="status-Select-btn">
