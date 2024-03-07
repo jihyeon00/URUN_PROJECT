@@ -371,7 +371,8 @@ a {
 .noticeContent{
 	margin-left: 50px;
 	margin-right: 50px;
-	height:300px; 
+	margin-bottom: 50px;
+	height:auto; 
 	font-size: 17px;
 	white-space : pre-line;
 }
@@ -402,7 +403,7 @@ a {
 }
 
 .downNoticeName{
-	padding: 15px 0 15px 20px;
+		padding: 15px 0 15px 20px;
     font-size: 14px;
     color: #222222;
     background: #f4f4f2;
@@ -411,7 +412,87 @@ a {
 }
 
 .downNoticeTitle{
-	padding: 15px 0 15px 20px;
+		padding: 15px 0 15px 20px;
     font-size: 14px;
     color: #666666;
 }
+
+.NoticeInsert{
+	margin-left: 40px;
+}
+.NoticeInsert:nth-child(1){
+  padding-top: 30px;
+}
+.NoticeInsert:nth-child(3){
+}
+
+.form-group col-12{
+	font-size: 17px;
+	min-width: 700px;
+	max-width: 800px;
+}
+
+.NoticeName{
+    font-size: 20px;
+		margin-top: 5px;
+		float: left;
+    font-weight: 600;
+}
+
+.textLengthWrapContent{
+    margin-bottom: 5px;
+    float:right;
+    width: 700px;
+    margin-left: -40px;
+    font-size: 14px;
+}
+
+.titleCount, .contentCount{
+    float:left;
+    padding-left: 480px;
+}
+.titleTotal, .contentTotal{
+    left:10px;
+}
+
+#NoticeTitle{
+    width: 700px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+    padding: 5px 15px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+#NoticeContent{
+    width: 700px;
+    height: 400px;
+    margin-top: 10px;
+		margin-bottom: 10px;
+    resize: none;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    font-size: 17px;
+}
+
+#btnNoticeInsert{
+		width: 70px;
+    padding: 3px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.GoNoticeList{
+	width: 70px;
+	margin-top:10px;
+    padding: 3px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 15px;
+    float: right;
+}
+    

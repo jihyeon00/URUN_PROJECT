@@ -58,6 +58,7 @@
 						</tbody>
 					</table>
 				</div>
+				<input type="button" class="GoNoticeList" value="목록가기" onclick="location.href='./NoticeList.jsp';"/>
 			</div>
 		</div>
 	</div>

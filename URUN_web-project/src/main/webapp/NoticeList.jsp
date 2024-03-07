@@ -3,9 +3,6 @@
 <%@page import="util.DBManager"%>
 <%@page import="dto.*"%>
 <%@page import="dao.*"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
 <head>
