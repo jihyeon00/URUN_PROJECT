@@ -146,7 +146,7 @@
 		function idCheck(){
 			var signUpMemberId = $('#signUpMemberId').val();
 			window.open('./idCheck.jsp?id='+signUpMemberId, '아이디 조회', 
-	           'width=500, height=700, scrollbars=no, resizable=no')
+	           'width=500, height=500, scrollbars=no, resizable=no')
 			// location.href='./idCheck.jsp?id='+signUpMemberId;
 		}
 		
