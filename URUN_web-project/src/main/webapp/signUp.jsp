@@ -145,9 +145,12 @@
 <script>
 		function idCheck(){
 			var signUpMemberId = $('#signUpMemberId').val();
+			if(signUpMemberId!=null&&signUpMemberId!=""){
 			window.open('./idCheck.jsp?id='+signUpMemberId, '아이디 조회', 
 	           'width=500, height=500, scrollbars=no, resizable=no')
-			// location.href='./idCheck.jsp?id='+signUpMemberId;
+			} else {
+				alert("아이디를 입력해주세요.");
+			}
 		}
 		
 		
