@@ -28,21 +28,25 @@ List<MemberDTO> selectMember = mDAO.selectMemberInfo(MEMBER_ID);
 			<div class="NoticeInsert">
 				<div><input type="hidden" name="MEMBER_ID" id="MEMBER_ID" value="<%=MEMBER_ID%>" readonly="readonly"></div>
 				<div class="form-group col-12" >
-					<div class="NoticeName">제목</div>
-					<div class="textLengthWrapContent">
-						<span class="titleCount">0자</span>
-				    <span class="titleTotal">/30자</span>
-				  </div>
+					<div class="NoticeName">
+					제목
+						<div class="textLengthWrapContent">
+							<span class="titleCount">0자</span>
+					    	<span class="titleTotal">/30자</span>
+					  </div>
+					</div>
 	   			<div><input type="text" name="NoticeTitle" id="NoticeTitle" placeholder="제목을 입력해주세요." maxlength="30" autocomplete="off" required></div>
 				</div>
 			</div>
 			<div class="NoticeInsert">
 				<div class="form-group col-12" >
-					<div class="NoticeName">내용</div>
-				  <div class="textLengthWrapContent">
-				    <div class="contentCount">0자</div>
-				    <div class="contentTotal">/700자</div>
-				  </div>
+					<div class="NoticeName">내용
+					 	<div class="textLengthWrapContent">
+						    <div class="contentCount">0자</div>
+						    <div class="contentTotal">/700자</div>
+					  	</div>
+					</div>
+				 
        			<textarea name="NoticeContent" id="NoticeContent" placeholder="내용을 입력해주세요." maxlength="700" autocomplete="off" required></textarea>
 				</div>	
 	       		<input id="btnNoticeInsert" type="submit" value="등록" class="btn btn-light" >
