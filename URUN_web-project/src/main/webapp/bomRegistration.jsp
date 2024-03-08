@@ -37,10 +37,10 @@
 			<span style="font-weight: 800;">| </span> 
 			<span style="font-weight: 800;">BOM 등록</span>
 		</div>
-			<div class="searchItem" style="margin-bottom: -20px;">
+			<div class="searchItem">
 				<span style="font-size: 18px; margin-right: 10px; font-weight: 500;">제품ID</span>
 				<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value="<%= searchText %>">
-				<a class="search" id="button" href="javascript: searchText();">검색</a>
+				<a class="search" id="button" class="bomSearchBtn" href="javascript: searchText();" style="font-size: 18px; border: 1px solid #999; border-radius: 6px; padding: 7px 15px;">검색</a>
 			</div>
 		<!-- 조회 테이블 -->
 		<div class="selectTable">
@@ -127,7 +127,7 @@ function searchText(){
 }
 function materialDelete(deleteMaterialNum) {
 	if (confirm('정말 삭제하시겠습니까?')) {
-		location.href = "./deleteOneBomMaterial.jsp?bomNum="+<%=searchText%>+"&deleteMaterialNum="+ deleteMaterialNum;
+		location.href = "./deleteOneMaterial.jsp?bomNum="+<%=searchText%>+"&deleteMaterialNum="+ deleteMaterialNum;
 	}
 }
 function materialInsert(insertMaterialNum) {
