@@ -26,7 +26,7 @@
 
 <section class= "sign-form">
 <h2>회원가입</h2>
-<form action="./signck.jsp" method="post" id="signUpForm" name="singck" onSubmit="return false">
+<form action="./signUpCheck.jsp" method="post" id="signUpForm" name="singck" onSubmit="return false">
 	<!-- 사원아이디 -->
 	<div class="signUp">
 		<div class="sign-area">

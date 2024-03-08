@@ -39,8 +39,8 @@
 function idCheck(){
 	if(<%=empCount%>==1){
 		if(<%=memCount%>==0){
-			$("#id-area").append('<input type="button" id="checkIdBtn" class="close" onclick="window.close()" value="확인" style="text-align: center;">')
-			$("#id-area").append('<div id="idCheckO" style="color:green; font-size:15px; padding-top:5px;"><%= signUpMemberId%>는 회원가입 가능한 사원번호입니다.</div>')
+			$("#id-area").append('<input type="button" id="checkIdBtn" class="close" onclick="window.close()" value="확인" style="text-align: center;">');
+			$("#id-area").append('<div id="idCheckO" style="color:green; font-size:15px; padding-top:5px;"><%= signUpMemberId%>는 회원가입 가능한 사원번호입니다.</div>');
   			$('#signUpMemberId').focus();
   			setTimeout(function() {
   				$('#idCheckO').remove();
@@ -49,18 +49,26 @@ function idCheck(){
   				$('.close').remove();
   			},8000);
 		} else {
-			$("#id-area").append('<div id="idCheckO" style="color:red; font-size:15px; padding-top:5px; "><%= signUpMemberId%>는 이미 존재하는 사원번호입니다.</div>')
+			$("#id-area").append('<input type="button" id="checkIdBtn" class="close" onclick="window.close()" value="확인" style="text-align: center;">');
+			$("#id-area").append('<div id="idCheckO" style="color:red; font-size:15px; padding-top:5px; "><%= signUpMemberId%>는 이미 존재하는 사원번호입니다.</div>');
   			$('#signUpMemberId').focus();
   			setTimeout(function() {
   				$('#idCheckO').remove();
   			},1500);
+  			setTimeout(function() {
+  				$('.close').remove();
+  			},8000);
 		}
 	} else {
-		$("#id-area").append('<div id="idCheckO" style="color:red; font-size:15px; padding-top:5px;"><%= signUpMemberId%>는 회원가입 불가능한 사원번호입니다.</div>')
+		$("#id-area").append('<input type="button" id="checkIdBtn" class="close" onclick="window.close()" value="확인" style="text-align: center;">');
+		$("#id-area").append('<div id="idCheckO" style="color:red; font-size:15px; padding-top:5px;"><%= signUpMemberId%>는 회원가입 불가능한 사원번호입니다.</div>');
 		$('#signUpMemberId').focus();
 		setTimeout(function() {
 			$('#idCheckO').remove();
 		},1500);
+		setTimeout(function() {
+			$('.close').remove();
+		},8000);
 	}
 	
 }

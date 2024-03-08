@@ -62,9 +62,11 @@
 <%
 	} else {
 %>
-<!-- 실패 케이스 html/css/js -->
-회원가입이 실패하였습니다. 시스템 관리자에게 문의하세요.<br>
-오류내용: <%= exception.getMessage() 
+		<script>
+		<!-- 실패 케이스 html/css/js -->
+			alert("회원가입이 불가능합니다.");
+			location.href = '<%= request.getContextPath() %>/signUp.jsp';
+		</script>
 %>
 <%= MEMBER_ID%>
 <%= MEMBER_PW %>
