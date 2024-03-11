@@ -11,10 +11,10 @@
 <head>
 <meta charset="UTF-8">
 <title>header</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/jquery-3.7.1.min.js"></script>
-        <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/main.css">
+    <script src="/resources/js/jquery-3.7.1.min.js"></script>
+        <script src="/resources/js/main.js"></script>
 </head>
 <body>
 <% request.setCharacterEncoding("UTF-8"); %>

@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="./js/jquery-3.7.1.min.js"></script>
+<script src="/resources/js/jquery-3.7.1.min.js"></script>
 <title>URUN</title>
 </head>
 <body>

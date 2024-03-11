@@ -9,15 +9,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>로그인</title>
-<link rel="stylesheet" href="./css/login.css">
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="/resources/css/login.css">
+<link rel="stylesheet" href="/resources/css/main.css">
 <script src="./js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <% request.setCharacterEncoding("UTF-8"); %>
 <section class="login-form">
   <div class="centerUrun">URUN</div>
-  <form action="./signInOk.jsp" method ="post">
+  <form action="./signInOk" method ="post">
       <div class="int-area" id="id-area">
           <input type="text" name="MEMBER_ID" id="MEMBER_ID" autocomplete="off" placeholder="사원번호" />
       </div>

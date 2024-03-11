@@ -9,7 +9,7 @@
 <title>공지사항 상세</title>
 </head>
 <body>
-<%@ include file="./sidebar.jsp"%>
+<%@ include file="../include/sidebar.jsp"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	
