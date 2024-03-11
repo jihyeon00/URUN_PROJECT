@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>제품재고조회</title>
-<link rel="stylesheet" href="./css/reset.css">
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="/resources/css/reset.css">
+<link rel="stylesheet" href="/resources/css/main.css">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"

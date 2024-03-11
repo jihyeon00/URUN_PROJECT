@@ -11,11 +11,11 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>회원가입 화면</title>
- <link rel="stylesheet" href="./css/signUp.css">
- <script defer src="./js/jquery-3.7.1.min.js"></script>
- <script defer src="./js/pro.js"></script>
- <script defer src="./js/ck_button.js"></script>
- <script defer src="./js/main.js"></script>
+ <link rel="stylesheet" href="/resources/css/signUp.css">
+ <script defer src="/resources/js/jquery-3.7.1.min.js"></script>
+ <script defer src="/resources/js/pro.js"></script>
+ <script defer src="/resources/js/ck_button.js"></script>
+ <script defer src="/resources/js/main.js"></script>
 </head>
 
 <body>
