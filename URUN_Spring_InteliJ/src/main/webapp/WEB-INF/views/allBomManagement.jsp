@@ -1,6 +1,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,28 +13,7 @@
 <script src="/resources/js/main.js"></script>
 </head>
 <body>
-<%@ page import="util.DBManager"%>
-<%@ page import="dao.BomDAO"%>
-<%@ page import="dto.BomDTO"%>
-<%@ include file="./sidebar.jsp"%>
-<% request.setCharacterEncoding("UTF-8");%>
-
-<%
-
-	String searchText = request.getParameter("search");
-	
-
-	if (searchText == null) {
-		searchText = "";
-	}
-	
-	String cp = request.getContextPath();
-	
-	BomDAO bDAO = new BomDAO();
-	List<BomDTO> listAllBom = bDAO.selectAllBom(searchText);
-	
-%>
-
+<%@ include file="../include/sidebar.jsp"%>
 <!-- 메인화면 -->
 	<div class="wrap">
 		<div class="title">
@@ -44,7 +24,7 @@
 			<div class="searchBoxDiv">
 				<div class="searchDetail">
 					<div>
-						<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value="<%= searchText %>">
+						<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value='<c:out value="${searchText}" />'>
 						<a class="search" id="button" href="javascript: searchText();" >검색</a>
 					</div>
 				</div>
@@ -73,16 +53,16 @@
 					</tr>
 				</thead>
 				<tbody>
-				<%for(int i=0;i<listAllBom.size();i++) {%>
+				<c:forEach items="${selectAllBom}" var="listAllBom">
 					<tr>
-						<td><%=listAllBom.get(i).getBOM_ID()%></td>
-						<td><%=listAllBom.get(i).getBOM_ITEM_ID()%></td>
-						<td><%=listAllBom.get(i).getITEM_NAME()%></td>
-						<td><a style="color:black;" href="./oneBomManagement.jsp?bomNum=<%=listAllBom.get(i).getBOM_ID()%>"><%=listAllBom.get(i).getMaterialNameList()%></a></td>
-						<td><%=listAllBom.get(i).getITEM_COLOR()%></td>
-						<td><%=listAllBom.get(i).getITEM_SIZE()%></td>
+						<td><c:out value="${listAllBom.BOM_ID}" /></td>
+						<td><c:out value="${listAllBom.BOM_ITEM_ID}" /></td>
+						<td><c:out value="${listAllBom.ITEM_NAME}" /></td>
+						<td><a style="color:black;" href='./oneBomManagement?bomNum=<c:out value="${listAllBom.BOM_ID}" />'><c:out value="${listAllBom.MaterialNameList}" /></a></td>
+						<td><c:out value="${listAllBom.ITEM_COLOR}" /></td>
+						<td><c:out value="${listAllBom.ITEM_SIZE}" /></td>
 					</tr>
-				<%} %>
+				</c:forEach>
 				</tbody>
 			</table>
 		</div>
@@ -92,7 +72,7 @@
 
 <script>
 	function searchText() {
-		location.href = "./allBomManagement.jsp?search=" + $('#search-text').val();
+		location.href = "./allBomManagement?search=" + $('#search-text').val();
 	}
 </script>
 </body>
