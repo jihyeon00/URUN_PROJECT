@@ -1,0 +1,497 @@
+@charset "UTF-8";
+
+
+body {
+  font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+}
+
+/* header */
+.header{
+	position: fixed;
+	width: 100%;
+	min-width : 700px;
+	height: 100px;
+  background-color: #fff;
+  border-bottom: 1px solid #333;
+  z-index: 15;
+}
+
+.header .header-inner{
+	
+}
+
+.header .logoBox{
+	float:left;
+	margin-left: 40px;
+	margin-top: 35px;
+	font-weight: 700;
+	font-size: 40px;
+}
+.header .logoBox a{
+	color: black;
+}
+.header .loginInfo{
+	float:right;
+	margin-right: 40px;
+	margin-top: 30px;
+	font-size: 16px;
+}
+
+.header .loginInfo span{
+	font-weight: 700;
+}
+
+.header .loginInfo input{
+	font-weight: 700;
+	margin-left: 5px;
+	
+}
+
+
+/* 사이드 메뉴 */
+.sub_menu {
+    margin-top: 100px;
+}
+.topbar{
+    position: absolute;
+}
+
+.left_sub_menu {
+    position: fixed;
+    width: 200px;
+    z-index: 10;
+    left: 0px;
+    background: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    bottom: 50px;
+    height: 100%;
+    margin-bottom: -50px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 0px 24px 0 rgb(0 0 0 / 6%), 0 1px 0px 0 rgb(0 0 0 / 2%);
+    color: black;
+    background-color: #D9D9D9;
+}
+
+.left_sub_menu>.sub_menu li:hover {
+    color: ff5858;
+    background-color: #e1e1e1;
+}
+
+.left_sub_menu>.sub_menu li {
+    color: #333;  
+    font-size: 17px;
+    padding: 20px 0px 8px 14px;
+    border-bottom: 1px solid #e1e1e1;
+    box-sizing: border-box;
+}
+
+.sub_menu>.big_menu>.small_menu li {
+    color: #333;
+    font-size: 14px;
+    border-bottom: 0px solid #e1e1e1;
+    box-sizing: border-box;
+    margin-left: 14px;
+    padding-top: 8px;
+}
+
+.big_menu {
+    background-color: #fff;
+}
+.big_menu li{
+    cursor: pointer;
+    background-color: #fff;
+}
+.big_menu li:active{
+		font-weight: 700;
+	}
+
+ul {
+    padding-inline-start: 0px;
+    list-style: none;
+    margin-top: 0;
+}
+
+a {
+    color: #797979;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* 내용이 있는 화면 */
+.wrap{
+	width: 70%;
+  margin-left: 245px;
+  padding-top: 145px;
+	
+}
+
+/* 제목 */
+.wrap .title{
+	padding-bottom: 20px;
+	
+}
+
+.wrap .title span{
+  color: black; 
+  font-size: 30px; 
+  font-family: Inter; 
+  font-weight: 700; 
+  word-wrap: break-word;
+
+}
+
+/* 검색 박스 */
+.searchBox {
+	display: flex;
+	justify-content: center;
+  font-family: Inter; 
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #ECECEC;
+	border: 1px solid black;
+	height: auto;
+	border-radius: 5px;
+	min-width: 810px;
+}
+
+
+.searchBox input, .searchItem input{
+  padding: 3px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  
+}
+.searchBox input[type="text"], .searchItem input[type="search"]{
+	width: 200px;
+  padding: 3px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.searchBox .searchBoxDiv{
+	display: flex;
+	width : 100%;
+	padding-left:10px;
+	height:auto;
+}
+
+.searchBox .searchDetail{
+  display: flex;
+  margin: 10px 10px;
+}
+
+#searchName{
+  width: 70px;
+ 	display: flex;
+	align-items: center;
+}
+
+
+.searchBox .searchDetail #searchButton, #searchButton{
+	background-color: white;
+	margin: auto 0 0 auto;
+	width: 50px;
+	height: 30px;
+	margin-left:20px; 
+	
+}
+
+/* 제품/재고 조회 테이블 담은 div */
+
+.selectTable{
+	margin-top:20px;
+	margin-bottom:40px;
+	font-family: Inter; 
+  font-weight: 400;
+  font-size: 15px;
+	border: 1px solid #5F5F5F;
+	border-radius: 6px;
+	font-size: 15px;
+	min-width: 810px;
+	height: auto;
+}
+.noticeList{
+	margin-top:20px;
+	margin-bottom:40px;
+	font-family: Inter; 
+  font-weight: 400;
+  font-size: 15px;
+	border-radius: 6px;
+	font-size: 15px;
+	min-width: 810px;
+	height: auto;
+}
+
+/* 조회 테이블 */
+
+.selectTable table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  
+}
+.selectTable th,
+.selectTable td {
+  padding: 6px 15px;
+  height: 37px;
+  text-align: center;
+  vertical-align: middle;
+  
+}
+.selectTable th {
+  background: #ECECEC;
+  color: #000;
+  font-weight:700;
+  text-align: center;
+}
+.selectTable tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+.selectTable tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+.selectTable td {
+  border-right: 1px solid #c6c9cc;
+  border-bottom: 1px solid #c6c9cc;
+}
+.selectTable td:first-child {
+  border-left: 1px solid #c6c9cc;
+}
+.selectTable tr:nth-child(even) td {
+  background: #eaeaed;
+}
+.selectTable tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+.selectTable tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+
+/* 페이징 */
+#pagingNav{
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+/* 공지사항 */
+.noticeList table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem auto;
+  background-color: white;
+}
+
+.noticeList thead{
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+.noticeList td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.noticeList th {
+  padding: 8px;
+  text-align: left;
+  text-align: center;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.noticeList tbody tr:hover {
+  background-color: #d3d3d3;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.noticeList th:nth-child(1),
+.noticeList td:nth-child(1) {
+  width: 15%;
+}
+
+.noticeList th:nth-child(2),
+.noticeList td:nth-child(2) {
+  width: 55%;
+}
+
+.noticeList th:nth-child(3),
+.noticeList td:nth-child(3) {
+  width: 30%;
+}
+
+.noticeList th, td {
+  border-left: none;
+  border-right: none;
+}
+ 
+.noticeList input[type="button"]{
+	width: 70px;
+  padding: 3px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-size:18px;
+  float: right;
+}
+
+.noticeDetail{
+  width: 80%;
+  margin-left: 40px;
+  padding-top: 30px;
+}
+
+.noticeTitleDiv{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #333;
+	min-width: 700px;
+	max-width: 800px;
+}
+.noticeTitle{
+	float: left;
+	font-size: 23px;
+	font-weight: 600;
+	padding-left: 10px;
+}
+.noticeInfo{
+	float: right;
+	font-size: 17px;
+	padding-right: 10px;
+}
+
+.noticeContentDiv{
+	min-width: 700px;
+	max-width: 800px;
+}
+.noticeContent{
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	height:auto; 
+	font-size: 17px;
+	white-space : pre-line;
+}
+
+.upDownNoticeTable{
+	width: 100%;
+	border-bottom: 1px solid #333;
+	border-top: 1px solid #333;
+	min-width: 700px;
+	max-width: 800px;
+}
+
+.upNoticeName{
+	padding: 15px 0 15px 20px;
+    font-size: 14px;
+    color: #222222;
+    background: #f4f4f2;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 1px solid #dddddd;
+}
+
+.upNoticeTitle{
+	padding: 15px 0 15px 20px;
+    font-size: 14px;
+    color: #666666;
+    border-bottom: 1px solid #dddddd;
+}
+
+.downNoticeName{
+		padding: 15px 0 15px 20px;
+    font-size: 14px;
+    color: #222222;
+    background: #f4f4f2;
+    font-weight: 600;
+    text-align: left;
+}
+
+.downNoticeTitle{
+		padding: 15px 0 15px 20px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.NoticeInsert{
+	margin-left: 40px;
+}
+.NoticeInsert:nth-child(1){
+  padding-top: 30px;
+}
+.NoticeInsert:nth-child(3){
+}
+
+.form-group col-12{
+	font-size: 17px;
+	min-width: 700px;
+	max-width: 800px;
+}
+
+.NoticeName{
+    font-size: 20px;
+		margin-top: 5px;
+		float: left;
+    font-weight: 600;
+}
+
+.textLengthWrapContent{
+    margin-bottom: 5px;
+    float:right;
+    width: 700px;
+    font-size: 14px;
+}
+
+.titleCount, .contentCount{
+    float:left;
+    padding-left: 580px;
+}
+.titleTotal, .contentTotal{
+    left:10px;
+}
+
+#NoticeTitle{
+    width: 700px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+    padding: 5px 15px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+#NoticeContent{
+    width: 700px;
+    height: 400px;
+    margin-top: 10px;
+		margin-bottom: 10px;
+    resize: none;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    font-size: 17px;
+}
+
+#btnNoticeInsert{
+		width: 70px;
+    padding: 3px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.GoNoticeList{
+	width: 70px;
+	margin-top:10px;
+    padding: 3px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 15px;
+    float: right;
+}
+    

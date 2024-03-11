@@ -1,0 +1,764 @@
+@charset "UTF-8";
+
+
+
+
+/* 입고예정정보등록 */
+.title {
+	position: absolute;
+	top: 160px;
+	left: 230px;
+	min-width: 500px;
+	color: black;
+	font-size: 30px;
+	font-family: Inter;
+	font-weight: 700;
+	word-wrap: break-word;
+}
+.title h1 a{
+	color: black;
+}
+.container.container-IB {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 250px;
+	min-width: 1000px;
+}
+
+.inner.inner-IB {
+	min-width: 500px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.write {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.write .IB-Insert {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.write .IB-Insert .IB-name {
+	width: 150px;
+}
+
+.write .IB-Insert .IB-name-date {
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write .IB-Insert input[type="text"] {
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+
+
+/* 입고 현황 */
+.container.container-IB-Select {
+	position: absolute;
+	top: 230px;
+	left: 170px;
+	width: 1800px;
+	min-width: 1200px;
+}
+
+.IB-Select-menu {
+	width: 1100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.IB-Select-menu .Select-menu {
+	border-bottom: 1px solid #333333;
+	width: 1000px;
+	height: 60px;
+	display: flex;
+}
+
+.IB-Select-menu .Select-item {
+	display: flex;
+	flex-grow: 1;
+}
+
+.IB-Select-menu .Select-item:hover {
+	border-bottom: 7px solid #D9D9D9;
+}
+
+.btn-Select {
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 22px;
+	border: none;
+	background-color: transparent;
+}
+
+.IB-Select {
+	position: absolute;
+	top: 80px;
+	left: 60px;
+	padding-bottom: 20px;
+	height: auto;
+}
+.IB-Select .IB-Select-view{
+	width: 1000px;
+	text-align: center;
+}
+.IB-Select .IB-Select-view table,
+.IB-Select .IB-Select-view td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.IB-Select .IB-Select-view tr:nth-child(even) td {
+  background: #eaeaed;
+}
+
+.IB-Select .IB-Select-view .IB-Select-view-menu {
+	height: 50px;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.IB-Select .IB-Select-view td {
+	height: 50px;
+	vertical-align: middle;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+/* 입고 수정 */
+.container.container-IB-update {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 250px;
+	min-width: 1250px;
+}
+
+.inner.inner-IB-update {
+	min-width: 400px;
+	width: 750px;
+	display: flex;
+	justify-content: center;
+}
+
+.write-IB-update {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.write-IB-update .IB-Update {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.write-IB-update .IB-Update .IB-name {
+	width: 150px;
+}
+
+.write-IB-update .IB-Update .IB-name-date {
+	padding: 10px;
+	width: 200px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write-IB-update .IB-Update input[type="text"] {
+	padding: 10px;
+	width: 200px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write-IB-update .IB-Update .IB-Status-name {
+	padding: 10px;
+	width: 200px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write-IB-update .IB-Update #IB_Note {
+	padding: 10px;
+	width: 570px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* 출고예정정보등록 */
+.container.container-OB {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 250px;
+	min-width: 1000px;
+}
+
+.inner.inner-OB {
+	min-width: 500px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.write {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.write .OB-Insert {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.write .OB-Insert .OB-name {
+	width: 150px;
+}
+
+.write .OB-Insert .OB-name-date {
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write .OB-Insert input[type="text"] {
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* 출고 현황 */
+.container.container-OB-Select {
+	position: absolute;
+	top: 230px;
+	left: 170px;
+	width: 1800px;
+	min-width: 1200px;
+	height: auto;
+}
+
+.OB-Select-menu {
+	width: 1100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.OB-Select-menu .Select-menu {
+	border-bottom: 1px solid #333333;
+	width: 1000px;
+	height: 60px;
+	display: flex;
+}
+
+.OB-Select-menu .Select-item {
+	display: flex;
+	flex-grow: 1;
+}
+
+.OB-Select-menu .Select-item:hover {
+	border-bottom: 7px solid #D9D9D9;
+}
+
+.OB-Select {
+	position: absolute;
+	top: 80px;
+	left: 60px;
+	height: auto;
+}
+.OB-Select .OB-Select-view{
+	width: 1000px;
+	text-align: center;
+}
+.OB-Select .OB-Select-view table, .IB-Select td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.OB-Select .OB-Select-view tr:nth-child(even) td {
+  background: #eaeaed;
+}
+.OB-Select .OB-Select-view .OB-Select-view-menu {
+	height: 50px;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.OB-Select .OB-Select-view td {
+	height: 50px;
+	vertical-align: middle;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.OB-Select .OB-Select-view table,
+.OB-Select .OB-Select-view td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+/* 출고 수정 */
+.container.container-OB-update {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 250px;
+	min-width: 1250px;
+}
+
+.inner.inner-OB-update {
+	min-width: 400px;
+	width: 700px;
+	display: flex;
+	justify-content: center;
+}
+
+.write-OB-update {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.write-OB-update .OB-Update {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.write-OB-update .OB-Update .OB-name {
+	width: 130px;
+}
+
+.write-OB-update .OB-Update .OB-name-date {
+	padding: 10px;
+	width: 175px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write-OB-update .OB-Update input[type="text"] {
+	padding: 10px;
+	width: 500px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write-OB-update .OB-Update .OB-Status-name {
+	padding: 10px;
+	width: 500px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write-OB-update .OB-Update #OB_Note {
+	padding: 10px;
+	width: 500px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* 주간생산계획 등록 */
+.container.container-PROCESS {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 250px;
+	min-width: 1000px;
+}
+
+.inner.inner-PROCESS {
+	min-width: 500px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.write {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.write .PROCESS-Insert {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.write .PROCESS-Insert .PROCESS-name {
+	width: 150px;
+}
+
+.write .PROCESS-Insert .PROCESS-name-date {
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.write .PROCESS-Insert input[type="text"] {
+	padding: 10px;
+	width: 350px;
+	background: #ECF0F8;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* 생산불량 현황 */
+.container.container-status {
+	position: absolute;
+	top: 230px;
+	left: 170px;
+	width: 1200px;
+	min-width: 1200px;
+	height: auto;
+}
+/* 생산불량 현황 검색메뉴 */
+.status-Select-menu {
+	position: absolute;
+	left: 60px;
+	border: 1px solid #333333;
+	width: 1000px;
+	height: 190px;
+	background-color: #ECECEC;
+	border-radius: 10px;
+}
+.status-Select-menu .Select-menu {
+	width: 1000px;
+	height: 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.status-Select-menu .Select-menu .Select-item {
+	right: 20px;
+	margin-top: 10px;
+	width: 350px;
+	display: flex;
+	flex-grow: 1;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+}
+.status-Select-menu .Select-menu .Select-item:nth-child(1){flex-grow: 1;}
+.status-Select-menu .Select-menu .Select-item:nth-child(2){flex-grow: 3;}
+.status-Select-menu .Select-menu .Select-item:nth-child(3){flex-grow: 1;}
+.status-Select-menu .Select-menu .Select-item:nth-child(4){flex-grow: 3;}
+
+.status-Select-menu .Select-menu .Select-item  input[type="text"]  {
+	padding: 10px;
+	width: 200px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+.status-Select-menu .Select-menu .Select-item .status-name{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 130px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+} 
+.status-Select-menu .Select-menu .Select-item .status-Date-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+	
+}
+.status-Select-menu .Select-menu .Select-item .status-name-date {
+	padding: 10px;
+	width: 200px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+}
+.status-Select-menu .Select-menu .Select-item .Select-item-btn{
+	position: absolute;
+	right :30px;
+}
+/* 검색내용 */
+.status-Select {
+	position: absolute;
+	top: 210px;
+	left: 60px;
+	width: 1000px;
+	height: auto;
+}
+.status-Select .status-Select-view{
+	width: 1000px;
+	text-align: center;
+}
+.status-Select .status-Select-view table,
+.status-Select .status-Select-view td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.status-Select .status-Select-view tr:nth-child(even) td {
+  background: #eaeaed;
+}
+.status-Select .status-Select-view .statu-Select-view-menu {
+	height: 50px;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.status-Select .status-Select-view td {
+	height: 50px;
+	vertical-align: middle;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 16px;
+}
+.status-Select .status-Select-view table,
+.status-Select .status-Select-view td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+
+/* 생산작업관리 */
+.status-Select-b{
+	display: flex;
+}
+.status-Select .status-Select-b .status-Select-case{
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid #333;
+	min-width: 620px;
+	width: 620px;
+	height: 280px;
+	margin-bottom: 40px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box{
+	margin: 7px;
+	border: 1px solid #333;
+	width: 600px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-name{
+	border: 1px solid #333;
+	width: 600px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 18px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-detail-box{
+	display: flex;
+	flex-wrap: wrap;
+	width: 600px;
+	height: 40px;
+	border-bottom: 1px solid #333;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-detail-box .status-Select-detail{
+	border: 1px solid #333;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	width: 149.5px;
+	height: 40px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 18px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-detail-box .status-Select-detail .detail-box-date{
+	width: 125px;
+	height: 35px;
+	border: 0px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-detail-box .status-Select-detail .detail-box-option {
+	width: 125px;
+	height: 35px;
+	border: 0px;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-btn{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-content: center;
+	height: 50px;
+	width: 600px;
+	border: 1px solid #333;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-btn .btn{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-btn .btn input[type="submit"]{
+	width: 100px; height: 40px; border: 1px solid #999; font-size: 20px; border-radius: 0;
+}
+.status-Select .status-Select-b .status-Select-case .status-Select-box .status-Select-btn .btn input[type="button"]{
+	width: 130px; height: 40px; border: 1px solid #999; font-size: 20px; border-radius: 0;
+}
+.status-Select .work-insert-box{
+	margin-left: 10px;
+	width: 400px;
+	height: 280px;
+	display: none;
+}
+.status-Select .work-insert-box .work-insert-case{
+	width: 400px;
+	height: 280px;
+	border: 1px solid #333;
+	display: flex;
+	flex-wrap: wrap;
+}
+.status-Select .work-insert-box .work-insert-case .work-insert-detail{
+	width:400px;
+	border: 1px solid #333;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.status-Select .work-insert-box .work-insert-case .work-insert-detail .detail-text{
+	width: 210px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 18px;
+}
+.status-Select .work-insert-box .work-insert-case .work-insert-detail .detail-name{
+	width: 180px;
+	height: 50px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+}
+
+
