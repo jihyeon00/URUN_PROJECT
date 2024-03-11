@@ -1,9 +1,9 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="util.DBManager"%>
-<%@page import="dto.*"%>
-<%@page import="dao.*"%>
+<%@page import="kr.co.urun.config.*"%>
+<%@page import="kr.co.urun.dto.*"%>
+<%@page import="kr.co.urun.mapper.*"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@
 
 <section class= "sign-form">
 <h2>회원가입</h2>
-<form action="./signUpCheck.jsp" method="post" id="signUpForm" name="singck" onSubmit="return false">
+<form action="./signUpCheck" method="post" id="signUpForm" name="singck" onSubmit="return false">
 	<!-- 사원아이디 -->
 	<div class="signUp">
 		<div class="sign-area">
@@ -138,7 +138,7 @@
 		<!-- 회원가입 버튼 -->
 		<div class="sign-btn">
 			<input type="button" id="signUpBtn" value="회원가입" onClick="prevCheckTextBox();">
-			<input type="button" id="cancleBtn" value="취소" onClick="location.href='./signIn.jsp'">
+			<input type="button" id="cancleBtn" value="취소" onClick="location.href='./signIn'">
 		</div>
 	</div>
 </form>    
@@ -146,7 +146,7 @@
 		function idCheck(){
 			var signUpMemberId = $('#signUpMemberId').val();
 			if(signUpMemberId!=null&&signUpMemberId!=""){
-			window.open('./idCheck.jsp?id='+signUpMemberId, '아이디 조회', 
+			window.open('./idCheck?id='+signUpMemberId, '아이디 조회',
 	           'width=500, height=500, scrollbars=no, resizable=no')
 			} else {
 				alert("아이디를 입력해주세요.");

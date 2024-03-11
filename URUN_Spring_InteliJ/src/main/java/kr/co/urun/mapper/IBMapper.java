@@ -1,5 +1,5 @@
 package kr.co.urun.mapper;
 
-public class IBMapper {
+public interface IBMapper {
 
 }

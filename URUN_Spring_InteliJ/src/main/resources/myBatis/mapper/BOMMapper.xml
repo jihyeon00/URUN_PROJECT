@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.urun.mapper.BomMapper">
+    <select id="selectAllBom" parameterType="String" resultType="kr.co.urun.dto.BomDTO">
+        SELECT i.ITEM_NAME, bm.*, i.ITEM_COLOR, i.ITEM_SIZE
+        FROM ITEM i INNER JOIN
+                (SELECT b.BOM_ID ,b.BOM_ITEM_ID,
+                        LISTAGG(DISTINCT m.MATERIAL_NAME||'('||b.BOM_MATERIAL_QUANTITY||')', ', ' ON OVERFLOW TRUNCATE) AS materialNameList
+                FROM MATERIAL m, BOM b
+                WHERE b.BOM_material_id = m.material_id
+                GROUP BY b.bom_id, b.bom_item_id) bm
+        ON i.ITEM_ID = bm.bom_item_id
+        WHERE i.ITEM_NAME LIKE %' || #{searchText} || '%'
+        OR i.ITEM_ID LIKE '%' || #{searchText} || '%'
+        OR bm.materialNameList LIKE '%' || #{searchText} || '%'
+        OR i.ITEM_COLOR LIKE '%' || #{searchText} || '%'
+        OR i.ITEM_SIZE LIKE '%' || #{searchText} || '%'
+    </select>
+</mapper>

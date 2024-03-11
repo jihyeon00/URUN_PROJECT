@@ -11,10 +11,10 @@
 <script src="/resources/js/main.js"></script>
 </head>
 <body>
-<%@ page import="util.DBManager"%>
-<%@ page import="dao.BomDAO"%>
-<%@page import="dto.BomDTO"%>
-<%@ include file="./sidebar.jsp"%>
+<%@page import="kr.co.urun.config.*"%>
+<%@page import="kr.co.urun.dto.*"%>
+<%@page import="kr.co.urun.mapper.*"%>
+<%@ include file="../include/sidebar.jsp"%>
 <% request.setCharacterEncoding("UTF-8");%>
 
 <%

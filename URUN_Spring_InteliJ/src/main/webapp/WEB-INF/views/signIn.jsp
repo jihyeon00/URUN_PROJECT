@@ -36,7 +36,7 @@
       </div>
   </form>
   <div class="signUp">
-      <a href="./signUp.jsp">회원가입</a>
+      <a href="./signUp">회원가입</a>
   </div>
 </section>
 <script>
