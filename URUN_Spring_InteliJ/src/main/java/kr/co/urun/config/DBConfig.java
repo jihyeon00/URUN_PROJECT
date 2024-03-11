@@ -13,18 +13,18 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = "org.zerock.service")
-@MapperScan(basePackages = {"org.zerock.mapper"})
+@ComponentScan(basePackages = "kr.co.urun.service")
+@MapperScan(basePackages = {"kr.co.urun.mapper"})
 public class DBConfig {
     @Bean
     public DataSource dataSource() {
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
-        hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@localhost:1521:orcl");
-        hikariConfig.setUsername("jsp");
-        hikariConfig.setPassword("123456");
+        hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@1.220.247.78:1522:orcl");
+        hikariConfig.setUsername("semi_project4");
+        hikariConfig.setPassword("123454");
 
-        hikariConfig.setPoolName("oracle-freebo");
+        hikariConfig.setPoolName("oracle-semiProject4");
         hikariConfig.setMaximumPoolSize(5);
 
         HikariDataSource dataSource = new HikariDataSource(hikariConfig);
