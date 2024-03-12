@@ -18,4 +18,10 @@ public class BOMServiceImpl implements BOMService{
 		List<BomDTO> selectAllBom = bomMapper.selectAllBom(searchText);
 		return selectAllBom;
 	}
+
+	@Override
+	public List<BomDTO> selectOneBom(int bomNum, String searchText){
+		List<BomDTO> selectOneBom = bomMapper.selectOneBom(bomNum, searchText);
+		return selectOneBom;
+	}
 }

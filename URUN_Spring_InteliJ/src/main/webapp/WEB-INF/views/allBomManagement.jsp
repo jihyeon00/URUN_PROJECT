@@ -13,7 +13,7 @@
 <script src="/resources/js/main.js"></script>
 </head>
 <body>
-<%@ include file="../include/sidebar.jsp"%>
+<%@ include file="./include/sidebar.jsp"%>
 <!-- 메인화면 -->
 	<div class="wrap">
 		<div class="title">
@@ -58,7 +58,7 @@
 						<td><c:out value="${listAllBom.BOM_ID}" /></td>
 						<td><c:out value="${listAllBom.BOM_ITEM_ID}" /></td>
 						<td><c:out value="${listAllBom.ITEM_NAME}" /></td>
-						<td><a style="color:black;" href='./oneBomManagement?bomNum=<c:out value="${listAllBom.BOM_ID}" />'><c:out value="${listAllBom.MaterialNameList}" /></a></td>
+						<td><a style="color:black;" href='./oneBomManagement?bomNum=<c:out value="${listAllBom.BOM_ID}" />'><c:out value="${listAllBom.materialNameList}" /></a></td>
 						<td><c:out value="${listAllBom.ITEM_COLOR}" /></td>
 						<td><c:out value="${listAllBom.ITEM_SIZE}" /></td>
 					</tr>

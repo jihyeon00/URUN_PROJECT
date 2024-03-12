@@ -11,10 +11,26 @@
                 WHERE b.BOM_material_id = m.material_id
                 GROUP BY b.bom_id, b.bom_item_id) bm
         ON i.ITEM_ID = bm.bom_item_id
-        WHERE i.ITEM_NAME LIKE %' || #{searchText} || '%'
-        OR i.ITEM_ID LIKE '%' || #{searchText} || '%'
-        OR bm.materialNameList LIKE '%' || #{searchText} || '%'
-        OR i.ITEM_COLOR LIKE '%' || #{searchText} || '%'
-        OR i.ITEM_SIZE LIKE '%' || #{searchText} || '%'
+        <if test="searchText!=null">
+
+            WHERE i.ITEM_NAME LIKE '%' || #{searchText} || '%'
+            OR i.ITEM_ID LIKE '%' || #{searchText} || '%'
+            OR bm.materialNameList LIKE '%' || #{searchText} || '%'
+            OR i.ITEM_COLOR LIKE '%' || #{searchText} || '%'
+            OR i.ITEM_SIZE LIKE '%' || #{searchText} || '%'
+        </if>
+    </select>
+    <select id="selectOneBom" parameterType="int" resultType="kr.co.urun.dto.BomDTO">
+        SELECT rownum, bm.*
+        FROM (SELECT b.bom_id, b.BOM_ITEM_ID, m.MATERIAL_ID, m.MATERIAL_NAME, m.MATERIAL_USES, b.BOM_MATERIAL_QUANTITY
+                FROM MATERIAL m, BOM b
+                WHERE b.BOM_MATERIAL_ID = m.MATERIAL_ID
+                AND b.bom_id = ${bomNum}
+        ORDER BY m.MATERIAL_ID) bm
+        <if test="searchText!=null">
+            where bm.MATERIAL_ID LIKE '%' || #{searchText} || '%'
+            OR bm.MATERIAL_NAME LIKE '%' || #{searchText} || '%'
+            OR bm.MATERIAL_USES LIKE '%' || #{searchText} || '%'
+        </if>
     </select>
 </mapper>

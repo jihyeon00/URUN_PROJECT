@@ -7,4 +7,6 @@ import java.util.List;
 public interface BOMService {
 
     List<BomDTO> selectAllBom(String searchText);
+
+    List<BomDTO> selectOneBom(int bomNum, String searchText);
 }

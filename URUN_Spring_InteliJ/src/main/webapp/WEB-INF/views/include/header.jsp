@@ -1,10 +1,9 @@
-<%@page import="dto.MemberDTO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="util.DBManager"%>
-<%@page import="dto.*"%>
-<%@page import="dao.*"%>
+<%@page import="kr.co.urun.config.*"%>
+<%@page import="kr.co.urun.dto.*"%>
+<%@page import="kr.co.urun.mapper.*"%>
 <!DOCTYPE html>
 
 <html>
@@ -24,18 +23,8 @@
 			<div>
 				<div class="logoBox"><a href="./main.jsp">URUN</a></div>
 				<div class="loginInfo">
-				<%
-					if(session.getAttribute("MEMBER_ID") == null){
-						out.println("<a href='./signIn.jsp'>로그인</a>");
-					} else {
-						String MEMBER_ID = (String)session.getAttribute("MEMBER_ID");
-						String employeeName = (String)session.getAttribute("employeeName");
-				%>
-						<span><%=MEMBER_ID%></span>(<%=employeeName %>)님 안녕하세요.
-							<input type="button" class="btn btn-light" value="로그아웃" onclick='location.href="./logOut.jsp"'/>
-				<%
-					}
-				%>
+				    <span>11111111</span>(OOO)님 안녕하세요.
+                	<input type="button" class="btn btn-light" value="로그아웃" onclick='location.href="./logOut"'/>
 				</div>
 			</div>
 		</div>
