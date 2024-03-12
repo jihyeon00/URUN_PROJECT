@@ -1,6 +1,7 @@
 <%@page import="java.util.List"%>
-<%@page import="dao.*"%>
-<%@page import="dto.*"%>
+<%@page import="kr.co.urun.config.*"%>
+<%@page import="kr.co.urun.dto.*"%>
+<%@page import="kr.co.urun.mapper.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>

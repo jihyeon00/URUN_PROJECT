@@ -14,7 +14,7 @@
     <title>URUN</title>
 </head>
 <body>
-<%@ include file="../include/header.jsp" %>
+<jsp:include page="./include/header.jsp"/>
 	<div id="wrapper">
 	    <div class="topbar"">
 	    	<!-- 왼쪽 서브 메뉴 -->
