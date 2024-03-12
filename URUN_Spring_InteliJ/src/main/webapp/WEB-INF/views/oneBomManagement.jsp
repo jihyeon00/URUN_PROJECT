@@ -25,9 +25,11 @@
 			<div class="searchBoxDiv">
 				<div class="searchDetail">
 					<div>
-						<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value='<c:out value="${searchText}" />'>
-						<a class="search" id="button" href="javascript: searchText();">검색</a>
-						<a></a>
+						<form id='searchForm' action='/oneBomManagement' method='get'>
+						    <input type="hidden" name="bomNum" id="bomNum" value='<c:out value="${bomNum}"/>'/>
+                            <input type="search" name="searchText" id="searchText" placeholder="검색어를 입력하세요." value='<c:out value="${searchText}" />'>
+                            <input type="submit" class="search" id="button" value="검색"/>
+                        </form>
 					</div>
 				</div>
 			</div>
@@ -70,13 +72,9 @@
 			</div>
 		</div>
 <script>
-	function searchText() {
-		var url = document.location.href;
-		location.href = url+ "&search=" + $('#search-text').val();
-	}
 	function materialDelete(deleteMaterialNum) {
 		if (confirm('정말 삭제하시겠습니까?')) {
-			location.href = "./deleteOneBomMaterial?bomNum="<c:out value='${bomNum}'/>+"&deleteMaterialNum="+ deleteMaterialNum;
+			location.href = "./deleteOneBomMaterial?bomNum="+<c:out value='${bomNum}'/>+"&deleteMaterialNum="+ deleteMaterialNum;
 		}
 	}
 	

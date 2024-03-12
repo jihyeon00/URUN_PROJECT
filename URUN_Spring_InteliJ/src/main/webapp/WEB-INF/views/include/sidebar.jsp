@@ -21,42 +21,42 @@
 			<div class="left_sub_menu">
 				<div class="sub_menu">
 					<ul class="big_menu">
-						<li><a href="./NoticeList.jsp" style="color:#333">공지사항</a></li>
+						<li><a href="./NoticeList" style="color:#333">공지사항</a></li>
 					</ul>
 					<ul class="big_menu">
 						<li>재고<i class="arrow fas fa-angle-right"></i></li>
 						<ul class="small_menu">
-							<li><a href="./materialInventorySelect.jsp">자재 재고 조회</a></li>
-							<li><a href="./itemInventorySelect.jsp">제품 재고 조회</a></li>
+							<li><a href="./materialInventorySelect">자재 재고 조회</a></li>
+							<li><a href="./itemInventorySelect">제품 재고 조회</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
 						<li>생산</li>
 						<ul class="small_menu">
-							<li><a href="./PROCESS_management.jsp">생산 작업 관리</a></li>
-							<li><a href="./PROCESSInsertForm.jsp">생산 계획 등록</a></li>
-							<li><a href="./Production_defect_status.jsp">생산 불량 현황</a></li>
+							<li><a href="./PROCESS_management">생산 작업 관리</a></li>
+							<li><a href="./PROCESSInsertForm">생산 계획 등록</a></li>
+							<li><a href="./Production_defect_status">생산 불량 현황</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
 						<li>BOM</li>
 						<ul class="small_menu">
-							<li><a href="./allBomManagement.jsp">BOM 관리</a></li>
-							<li><a href="./bomRegistration.jsp">BOM 등록</a></li>
+							<li><a href="./allBomManagement">BOM 관리</a></li>
+							<li><a href="./bomRegistration">BOM 등록</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
 						<li>입고 - IB</li>
 						<ul class="small_menu">
-							<li><a href="./IBSelect.jsp">입고 현황</a></li>
-							<li><a href="./IBInsertForm.jsp">입고 등록</a></li>
+							<li><a href="./IBSelect">입고 현황</a></li>
+							<li><a href="./IBInsertForm">입고 등록</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
 	  					<li>출고 - OB</li>
 						<ul class="small_menu">
-							<li><a href="./OBSelect.jsp">출고 현황</a></li>
-							<li><a href="./OBInsertForm.jsp">출고 등록</a></li>
+							<li><a href="./OBSelect">출고 현황</a></li>
+							<li><a href="./OBInsertForm">출고 등록</a></li>
 						</ul>
 					</ul>
 				</div>

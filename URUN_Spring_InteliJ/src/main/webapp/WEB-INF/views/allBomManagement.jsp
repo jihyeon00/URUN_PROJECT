@@ -24,8 +24,10 @@
 			<div class="searchBoxDiv">
 				<div class="searchDetail">
 					<div>
-						<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value='<c:out value="${searchText}" />'>
-						<a class="search" id="button" href="javascript: searchText();" >검색</a>
+					    <form id='searchForm' action='/allBomManagement' method='get'>
+						    <input type="search" name="searchText" id="searchText" placeholder="검색어를 입력하세요." value='<c:out value="${searchText}" />'>
+						    <input type="submit" class="search" id="button" value="검색"/>
+					    </form>
 					</div>
 				</div>
 			</div>

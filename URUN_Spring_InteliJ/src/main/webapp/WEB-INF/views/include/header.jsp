@@ -21,7 +21,7 @@
 	<div class="header">
 		<div class="header-inner">
 			<div>
-				<div class="logoBox"><a href="./main.jsp">URUN</a></div>
+				<div class="logoBox"><a href="./main">URUN</a></div>
 				<div class="loginInfo">
 				    <span>11111111</span>(OOO)님 안녕하세요.
                 	<input type="button" class="btn btn-light" value="로그아웃" onclick='location.href="./logOut"'/>

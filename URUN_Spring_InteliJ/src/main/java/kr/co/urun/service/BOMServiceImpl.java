@@ -5,7 +5,9 @@ import kr.co.urun.mapper.BomMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class BOMServiceImpl implements BOMService{
@@ -13,15 +15,34 @@ public class BOMServiceImpl implements BOMService{
 	@Autowired
 	private BomMapper bomMapper;
 
+	// 전체 BOM 조회 : allBomManagement
 	@Override
 	public List<BomDTO> selectAllBom(String searchText){
 		List<BomDTO> selectAllBom = bomMapper.selectAllBom(searchText);
 		return selectAllBom;
 	}
 
+	// 상세 BOM 조회 : oneBomManagement
 	@Override
 	public List<BomDTO> selectOneBom(int bomNum, String searchText){
-		List<BomDTO> selectOneBom = bomMapper.selectOneBom(bomNum, searchText);
+		Map<String, Object> paramOneBom = new HashMap<>();
+		paramOneBom.put("bomNum", bomNum);
+		paramOneBom.put("searchText", searchText);
+		List<BomDTO> selectOneBom = bomMapper.selectOneBom(paramOneBom);
 		return selectOneBom;
+	}
+
+	// 상세 BOM 조회2 : bomRegistration item의 BOM
+	@Override
+	public List<BomDTO> selectOneItemBom(String searchText) {
+		List<BomDTO> selectOneItemBom = bomMapper.selectOneItemBom(searchText);
+		return selectOneItemBom;
+	}
+
+	// 전체 Material 조회 : bomRegistration
+	@Override
+	public List<BomDTO> selectMaterial() {
+		List<BomDTO> selectMaterial = bomMapper.selectMaterial();
+		return selectMaterial;
 	}
 }
