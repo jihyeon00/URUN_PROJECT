@@ -11,8 +11,7 @@
                 WHERE b.BOM_material_id = m.material_id
                 GROUP BY b.bom_id, b.bom_item_id) bm
         ON i.ITEM_ID = bm.bom_item_id
-        <if test="searchText!=null">
-
+        <if test="searchText != null">
             WHERE i.ITEM_NAME LIKE '%' || #{searchText} || '%'
             OR i.ITEM_ID LIKE '%' || #{searchText} || '%'
             OR bm.materialNameList LIKE '%' || #{searchText} || '%'
@@ -20,7 +19,8 @@
             OR i.ITEM_SIZE LIKE '%' || #{searchText} || '%'
         </if>
     </select>
-    <select id="selectOneBom" parameterType="int" resultType="kr.co.urun.dto.BomDTO">
+
+    <select id="selectOneBom" parameterType="hashmap" resultType="kr.co.urun.dto.BomDTO">
         SELECT rownum, bm.*
         FROM (SELECT b.bom_id, b.BOM_ITEM_ID, m.MATERIAL_ID, m.MATERIAL_NAME, m.MATERIAL_USES, b.BOM_MATERIAL_QUANTITY
                 FROM MATERIAL m, BOM b
@@ -33,4 +33,19 @@
             OR bm.MATERIAL_USES LIKE '%' || #{searchText} || '%'
         </if>
     </select>
+
+    <select id="selectOneItemBom" parameterType="String" resultType="kr.co.urun.dto.BomDTO">
+        SELECT rownum, bm.*
+        FROM (SELECT b.bom_id ,b.BOM_ITEM_ID, m.MATERIAL_ID, m.MATERIAL_NAME, m.MATERIAL_USES, b.BOM_MATERIAL_QUANTITY
+                FROM MATERIAL m, BOM b
+                WHERE b.BOM_MATERIAL_ID = m.MATERIAL_ID
+                AND b.BOM_ITEM_ID LIKE #{searchText}
+                ORDER BY m.MATERIAL_ID) bm
+    </select>
+
+    <select id="selectMaterial" resultType="kr.co.urun.dto.BomDTO">
+        SELECT * FROM material
+    </select>
+
+
 </mapper>

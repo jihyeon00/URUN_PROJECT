@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,23 +16,8 @@
 <%@page import="kr.co.urun.config.*"%>
 <%@page import="kr.co.urun.dto.*"%>
 <%@page import="kr.co.urun.mapper.*"%>
-<%@ include file="../include/sidebar.jsp"%>
+<%@ include file="./include/sidebar.jsp"%>
 <% request.setCharacterEncoding("UTF-8");%>
-
-<%
-	String searchText = request.getParameter("search");
-	
-	if (searchText == null) {
-		searchText="10000001";
-	}
-	
-	BomDAO bDAO = new BomDAO();
-	List<BomDTO> listMaterial = bDAO.selectMaterial();
-	List<BomDTO> listOneItemBom = bDAO.selectOneItemBom(searchText);
-	
-
-%>
-
 <!-- 메인화면 -->
 	<div class="wrap">
 		<div class="title">
@@ -38,9 +25,11 @@
 			<span style="font-weight: 800;">BOM 등록</span>
 		</div>
 			<div class="searchItem">
-				<span style="font-size: 18px; margin-right: 10px; font-weight: 500;">제품ID</span>
-				<input type="search" name="search-text" id="search-text" placeholder="검색어를 입력하세요." value="<%= searchText %>">
-				<a class="search" id="button" class="bomSearchBtn" href="javascript: searchText();" style="font-size: 18px; border: 1px solid #999; border-radius: 6px; padding: 7px 15px;">검색</a>
+				<form id='searchForm' action='/bomRegistration' method='get'>
+				    <span style="font-size: 18px; margin-right: 10px; font-weight: 500;">제품ID</span>
+					<input type="search" name="searchText" id="search-text" placeholder="검색어를 입력하세요." value='<c:out value="${searchText}" />'>
+					<input type="submit" class="search" id="button" value="검색"/>
+			 	</form>
 			</div>
 		<!-- 조회 테이블 -->
 		<div class="selectTable">
@@ -64,29 +53,34 @@
 						</tr>
 					</thead>
 					<tbody>
-					<%for(int i=0;i<listOneItemBom.size();i++) {%>
-							<tr>
-								<td><%=listOneItemBom.get(i).getROWNUM() %></td>
-								<td><%=listOneItemBom.get(i).getMATERIAL_ID() %></td>
-								<td><%=listOneItemBom.get(i).getMATERIAL_NAME()%></td>
-								<td><%=listOneItemBom.get(i).getMATERIAL_USES() %></td>
-								<td><%=listOneItemBom.get(i).getBOM_MATERIAL_QUANTITY() %></td>
-								<td><a id="button" href="javascript: materialDelete(<%=listOneItemBom.get(i).getMATERIAL_ID()%>)">삭제</a></td>
-							</tr>
-					<%} %>
+					<c:if test="${empty searchText}">
+					    <tr>
+                            <td colspan="6">현재 제품을 조회하지 않아 자재 리스트가 존재하지 않습니다.</td>
+                        </tr>
+                    </c:if>
+                    <c:if test="${!empty searchText}">
+                        <c:if test="${fn:length(selectOneItemBom) == 0}">
+                            <tr>
+                                <td colspan="6">등록된 자재가 없습니다. 자재를 추가해주세요.</td>
+                            </tr>
+                        </c:if>
+                    </c:if>
+                    <c:if test="${searchText!= null}">
+                        <c:forEach items="${selectOneItemBom}" var="listOneItemBom">
+                            <tr>
+                                <td><c:out value="${listOneItemBom.ROWNUM}" /></td>
+                                <td><c:out value="${listOneItemBom.MATERIAL_ID}" /></td>
+                                <td><c:out value="${listOneItemBom.MATERIAL_NAME}" /></td>
+                                <td><c:out value="${listOneItemBom.MATERIAL_USES}" /></td>
+                                <td><c:out value="${listOneItemBom.BOM_MATERIAL_QUANTITY}" /></td>
+                                <td><a id="button" href="javascript: materialDelete(<c:out value="${listOneItemBom.MATERIAL_ID}" />)">삭제</a></td>
+                            </tr>
+                        </c:forEach>
+					</c:if>
 					</tbody>
 				</table>
 		</div>
-		
-		
-		<!-- 추가 테이블 -->
-			<!--
-			<div class="searchItem" style="margin-bottom: -20px;">
-				<span style="font-size: 18px; margin-right: 10px; font-weight: 500;">자재명</span>
-				<input type="search" style=""name="search-text" id="search-text" placeholder="검색어를 입력하세요." value="<%= searchText %>">
-				<input type="button" class="searchMaterialBtn" id="button" value="검색">
-			</div>
-			-->
+
 		<div class="selectTable">
 			<table>
 					<colgroup>
@@ -104,39 +98,19 @@
 						</tr>
 					</thead>
 					<tbody>
-					<%for(int i=0;i<listMaterial.size();i++) {%>
+					<c:forEach items="${selectMaterial}" var="listMaterial">
 						<tr>
-							<td><%=listMaterial.get(i).getMATERIAL_ID()%></td>
-							<td><%=listMaterial.get(i).getMATERIAL_NAME()%></td>
-							<td><%=listMaterial.get(i).getMATERIAL_USES()%></td>
-							<td><a id="button" href="javascript: materialInsert(<%=listMaterial.get(i).getMATERIAL_ID()%>)">추가</a></td>
+							<td><c:out value="${listMaterial.MATERIAL_ID}" /></td>
+							<td><c:out value="${listMaterial.MATERIAL_NAME}" /></td>
+							<td><c:out value="${listMaterial.MATERIAL_USES}" /></td>
+							<td><a id="button" href="javascript: materialInsert(<c:out value="${listMaterial.MATERIAL_ID}" />)">추가</a></td>
 						</tr>
-					<%} %>
+						</c:forEach>
 					</tbody>
 				</table>
 		</div>
 	</div>
 <script>
-function searchText(){
-	if($('#search-text').val()==""){
-		alert('제품명 혹은 제품ID를 정확히 입력해주세요.');
-	} else{
-		var url = document.location.href;
-		location.href = "./bomRegistration.jsp?search=" + $('#search-text').val();
-	}
-}
-function materialDelete(deleteMaterialNum) {
-	if (confirm('정말 삭제하시겠습니까?')) {
-		location.href = "./deleteOneMaterial.jsp?bomNum="+<%=searchText%>+"&deleteMaterialNum="+ deleteMaterialNum;
-	}
-}
-function materialInsert(insertMaterialNum) {
-	var str1 = prompt("필요 자재수량을 입력해주세요","");
-	if (str1 == null) return false; 
-
-	var quantity = Number(str1);
-	location.href = "./insertOneBomMaterial.jsp?bomNum="+<%=searchText%>+"&quantity="+ quantity +"&insertMaterialNum="+ insertMaterialNum;
-}
 
 </script>
 </body>
