@@ -32,6 +32,7 @@ public class BomDTO {
 	private int ITEM_SIZE;
 	
 	private int ROWNUM;
-	
+	private String searchText;
+
 	
 }

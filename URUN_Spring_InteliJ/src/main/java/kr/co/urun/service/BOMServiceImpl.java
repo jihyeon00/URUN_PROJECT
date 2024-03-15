@@ -45,4 +45,22 @@ public class BOMServiceImpl implements BOMService{
 		List<BomDTO> selectMaterial = bomMapper.selectMaterial();
 		return selectMaterial;
 	}
+
+	// 상세 Material 조회 : bomRegistration
+	@Override
+	public BomDTO selectOneMaterial(Long MATERIAL_ID) {
+		return bomMapper.selectOneMaterial(MATERIAL_ID);
+	}
+
+	@Override
+	public void materialInsert(BomDTO bomDTO) {
+		bomMapper.materialInsert(bomDTO);
+	}
+
+	// Material 삭제 : bomRegistration
+	@Override
+	public int materialDelete(BomDTO bomDTO) {
+		int materialDelete = bomMapper.materialDelete(bomDTO);
+		return materialDelete;
+	}
 }

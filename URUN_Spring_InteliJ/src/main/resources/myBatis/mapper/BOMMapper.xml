@@ -47,5 +47,19 @@
         SELECT * FROM material
     </select>
 
+    <select id="selectOneMaterial" parameterType="java.lang.Long" resultType="kr.co.urun.dto.BomDTO">
+        SELECT MATERIAL_ID, MATERIAL_NAME, MATERIAL_USES
+        FROM MATERIAL
+        WHERE MATERIAL_ID = #{MATERIAL_ID}
+    </select>
 
+    <insert id="materialInsert" parameterType="kr.co.urun.dto.BomDTO">
+        INSERT INTO BOM b (BOM_ID, BOM_MATERIAL_ID, BOM_ITEM_ID, BOM_MATERIAL_QUANTITY)
+        VALUES (#{searchText}, #{MATERIAL_ID}, #{searchText}, #{BOM_MATERIAL_QUANTITY})
+    </insert>
+
+    <delete id="materialDelete" parameterType="kr.co.urun.dto.BomDTO">
+        DELETE FROM BOM b WHERE b.bom_item_id = #{searchText}
+        AND b.bom_material_id = #{BOM_MATERIAL_ID}
+    </delete>
 </mapper>
