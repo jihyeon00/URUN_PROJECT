@@ -1,9 +1,26 @@
 package kr.co.urun.service;
 
+import kr.co.urun.dto.MemberDTO;
+import kr.co.urun.mapper.MemberMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MemberServiceImpl implements MemberService{
+
+    @Autowired
+    private MemberMapper memberMapper;
+
+    // 멤버 조회 : signIn
+    @Override
+    public String selectMemberInfo(String MEMBER_ID, String MEMBER_PW) {
+        MemberDTO selectMemberInfo = memberMapper.selectMemberInfo(MEMBER_ID);
+        if(selectMemberInfo.getMEMBER_PW().equals(MEMBER_PW)){
+            return selectMemberInfo.getMEMBER_ID();
+        }
+        return null;
+    }
+
 
 
 }

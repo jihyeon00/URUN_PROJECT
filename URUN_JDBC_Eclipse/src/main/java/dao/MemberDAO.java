@@ -30,7 +30,7 @@ public class MemberDAO {
 		
 		
 		try {
-			sql = "SELECT e.EMPLOYEE_ID, m.MEMBER_ID , m.MEMBER_PW, m.MEMBER_EMPLOYEE_ID, e.EMPLOYEE_NAME, e.EMPLOYEE_DIVISON"
+			sql = "SELECT e.EMPLOYEE_ID, m.MEMBER_ID , m.MEMBER_PW, m.MEMBER_EMPLOYEE_ID, e.EMPLOYEE_NAME, e.EMPLOYEE_DIVISION"
 					+ " FROM EMPLOYEES e LEFT join MEMBER m on e.EMPLOYEE_ID=m.MEMBER_EMPLOYEE_ID"
 					+ " WHERE e.EMPLOYEE_ID = " + MEMBER_ID;
 			conn = DBManager.getConnection();
@@ -44,7 +44,7 @@ public class MemberDAO {
 				memberDTO.setMEMBER_PW(rs.getString("MEMBER_PW"));
 				memberDTO.setMEMBER_EMPLOYEE_ID(rs.getString("MEMBER_EMPLOYEE_ID"));
 				memberDTO.setEMPLOYEE_NAME(rs.getString("EMPLOYEE_NAME"));
-				memberDTO.setEMPLOYEE_DIVISON(rs.getString("EMPLOYEE_DIVISON"));
+				memberDTO.setEMPLOYEE_DIVISON(rs.getString("EMPLOYEE_DIVISION"));
 				list.add(memberDTO);
 			}
 		} catch (Exception e) {

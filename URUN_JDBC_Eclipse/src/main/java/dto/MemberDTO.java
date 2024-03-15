@@ -7,7 +7,7 @@ public class MemberDTO {
 	
 	private String EMPLOYEE_ID;
 	private String EMPLOYEE_NAME;
-	private String EMPLOYEE_DIVISON;
+	private String EMPLOYEE_DIVISION;
 	
 	private int empCount;
 	private int memCount;
@@ -27,11 +27,11 @@ public class MemberDTO {
 	
 	
 	
-	public String getEMPLOYEE_DIVISON() {
-		return EMPLOYEE_DIVISON;
+	public String getEMPLOYEE_DIVISION() {
+		return EMPLOYEE_DIVISION;
 	}
-	public void setEMPLOYEE_DIVISON(String eMPLOYEE_DIVISON) {
-		EMPLOYEE_DIVISON = eMPLOYEE_DIVISON;
+	public void setEMPLOYEE_DIVISON(String eMPLOYEE_DIVISION) {
+		EMPLOYEE_DIVISION = eMPLOYEE_DIVISION;
 	}
 	public String getMEMBER_ID() {
 		return MEMBER_ID;

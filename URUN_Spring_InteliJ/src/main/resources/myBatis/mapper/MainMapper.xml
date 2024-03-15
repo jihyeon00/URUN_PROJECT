@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.urun.mapper.MainMapper">
+    <select id="selectNoticeFetch" resultType="kr.co.urun.dto.NoticeDTO">
+        SELECT n.NOTICE_ID, n.NOTICE_TITLE, n.NOTICE_CONTENT, n.NOTICE_REGDATE, n.NOTICE_MEMBER_ID, m.MEMBER_ID, e.EMPLOYEE_DIVISION
+        FROM NOTICE n, MEMBER m, EMPLOYEES e
+        WHERE n.NOTICE_MEMBER_ID = m.MEMBER_ID
+             AND m.MEMBER_EMPLOYEE_ID = e.EMPLOYEE_ID
+        ORDER BY n.NOTICE_ID DESC fetch first 5 rows only
+    </select>
+</mapper>

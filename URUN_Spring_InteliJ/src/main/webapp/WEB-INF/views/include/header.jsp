@@ -1,9 +1,6 @@
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="kr.co.urun.config.*"%>
-<%@page import="kr.co.urun.dto.*"%>
-<%@page import="kr.co.urun.mapper.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 
 <html>
@@ -23,7 +20,7 @@
 			<div>
 				<div class="logoBox"><a href="./main">URUN</a></div>
 				<div class="loginInfo">
-				    <span>11111111</span>(OOO)님 안녕하세요.
+				    <span><c:out value="${memberInfo.MEMBER_ID} "/></span>(<c:out value="${memberInfo.EMPLOYEE_NAME} "/>)님 안녕하세요.
                 	<input type="button" class="btn btn-light" value="로그아웃" onclick='location.href="./logOut"'/>
 				</div>
 			</div>

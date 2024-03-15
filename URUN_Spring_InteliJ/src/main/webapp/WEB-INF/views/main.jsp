@@ -1,9 +1,6 @@
-<%@ page import="util.*" %> 
-<%@ page import="java.sql.*" %>
-<%@ page import="java.lang.Exception" %> 
-<%@page import="dto.NoticeDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -19,7 +16,7 @@
  
 </head>
 <body>
-<%@ include file="./sidebar.jsp" %>
+<%@ include file="./include/sidebar.jsp"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	
