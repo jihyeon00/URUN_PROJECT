@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import lombok.extern.log4j.Log4j;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -50,10 +52,11 @@ public class BOMController {
     @GetMapping("/bomRegistration")
     public String bomRegistration(
             @RequestParam(value="searchText", required = false) String searchText,
+            @RequestParam(value="MATERIAL_ID", required = false) Long MATERIAL_ID,
             Model model){
 
         if (searchText == null) {
-            searchText="";
+            searchText = "";
         }
 
         List<BomDTO> selectOneItemBom = bomService.selectOneItemBom(searchText);
@@ -61,10 +64,58 @@ public class BOMController {
 
         model.addAttribute("selectOneItemBom", selectOneItemBom);
         model.addAttribute("selectMaterial", selectMaterial);
+
+        // BOM 등록 시 자재 조회
+        if (MATERIAL_ID != null) {
+            BomDTO selectOneMaterial = bomService.selectOneMaterial(MATERIAL_ID);
+            model.addAttribute("selectOneMaterial", selectOneMaterial);
+            log.info("selectOneMaterial: " + selectOneMaterial);
+        }
         model.addAttribute("searchText", searchText);
 
         return "bomRegistration";
     }
-	
-	
+
+
+    @PostMapping("/materialInsert")
+    public String materialInsert(
+            BomDTO bomDTO,
+            @RequestParam(value="searchText", required = false) String searchText,
+            @RequestParam(value="MATERIAL_ID", required = false) String MATERIAL_ID,
+            @RequestParam(value="BOM_MATERIAL_QUANTITY", required = false) int BOM_MATERIAL_QUANTITY,
+            RedirectAttributes rttr){
+
+        bomDTO.setSearchText(searchText);
+        bomDTO.setBOM_ITEM_ID(searchText);
+        bomDTO.setBOM_ID(searchText);
+        bomDTO.setMATERIAL_ID(MATERIAL_ID);
+        bomDTO.setBOM_MATERIAL_QUANTITY(BOM_MATERIAL_QUANTITY);
+
+
+        log.info("insert searchText(BOM_ID, BOM_ITEM_ID) : " + searchText);
+        bomService.materialInsert(bomDTO);
+        rttr.addFlashAttribute("result", "insert success");
+        return "redirect:/bomRegistration?searchText="+searchText;
+    }
+
+    @PostMapping("/materialDelete")
+    public String materialDelete(
+            BomDTO bomDTO,
+            @RequestParam(value="searchText", required = false) String searchText,
+            @RequestParam(value="BOM_MATERIAL_ID", required = false) String BOM_MATERIAL_ID,
+            RedirectAttributes rttr){
+
+        log.info("delete searchText(BOM_ID, BOM_ITEM_ID) : " + searchText);
+
+        bomDTO.setSearchText(searchText);
+        bomDTO.setBOM_ITEM_ID(searchText);
+        bomDTO.setBOM_MATERIAL_ID(BOM_MATERIAL_ID);
+
+        bomService.materialDelete(bomDTO);
+        rttr.addFlashAttribute("result", "delete success");
+        return "redirect:/bomRegistration?searchText="+searchText;
+    }
+
+
+
 }
