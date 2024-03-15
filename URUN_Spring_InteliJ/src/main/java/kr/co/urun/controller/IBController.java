@@ -75,10 +75,13 @@ public class IBController {
     }
 
     /**** 입고 수정 ****/
-    @PutMapping(value = "/IBUpdate")
-    public String IBUpdate(@RequestParam("IB_ID") String IB_ID, IBDTO dto, RedirectAttributes rttr){
-        int rtn = ibService.IBUpdate(IB_ID, dto);
-        log.info("IBUpdate: "+ IB_ID + dto);
+    @PostMapping(value = "/IBUpdate")
+    public String IBUpdate(IBDTO dto, RedirectAttributes rttr){
+        String IB_Complete_Date = dto.getIB_Complete_Date_date()+dto.getIB_Complete_Date_time();
+        dto.setIB_Complete_Date(IB_Complete_Date);
+
+        int rtn = ibService.IBUpdate(dto);
+        log.info("IBUpdate dto: "+ dto);
         rttr.addFlashAttribute("updateSuccessCount", rtn);
         return "redirect:/IBList";
     }

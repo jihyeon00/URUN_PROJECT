@@ -15,7 +15,7 @@ public interface IBService {
     // 자재 조회
     List<IBDTO> IBMaterialList();
     // 입고 수정
-    int IBUpdate(String IB_ID, IBDTO dto);
+    int IBUpdate(IBDTO dto);
     IBDTO IBSelectOne(Long IB_ID);
 
     // 카운트

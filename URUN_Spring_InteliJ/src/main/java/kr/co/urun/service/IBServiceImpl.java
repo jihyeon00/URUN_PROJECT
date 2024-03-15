@@ -50,8 +50,8 @@ public class IBServiceImpl implements IBService{
 	}
 	// 입고 수정
 	@Override
-	public int IBUpdate(String IB_ID, IBDTO dto) {
-		int rtn = ibMapper.IBUpdate(IB_ID, dto);
+	public int IBUpdate(IBDTO dto) {
+		int rtn = ibMapper.IBUpdate(dto);
 
 		return rtn;
 	}
