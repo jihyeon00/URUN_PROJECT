@@ -1,11 +1,10 @@
 package kr.co.urun.service;
 
 import kr.co.urun.dto.IBDTO;
-
 import java.util.List;
 
-
 public interface IBService {
+
     List<IBDTO> IBList(String IBWhere);
     // 입고 등록
     int IBInsert(IBDTO dto);

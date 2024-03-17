@@ -1,7 +1,7 @@
 package kr.co.urun.controller;
 
-import kr.co.urun.dto.IBDTO;
-import kr.co.urun.service.IBService;
+import kr.co.urun.dto.OBDTO;
+import kr.co.urun.service.OBService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/ibrest")
+@RequestMapping("/obrest")
 @AllArgsConstructor
-public class IBRestController {
-    private IBService ibService;
+public class OBRestController {
+    private OBService obService;
 
-    // IB 상세 조회
-    @GetMapping(value = "/{IB_ID}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<IBDTO> get(@PathVariable("IB_ID") Long IB_ID) {
-        return new ResponseEntity<>(ibService.IBSelectOne(IB_ID), HttpStatus.OK);
+    // OB 상세 조회
+    @GetMapping(value = "/{OB_ID}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<OBDTO> get(@PathVariable("OB_ID") Long OB_ID) {
+        return new ResponseEntity<>(obService.OBSelectOne(OB_ID), HttpStatus.OK);
     }
 }
