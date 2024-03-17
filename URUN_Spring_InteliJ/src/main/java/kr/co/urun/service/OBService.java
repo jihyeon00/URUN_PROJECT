@@ -1,5 +1,25 @@
 package kr.co.urun.service;
 
-public interface OBService {
+import kr.co.urun.dto.OBDTO;
+import java.util.List;
 
+public interface OBService {
+    // 출고 조회
+    List<OBDTO> OBList(String OBWhere);
+    // 출고 등록
+    int OBInsert(OBDTO dto);
+    int OBIvInsert(OBDTO dto);
+    // 거래처 조회
+    List<OBDTO> OBCompanyList();
+    // 제품 조회
+    List<OBDTO> OBItemList();
+    // 출고 수정
+    int OBUpdate(OBDTO dto);
+    OBDTO OBSelectOne(Long IB_ID);
+
+    // 카운트
+    Integer OBAllCount();
+    Integer ExpectedCount();
+    Integer ProceedingCount();
+    Integer completedCount();
 }

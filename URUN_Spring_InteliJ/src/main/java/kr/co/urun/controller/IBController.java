@@ -35,8 +35,6 @@ public class IBController {
         List<IBDTO> IBMaterialList = ibService.IBMaterialList();
         model.addAttribute("IBCompanyList", IBCompanyList);
         model.addAttribute("IBMaterialList", IBMaterialList);
-        log.info("IBCompanyList: "+ IBCompanyList);
-        log.info("IBMaterialList: "+ IBMaterialList);
 
         // 입고 수정 조회
         if (IB_ID != null) {

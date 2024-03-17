@@ -14,7 +14,6 @@ import java.util.List;
 public class IBServiceImpl implements IBService{
 	@Autowired
 	private IBMapper ibMapper;
-
 	// 입고 현황 조회
 	@Override
 	public List<IBDTO> IBList(String IBWhere) {
