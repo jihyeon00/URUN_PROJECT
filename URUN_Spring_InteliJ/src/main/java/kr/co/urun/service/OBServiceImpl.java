@@ -52,8 +52,8 @@ public class OBServiceImpl implements OBService{
 	}
 	// 츨고 수정 조회
 	@Override
-	public OBDTO OBSelectOne(Long IB_ID) {
-		return obMapper.OBSelectOne(IB_ID);
+	public OBDTO OBSelectOne(Long OB_ID) {
+		return obMapper.OBSelectOne(OB_ID);
 	}
 
 	// 카운트

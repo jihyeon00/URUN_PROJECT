@@ -16,7 +16,7 @@ public interface OBMapper {
     List<OBDTO> OBItemList();
     // 출고 수정
     int OBUpdate(OBDTO dto);
-    OBDTO OBSelectOne(Long IB_ID);
+    OBDTO OBSelectOne(Long OB_ID);
 
     // 카운트
     Integer OBAllCount();
