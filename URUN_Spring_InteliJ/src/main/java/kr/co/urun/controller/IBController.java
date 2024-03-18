@@ -8,14 +8,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import lombok.extern.log4j.Log4j;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import java.util.List;
 
 @Controller
 @Log4j
 @AllArgsConstructor
 public class IBController {
-
     private IBService ibService;
 
     /**** 입고 현황 조회 ****/

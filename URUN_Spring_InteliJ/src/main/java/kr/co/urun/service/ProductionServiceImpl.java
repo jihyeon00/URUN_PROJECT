@@ -1,10 +1,24 @@
 package kr.co.urun.service;
 
+import kr.co.urun.dto.Criteria;
+import kr.co.urun.dto.ProductionDTO;
+import kr.co.urun.mapper.ProductionMapper;
+import lombok.extern.log4j.Log4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+@Log4j
 @Service
 public class ProductionServiceImpl implements ProductionService {
-	
-	private ProductionService productionService;
+	@Autowired
+	private ProductionMapper mapper;
 
+	// 생산불량현황
+	@Override
+	public List<ProductionDTO> getStatusList(Criteria cri) {
+		List<ProductionDTO> StatusList = mapper.getStatusList(cri);
+		return StatusList;
+	}
 }
