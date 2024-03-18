@@ -1,9 +1,6 @@
-<%@ page import="util.*" %> 
-<%@ page import="java.sql.*" %>
-<%@ page import="java.lang.Exception" %> 
-<%@page import="dto.NoticeDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -19,15 +16,10 @@
  
 </head>
 <body>
-<%@ include file="./sidebar.jsp" %>
-<%
-	request.setCharacterEncoding("UTF-8");
-	
-	NoticeDAO nDAO = new NoticeDAO();
-	List<NoticeDTO> listNoticeFetch = nDAO.selectNoticeFetch();
-	
-	
-%>
+<jsp:include page="./include/sidebar.jsp">
+ <jsp:param name="MEMBER_ID" value="${selectMemberInfo.MEMBER_ID}" />
+ <jsp:param name="EMPLOYEE_NAME" value="${selectMemberInfo.EMPLOYEE_NAME}" />
+</jsp:include>
 	<div class="wrap">
 		<div class="title">
 			<span style="font-weight: 800;">| </span> 
@@ -48,13 +40,13 @@
 					</tr>
 				</thead>
 				<tbody>
-					<%for(int i=0;i<listNoticeFetch.size();i++) {%>
+				<c:forEach items="${selectNoticeFetch}" var="selectNoticeFetch">
 					<tr>
-						<td><%=listNoticeFetch.get(i).getNOTICE_ID()%></td>
-						<td><a style="color:black;" href="./NoticeDetail.jsp?num=<%=listNoticeFetch.get(i).getNOTICE_ID()%>"><%=listNoticeFetch.get(i).getNOTICE_TITLE()%></a></td>
-						<td><%=listNoticeFetch.get(i).getNOTICE_REGDATE().substring(0, 10) %></td>
+						<td><c:out value="${selectNoticeFetch.NOTICE_ID}"/></td>
+						<td><a style="color:black;" href='./NoticeDetail.jsp?num=<c:out value="${selectNoticeFetch.NOTICE_ID}"/>'><c:out value="${selectNoticeFetch.NOTICE_TITLE}"/></a></td>
+						<td><c:out value="${selectNoticeFetch.NOTICE_REGDATE}"/></td>
 					</tr>
-					<%} %>
+				</c:forEach>
 				</tbody>
 			</table>
 		</div>
@@ -83,56 +75,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				<%
-					Connection conn = null;
-					PreparedStatement pstmt = null;
-					ResultSet rs = null;
-					
-					String sql = null;
-					
-					try {
-					 	sql = "SELECT i.ITEM_NAME, "
-								+ "p.PROCESS_ITEM_ID, "
-								+ "p.PROCESS_Plan_Quantity,"
-								/* PROCESS_ID 의 (총 생산수, 총 불량수, 불량률) */
-								+ "SUM(w.WORK_Item_Quantity) as WORK_Item_Quantity, "
-								+ "SUM(w.WORK_Defective_Quantity) as WORK_Defective_Quantity,"
-								+ "round(NVL(SUM(w.WORK_Defective_Quantity)/DECODE(SUM(w.WORK_Item_Quantity), 0, null, SUM(w.WORK_Item_Quantity)), 0),3) AS PROCESS_defect_rate"
-						+ " FROM PROCESS p, WORK w, ITEM i"
-						+ " WHERE p.PROCESS_ID = w.WORK_PROCESS_ID(+)"
-						+ 	" AND p.PROCESS_ITEM_ID = i.ITEM_ID"
-						+ " GROUP BY w.WORK_PROCESS_ID, i.ITEM_NAME, p.PROCESS_ITEM_ID, p.PROCESS_Plan_Quantity"
-						+ " ORDER BY p.PROCESS_ITEM_ID DESC";
-					 	
-					 	conn = DBManager.getConnection();
-						pstmt = conn.prepareStatement(sql);
-						rs = pstmt.executeQuery();
-						
-					 while(rs.next()) {
-						 int PROCESS_ITEM_ID = rs.getInt("PROCESS_ITEM_ID");
-						 String ITEM_NAME = rs.getString("ITEM_NAME");
-						 int PROCESS_Plan_Quantity = rs.getInt("PROCESS_Plan_Quantity");
-						 int WORK_Item_Quantity = rs.getInt("WORK_Item_Quantity");
-						 int WORK_Defective_Quantity = rs.getInt("WORK_Defective_Quantity");
-						 Double PROCESS_defect_rate = rs.getDouble("PROCESS_defect_rate");
-
-				%>
-					<tr>
-						<td><%=PROCESS_ITEM_ID%></td>
-						<td><%=ITEM_NAME %></td>
-						<td><%=PROCESS_Plan_Quantity%></td>
-						<td><%=WORK_Item_Quantity %></td>
-						<td><%=WORK_Defective_Quantity %></td>
-						<td><%=PROCESS_defect_rate %></td>
-					</tr>
-				<% 		 		
-					 	}
-					} catch(Exception e) {
-						System.out.println("오라클 접속 오류: " + e);
-					} finally {
-						DBManager.selectClose(conn, pstmt, rs);
-					}
-				%>
+				
 				</tbody>
 			</table>
 		</div>

@@ -18,7 +18,7 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <section class="login-form">
   <div class="centerUrun">URUN</div>
-  <form action="./signInOk" method ="post">
+  <form action="/signIn" method ="post">
       <div class="int-area" id="id-area">
           <input type="text" name="MEMBER_ID" id="MEMBER_ID" autocomplete="off" placeholder="사원번호" />
       </div>
@@ -37,7 +37,7 @@
       </div>
   </form>
   <div class="signUp">
-      <a href="./signUp">회원가입</a>
+      <a href="/signUp">회원가입</a>
   </div>
 </section>
 <script>
