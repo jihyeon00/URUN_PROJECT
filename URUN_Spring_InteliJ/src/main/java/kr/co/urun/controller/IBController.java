@@ -1,7 +1,10 @@
 package kr.co.urun.controller;
 
+import jakarta.servlet.http.HttpSession;
 import kr.co.urun.dto.IBDTO;
+import kr.co.urun.dto.MemberDTO;
 import kr.co.urun.service.IBService;
+import kr.co.urun.service.MemberService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,13 +18,20 @@ import java.util.List;
 @AllArgsConstructor
 public class IBController {
     private IBService ibService;
+    public MemberService memberService;
 
     /**** 입고 현황 조회 ****/
     @GetMapping(value ="/IBList")
     public String IBList(
             @RequestParam(value = "IBWhere", required = false) String IBWhere,
             @RequestParam(value = "IB_ID", required = false) Long IB_ID,
+            HttpSession session,
             Model model){
+        // 헤더 멤버
+        String MEMBER_ID = (String) session.getAttribute("member");
+        MemberDTO selectMemberInfo = memberService.selectMemberInfo(MEMBER_ID);
+        model.addAttribute("selectMemberInfo", selectMemberInfo);
+
         // 입고 현황 조회
         List<IBDTO> IBList = ibService.IBList(IBWhere);
 

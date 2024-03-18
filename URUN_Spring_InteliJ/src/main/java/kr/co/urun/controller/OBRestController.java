@@ -1,6 +1,7 @@
 package kr.co.urun.controller;
 
 import kr.co.urun.dto.OBDTO;
+import kr.co.urun.service.MemberService;
 import kr.co.urun.service.OBService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
