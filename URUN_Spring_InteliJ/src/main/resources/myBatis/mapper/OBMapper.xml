@@ -2,4 +2,105 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.urun.mapper.OBMapper">
+    <!--  출고 현황 조회  -->
+    <select id="OBList" resultType="kr.co.urun.dto.OBDTO">
+        SELECT  o.OB_Status,
+                o.OB_ID,
+                c.Company_Name,
+                i.ITEM_NAME,
+                o.OB_ITEM_ID,
+                o.OB_Quantity,
+                to_char(o.OB_Expected_Date,'yyyy-mm-dd') as OB_Expected_Date,
+                o.OB_Complete_Date
+        FROM OB o, ITEM i, COMPANY c
+        WHERE o.OB_Company_ID = c.Company_ID
+            AND o.OB_ITEM_ID = i.ITEM_ID
+            <if test="OBWhere != null and OBWhere != ''">
+                AND o.OB_Status Like '%' || #{OBWhere} || '%'
+            </if>
+        ORDER BY OB_ID DESC
+    </select>
+
+    <!--  입고 입력시 거래처 조회  -->
+    <select id="OBCompanyList" resultType="kr.co.urun.dto.OBDTO">
+        SELECT  COMPANY_ID, COMPANY_NAME
+        FROM    COMPANY
+        WHERE   COMPANY_DIVISON = '납품업체'
+        ORDER BY COMPANY_ID
+    </select>
+    <!--  입고 입력시 제품 조회  -->
+    <select id="OBItemList" resultType="kr.co.urun.dto.OBDTO">
+        SELECT  ITEM_ID, ITEM_NAME
+        FROM    ITEM
+        ORDER BY ITEM_ID
+    </select>
+
+    <!--  입고 등록  -->
+    <insert id="OBInsert">
+        INSERT INTO OB(
+        OB_Company_ID, OB_ITEM_ID, OB_Quantity, OB_Expected_Date)
+        VALUES (#{OB_Company_ID_}, #{OB_ITEM_ID_}, #{OB_Quantity_}, to_date(#{OB_Expected_Date_},'YYYY-MM-DD'))
+    </insert>
+    <insert id="OBIvInsert">
+        INSERT INTO	INVENTORY(INVENTORY_OB_ID, INVENTORY_ITEM_ID, INVENTORY_Quantity)
+        SELECT  OB_ID, OB_ITEM_ID, OB_Quantity
+        FROM OB
+        WHERE OB_Company_ID = #{OB_Company_ID_}
+            AND OB_ITEM_ID = #{OB_ITEM_ID_}
+            AND OB_Quantity = #{OB_Quantity_}
+            AND OB_Expected_Date = to_date(#{OB_Expected_Date_},'YYYY-MM-DD')
+    </insert>
+
+    <!--  입고 수정  -->
+    <select id="OBSelectOne" resultType="kr.co.urun.dto.OBDTO">
+        SELECT  OB_ID,
+                OB_Company_ID,
+                OB_ITEM_ID,
+                OB_Quantity,
+                to_char(OB_Expected_Date,'yyyy-mm-dd')  as OB_Expected_Date,
+                to_char(OB_Complete_Date,'yyyy-mm-dd')  as OB_Complete_Date,
+                to_char(OB_Complete_Date,'yyyy-mm-dd')  as OB_Complete_Date_date,
+                to_char(OB_Complete_Date,'HH24:MI')     as OB_Complete_Date_time,
+                OB_Status,
+                OB_Note
+        FROM    OB
+        WHERE 1=1
+        <if test="OB_ID != null and OB_ID != ''">
+            AND OB_ID = #{OB_ID}
+        </if>
+        ORDER BY OB_ID DESC
+    </select>
+    <update id="OBUpdate">
+        UPDATE  OB
+        SET     OB_Complete_Date = to_TIMESTAMP( #{OB_Complete_Date}, 'YYYY-MM-DD HH24:MI:SS'),
+                OB_Status = #{OB_Status},
+                OB_Note = #{OB_Note}
+        WHERE   OB_ID = #{OB_ID}
+    </update>
+
+    <!--  진생현황 카운트  -->
+    <select id="OBAllCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) AS COUNT FROM OB
+    </select>
+    <select id="ExpectedCount" resultType="java.lang.Integer">
+        SELECT nvl(COUNT,0) AS COUNT
+        FROM (
+        SELECT	COUNT(OB_Status) AS COUNT
+        FROM	OB
+        WHERE  	OB_Status = '출고예정')
+    </select>
+    <select id="ProceedingCount" resultType="java.lang.Integer">
+        SELECT nvl(COUNT,0) AS COUNT
+        FROM (
+        SELECT	COUNT(OB_Status) AS COUNT
+        FROM	OB
+        WHERE  	OB_Status = '출고진행중')
+    </select>
+    <select id="completedCount" resultType="java.lang.Integer">
+        SELECT nvl(COUNT,0) AS COUNT
+        FROM (
+        SELECT	COUNT(OB_Status) AS COUNT
+        FROM	OB
+        WHERE  	OB_Status = '출고완료')
+    </select>
 </mapper>

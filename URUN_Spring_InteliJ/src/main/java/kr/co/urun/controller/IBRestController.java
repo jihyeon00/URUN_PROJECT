@@ -2,6 +2,7 @@ package kr.co.urun.controller;
 
 import kr.co.urun.dto.IBDTO;
 import kr.co.urun.service.IBService;
+import kr.co.urun.service.MemberService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

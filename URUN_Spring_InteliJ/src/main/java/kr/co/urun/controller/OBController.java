@@ -1,6 +1,9 @@
 package kr.co.urun.controller;
 
+import jakarta.servlet.http.HttpSession;
+import kr.co.urun.dto.MemberDTO;
 import kr.co.urun.dto.OBDTO;
+import kr.co.urun.service.MemberService;
 import kr.co.urun.service.OBService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -17,13 +20,20 @@ import java.util.List;
 @AllArgsConstructor
 public class OBController {
     private OBService obService;
+    public MemberService memberService;
 
     /**** 출고 현황 조회 ****/
     @GetMapping(value ="/OBList")
     public String OBList(
             @RequestParam(value = "OBWhere", required = false) String OBWhere,
             @RequestParam(value = "OB_ID", required = false) Long OB_ID,
+            HttpSession session,
             Model model){
+        // 헤더 멤버
+        String MEMBER_ID = (String) session.getAttribute("member");
+        MemberDTO selectMemberInfo = memberService.selectMemberInfo(MEMBER_ID);
+        model.addAttribute("selectMemberInfo", selectMemberInfo);
+
         // 출고 현황 조회
         List<OBDTO> OBList = obService.OBList(OBWhere);
 

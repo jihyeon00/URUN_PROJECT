@@ -2,4 +2,126 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.urun.mapper.IBMapper">
+    <!--  입고 현황 조회  -->
+    <select id="IBList" resultType="kr.co.urun.dto.IBDTO">
+        SELECT  i.IB_Status,
+                i.IB_ID,
+                c.Company_Name,
+                m.MATERIAL_NAME,
+                to_char(i.IB_Expected_Date,'yyyy-mm-dd') as IB_Expected_Date,
+                i.IB_Complete_Date,
+                i.IB_Quantity, i.IB_Test_Quantity,
+                i.IB_Defective_Quantity,
+                round(NVL(i.IB_Defective_Quantity / DECODE(i.IB_Test_Quantity, 0, null, i.IB_Test_Quantity), 0),3) AS IB_defect_rate
+        FROM IB i, MATERIAL m, COMPANY c
+        WHERE i.IB_Company_ID = c.Company_ID
+            AND i.IB_MATERIAL_ID = m.MATERIAL_ID
+        <if test="IBWhere != null and IBWhere != ''">
+            AND i.IB_Status Like '%' || #{IBWhere} || '%'
+        </if>
+        ORDER BY IB_ID DESC
+    </select>
+
+    <!--  입고 입력시 거래처 조회  -->
+    <select id="IBCompanyList" resultType="kr.co.urun.dto.IBDTO">
+        SELECT  COMPANY_ID, COMPANY_NAME
+        FROM    COMPANY
+        WHERE   COMPANY_DIVISON = '공급업체'
+        ORDER BY COMPANY_ID
+    </select>
+    <!--  입고 입력시 자재 조회  -->
+    <select id="IBMaterialList" resultType="kr.co.urun.dto.IBDTO">
+        SELECT  MATERIAL_ID, MATERIAL_NAME
+        FROM    MATERIAL
+        ORDER BY MATERIAL_ID
+    </select>
+
+    <!--  입고 등록  -->
+    <insert id="IBInsert">
+        INSERT INTO IB(
+            IB_Company_ID, IB_MATERIAL_ID, IB_Quantity, IB_Expected_Date)
+        VALUES (#{IB_Company_ID_}, #{IB_MATERIAL_ID_}, #{IB_Quantity_}, to_date(#{IB_Expected_Date_},'YYYY-MM-DD'))
+    </insert>
+    <insert id="IBIvInsert">
+        INSERT INTO	INVENTORY(INVENTORY_IB_ID, INVENTORY_MATERIAL_ID, INVENTORY_Quantity)
+        SELECT  IB_ID, IB_MATERIAL_ID, IB_Quantity
+        FROM IB
+        WHERE IB_Company_ID = #{IB_Company_ID_}
+            AND IB_MATERIAL_ID = #{IB_MATERIAL_ID_}
+            AND IB_Quantity = #{IB_Quantity_}
+            AND IB_Expected_Date = to_date(#{IB_Expected_Date_},'YYYY-MM-DD')
+    </insert>
+
+    <!--  입고 수정  -->
+    <select id="IBSelectOne" resultType="kr.co.urun.dto.IBDTO">
+        SELECT  IB_ID,
+                IB_Company_ID,
+                IB_MATERIAL_ID,
+                IB_Quantity,
+                IB_Test_Quantity,
+                IB_Defective_Quantity,
+                to_char(IB_Defective_Date,'yyyy-mm-dd') as IB_Defective_Date,
+                to_char(IB_Expected_Date,'yyyy-mm-dd') as IB_Expected_Date,
+                to_char(IB_Complete_Date,'yyyy-mm-dd') as IB_Complete_Date,
+                to_char(IB_Complete_Date,'yyyy-mm-dd') as IB_Complete_Date_date,
+                to_char(IB_Complete_Date,'HH24:MI') as IB_Complete_Date_time,
+                IB_Status,
+                IB_Note
+        FROM IB
+        WHERE 1=1
+        <if test="IB_ID != null and IB_ID != ''">
+            AND IB_ID = #{IB_ID}
+        </if>
+        ORDER BY IB_ID DESC
+    </select>
+    <update id="IBUpdate">
+        UPDATE IB
+        SET IB_Test_Quantity = #{IB_Test_Quantity},
+            IB_Defective_Quantity = #{IB_Defective_Quantity},
+            IB_Defective_Date = to_date( #{IB_Defective_Date},'YYYY-MM-DD'),
+            IB_Complete_Date = to_TIMESTAMP( #{IB_Complete_Date}, 'YYYY-MM-DD HH24:MI:SS'),
+            IB_Status = #{IB_Status},
+            IB_Note = #{IB_Note}
+        WHERE IB_ID = #{IB_ID}
+    </update>
+
+    <!--  진생현황 카운트  -->
+    <select id="IBAllCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) AS COUNT FROM IB
+    </select>
+    <select id="RequestCount" resultType="java.lang.Integer">
+        SELECT nvl(COUNT,0) AS COUNT
+        FROM (
+        SELECT	COUNT(IB_Status) AS COUNT
+        FROM	IB
+        WHERE  	IB_Status = '입고요청')
+    </select>
+    <select id="PartialIBCount" resultType="java.lang.Integer">
+        SELECT nvl(COUNT,0) AS COUNT
+        FROM (
+        SELECT	COUNT(IB_Status) AS COUNT
+        FROM	IB
+        WHERE  	IB_Status = '부분입고')
+    </select>
+    <select id="IBCount" resultType="java.lang.Integer">
+        SELECT nvl(COUNT,0) AS COUNT
+        FROM (
+        SELECT	COUNT(IB_Status) AS COUNT
+        FROM	IB
+        WHERE  	IB_Status = '입고완료')
+    </select>
+    <select id="UnderReviewIBCount" resultType="java.lang.Integer">
+        SELECT nvl(COUNT,0) AS COUNT
+        FROM (
+        SELECT	COUNT(IB_Status) AS COUNT
+        FROM	IB
+        WHERE  	IB_Status = '검수중')
+    </select>
+    <select id="CompletedIBCount" resultType="java.lang.Integer">
+        SELECT nvl(COUNT,0) AS COUNT
+        FROM (
+        SELECT	COUNT(IB_Status) AS COUNT
+        FROM	IB
+        WHERE  	IB_Status = '검수완료')
+    </select>
 </mapper>
