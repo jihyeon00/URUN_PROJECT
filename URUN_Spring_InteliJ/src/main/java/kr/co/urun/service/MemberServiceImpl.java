@@ -13,12 +13,19 @@ public class MemberServiceImpl implements MemberService{
 
     // 멤버 조회 : signIn
     @Override
-    public String selectMemberInfo(String MEMBER_ID, String MEMBER_PW) {
-        MemberDTO selectMemberInfo = memberMapper.selectMemberInfo(MEMBER_ID);
-        if(selectMemberInfo.getMEMBER_PW().equals(MEMBER_PW)){
-            return selectMemberInfo.getMEMBER_ID();
+    public String selectMember(String MEMBER_ID, String MEMBER_PW) {
+        MemberDTO selectMember = memberMapper.selectMember(MEMBER_ID);
+        if(selectMember.getMEMBER_PW().equals(MEMBER_PW)){
+            return selectMember.getMEMBER_ID();
         }
         return null;
+    }
+
+    // 멤버 정보 조회
+    @Override
+    public MemberDTO selectMemberInfo(String MEMBER_ID) {
+        MemberDTO selectMemberInfo = memberMapper.selectMember(MEMBER_ID);
+        return selectMemberInfo;
     }
 
 

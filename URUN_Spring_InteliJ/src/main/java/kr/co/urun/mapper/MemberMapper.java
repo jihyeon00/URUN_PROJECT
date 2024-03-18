@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface MemberMapper {
     // 멤버 조회 : signIn
-    MemberDTO selectMemberInfo(String MEMBER_ID);
+    MemberDTO selectMember(String MEMBER_ID);
 
 
 

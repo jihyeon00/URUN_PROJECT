@@ -13,14 +13,17 @@
         <script src="/resources/js/main.js"></script>
 </head>
 <body>
-<% request.setCharacterEncoding("UTF-8"); %>
+<% request.setCharacterEncoding("UTF-8"); 
+	String MEMBER_ID = request.getParameter("MEMBER_ID");
+    String EMPLOYEE_NAME = request.getParameter("EMPLOYEE_NAME");
+%>
 <header>
 	<div class="header">
 		<div class="header-inner">
 			<div>
 				<div class="logoBox"><a href="./main">URUN</a></div>
 				<div class="loginInfo">
-				    <span><c:out value="${memberInfo.MEMBER_ID} "/></span>(<c:out value="${memberInfo.EMPLOYEE_NAME} "/>)님 안녕하세요.
+				    <span><%=MEMBER_ID%></span>(<%=EMPLOYEE_NAME%>)님 안녕하세요.
                 	<input type="button" class="btn btn-light" value="로그아웃" onclick='location.href="./logOut"'/>
 				</div>
 			</div>

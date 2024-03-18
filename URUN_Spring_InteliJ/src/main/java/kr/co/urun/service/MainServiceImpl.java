@@ -14,7 +14,7 @@ public class MainServiceImpl implements MainService{
 
     @Override
     public List<NoticeDTO> selectNoticeFetch() {
-        List<NoticeDTO selectNoticeFetch = mainMapper.selectNoticeFetch();
+        List<NoticeDTO> selectNoticeFetch = mainMapper.selectNoticeFetch();
         return selectNoticeFetch;
     }
 }
