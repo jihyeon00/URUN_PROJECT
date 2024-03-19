@@ -54,7 +54,7 @@
 			<span style="font-weight: 800;">| </span> 
 			<span style="font-weight: 800;">생산현황</span>
 		</div>
-		<div class="selectTable">
+		<div class="selectTable" id="statusList">
 			<table>
 				<colgroup>
 					<col style="width: 15%" />
@@ -75,7 +75,16 @@
 					</tr>
 				</thead>
 				<tbody>
-				
+				<c:forEach items="${selectStatusList}" var="selectStatusList">
+					<tr>
+						<td><c:out value="${selectStatusList.ITEM_NAME}"/></td>
+						<td><c:out value="${selectStatusList.PROCESS_ITEM_ID}"/></td>
+						<td><c:out value="${selectStatusList.PROCESS_Plan_Quantity}"/></td>
+						<td><c:out value="${selectStatusList.WORK_Item_Quantity}"/></td>
+                        <td><c:out value="${selectStatusList.WORK_Defective_Quantity}"/></td>
+                        <td><c:out value="${selectStatusList.PROCESS_defect_rate}"/></td>
+					</tr>
+				</c:forEach>
 				</tbody>
 			</table>
 		</div>

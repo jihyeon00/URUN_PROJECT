@@ -648,6 +648,10 @@
 	position: absolute;
 	right :30px;
 }
+.status-Select-menu .Select-menu .Select-item .Select-item-btn{
+	position: absolute;
+	right :30px;
+}
 /* 검색내용 */
 .status-Select {
 	position: absolute;
@@ -809,5 +813,4 @@
 	align-items: center;
 	padding-left: 25px;
 }
-
 

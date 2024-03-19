@@ -23,4 +23,7 @@ public interface ProductionService  {
 
     /*** 생산불량현황 ***/
     List<ProductionDTO> getStatusList(Criteria cri);
+
+    /*** 생산현황 조회 ***/
+    List<ProductionDTO> getStatusLists();
 }

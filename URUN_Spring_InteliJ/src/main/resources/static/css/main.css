@@ -224,6 +224,11 @@ a {
 	height: auto;
 }
 
+#statusList {
+    height: 270px;
+    overflow-y :scroll;
+}
+
 /* 조회 테이블 */
 
 .selectTable table {

@@ -3,8 +3,10 @@ package kr.co.urun.controller;
 import jakarta.servlet.http.HttpSession;
 import kr.co.urun.dto.MemberDTO;
 import kr.co.urun.dto.NoticeDTO;
+import kr.co.urun.dto.ProductionDTO;
 import kr.co.urun.service.MainService;
 import kr.co.urun.service.MemberService;
+import kr.co.urun.service.ProductionService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +28,9 @@ public class MainController {
     @Autowired
     private MainService mainService;
 
+    @Autowired
+    private ProductionService productionService;
+
     @GetMapping(value = {"", "/", "/main"})
     public String home(HttpSession session, Model model) {
         String MEMBER_ID = (String) session.getAttribute("member");
@@ -35,6 +40,9 @@ public class MainController {
 
             List<NoticeDTO> selectNoticeFetch = mainService.selectNoticeFetch();
             model.addAttribute("selectNoticeFetch", selectNoticeFetch);
+
+            List<ProductionDTO> selectStatusList = productionService.getStatusLists();
+            model.addAttribute("selectStatusList", selectStatusList);
 
             return "main";
         }
