@@ -115,7 +115,7 @@
                                <div class="IB-name">거래처 이름</div>
                                <div>
                                    <select name="IB_Company_ID_" id="IB_Company_ID_" class="form-control">
-                                       <option selected>거래처 선택</option>
+                                       <option value="" selected>거래처 선택</option>
                                        <c:forEach var="IB" items = "${IBCompanyList}">
                                            <option value='<c:out value="${IB.COMPANY_ID}"/>'><c:out value="${IB.COMPANY_NAME}"/>
                                        </c:forEach>
@@ -126,7 +126,7 @@
                                <div class="IB-name">자재 이름</div>
                                <div>
                                    <select name="IB_MATERIAL_ID_" id="IB_MATERIAL_ID_" class="form-control">
-                                       <option selected>자재 선택</option>
+                                       <option value="" selected>자재 선택</option>
                                        <c:forEach var="IB" items = "${IBMaterialList}">
                                            <option value='<c:out value="${IB.MATERIAL_ID}" />'><c:out value="${IB.MATERIAL_NAME}"/></option>
                                        </c:forEach>
@@ -135,11 +135,17 @@
                            </div>
                            <div class="IB-Insert">
                                <div class="IB-name">공급수량</div>
-                               <div><input type="text" name="IB_Quantity_" id="IB_Quantity_" placeholder="공급수량" autocomplete="off" required></div>
+                               <div>
+                                    <input type="text" name="IB_Quantity_" id="IB_Quantity_"
+                                        placeholder="공급수량" autocomplete="off" required>
+                               </div>
                            </div>
                            <div class="IB-Insert">
                                <div class="IB-name">공급예정날짜</div>
-                               <div><input class="IB-name-date" type="date" name="IB_Expected_Date_" id="IB_Expected_Date_" placeholder='날짜를 선택해주세요.' autocomplete="off" required></div>
+                               <div>
+                                    <input class="IB-name-date" type="date" name="IB_Expected_Date_" value=""
+                                        id="IB_Expected_Date_" placeholder='날짜를 선택해주세요.' autocomplete="off" required>
+                               </div>
                            </div>
 
                            <!-- <div class="IB-Insert">
@@ -328,6 +334,11 @@
         }
         if (!$('#IB_Quantity_').val()) {
             alert('공급수량을 입력하세요.');
+            $('#IB_Quantity_').focus();
+            return;
+        }
+        if (!/^\d+$/.test( $('#IB_Quantity_').val() )) {
+            alert('공급수량은 숫자만 입력하세요.');
             $('#IB_Quantity_').focus();
             return;
         }
