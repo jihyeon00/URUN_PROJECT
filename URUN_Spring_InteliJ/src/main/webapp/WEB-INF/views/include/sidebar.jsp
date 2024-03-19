@@ -40,9 +40,8 @@
 					<ul class="big_menu">
 						<li>생산</li>
 						<ul class="small_menu">
-							<li><a href="/PROCESS_management">생산 작업 관리</a></li>
-							<li><a href="/PROCESSInsertForm">생산 계획 등록</a></li>
-							<li><a href="/Production_defect_status">생산 불량 현황</a></li>
+							<li><a href="/ProcessList">생산 작업 관리</a></li>
+							<li><a href="/DefectStatusList">생산 불량 현황</a></li>
 						</ul>
 					</ul>
 					<ul class="big_menu">
@@ -53,18 +52,10 @@
 						</ul>
 					</ul>
 					<ul class="big_menu">
-						<li>입고 - IB</li>
-						<ul class="small_menu">
-							<li><a href="/IBSelect">입고 현황</a></li>
-							<li><a href="/IBInsertForm">입고 등록</a></li>
-						</ul>
+						<li><a href="/IBList" style="color:#333">입고 - IB</a></li>
 					</ul>
 					<ul class="big_menu">
-	  					<li>출고 - OB</li>
-						<ul class="small_menu">
-							<li><a href="/OBSelect">출고 현황</a></li>
-							<li><a href="/OBInsertForm">출고 등록</a></li>
-						</ul>
+	  					<li><a href="/OBList" style="color:#333">출고 - OB</a></li>
 					</ul>
 				</div>
 			</div>

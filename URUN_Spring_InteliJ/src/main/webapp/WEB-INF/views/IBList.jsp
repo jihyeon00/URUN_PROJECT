@@ -17,14 +17,10 @@
     <title>URUN-입고 현황</title>
 </head>
 <body>
-<%
-// 진행상태 박스
-String IBWhere = request.getParameter("IBWhere");
-if (IBWhere == null) {
-	IBWhere = "";
-}
-%>
-<%@ include file="./include/sidebar.jsp" %>
+<jsp:include page="./include/sidebar.jsp">
+ <jsp:param name="MEMBER_ID" value="${selectMemberInfo.MEMBER_ID}" />
+ <jsp:param name="EMPLOYEE_NAME" value="${selectMemberInfo.EMPLOYEE_NAME}" />
+</jsp:include>
 <div class="container-IB">
 		<div class="title">
 			<h1>|  입고 현황</h1>
@@ -37,22 +33,22 @@ if (IBWhere == null) {
 					<input type="hidden" name="IBWhere" id="IBWhere" value="">
 					<!-- 입고 진행상태 조회 조건 선택 버튼 -->
 					<div class="Select-item">
-						<input id="btn-Select" type="button" value='전체( <c:out value="${IBallCount}" /> )' class="btn-Select" onClick="allIBClick();"/>
+						<input id="btn-Select" type="button" value='전체 ( <c:out value="${IBallCount}" /> )' class="btn-Select" onClick="allIBClick();"/>
 					</div>
 					<div class="Select-item">
-						<input id="btn-Select" type="button" value='입고요청( <c:out value="${RequestCount}" /> )' class="btn-Select" onClick="Request();"/>
+						<input id="btn-Select" type="button" value='입고요청 ( <c:out value="${RequestCount}" /> )' class="btn-Select" onClick="Request();"/>
 					</div>
 					<div class="Select-item">
-						<input id="btn-Select" type="button" value='부분입고( <c:out value="${PartialIBCount}" /> )' class="btn-Select" onClick="PartialIB();"/>
+						<input id="btn-Select" type="button" value='부분입고 ( <c:out value="${PartialIBCount}" /> )' class="btn-Select" onClick="PartialIB();"/>
 					</div>
 					<div class="Select-item">
-						<input id="btn-Select" type="button" value='입고완료( <c:out value="${IBCount}" /> )' class="btn-Select" onClick="completedIB();"/>
+						<input id="btn-Select" type="button" value='입고완료 ( <c:out value="${IBCount}" /> )' class="btn-Select" onClick="completedIB();"/>
 					</div>
 					<div class="Select-item">
-						<input id="btn-Select" type="button" value='검수중( <c:out value="${UnderReviewIBCount}" /> )' class="btn-Select" onClick="UnderReview();"/>
+						<input id="btn-Select" type="button" value='검수중 ( <c:out value="${UnderReviewIBCount}" /> )' class="btn-Select" onClick="UnderReview();"/>
 					</div>
 					<div class="Select-item">
-						<input id="btn-Select" type="button" value='검수완료( <c:out value="${CompletedIBCount}" /> )' class="btn-Select" onClick="confirmed();"/>
+						<input id="btn-Select" type="button" value='검수완료 ( <c:out value="${CompletedIBCount}" /> )' class="btn-Select" onClick="confirmed();"/>
 					</div>
 					<!-- 입고 등록 버튼 -->
                     <button style="cursor: pointer; border: 1px solid #999;"
@@ -109,17 +105,17 @@ if (IBWhere == null) {
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="IBInsertModalLabel">입고 등록</h1>
+                    <h1 class="modal-title" id="IBInsertModalLabel" style="font-size: 20px;" >입고 등록</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="./IBInsert" method="post" id="form-IB-INSERT" onSubmit="return false">
+                <form action="/IBInsert" method="post" id="form-IB-INSERT" onSubmit="return false">
                    <div class="modal-body">
                        <div class="write">
                            <div class="IB-Insert">
-                               <div class="IB-name">공급처ID</div>
+                               <div class="IB-name">거래처 이름</div>
                                <div>
                                    <select name="IB_Company_ID_" id="IB_Company_ID_" class="form-control">
-                                       <option selected>공급처 선택</option>
+                                       <option selected>거래처 선택</option>
                                        <c:forEach var="IB" items = "${IBCompanyList}">
                                            <option value='<c:out value="${IB.COMPANY_ID}"/>'><c:out value="${IB.COMPANY_NAME}"/>
                                        </c:forEach>
@@ -127,7 +123,7 @@ if (IBWhere == null) {
                                </div>
                            </div>
                            <div class="IB-Insert">
-                               <div class="IB-name">자재ID</div>
+                               <div class="IB-name">자재 이름</div>
                                <div>
                                    <select name="IB_MATERIAL_ID_" id="IB_MATERIAL_ID_" class="form-control">
                                        <option selected>자재 선택</option>
@@ -146,9 +142,9 @@ if (IBWhere == null) {
                                <div><input class="IB-name-date" type="date" name="IB_Expected_Date_" id="IB_Expected_Date_" placeholder='날짜를 선택해주세요.' autocomplete="off" required></div>
                            </div>
 
-                           <div class="IB-Insert">
+                           <!-- <div class="IB-Insert">
                                <input id="btn-insert" type="submit" value="등록" class="btn btn-light" onClick="javascript: IBInsert();"">
-                           </div>
+                           </div> -->
                        </div>
                    </div>
                 </form>
@@ -168,7 +164,7 @@ if (IBWhere == null) {
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="IBUpdateModalLabel">입고 수정</h1>
+                    <h1 class="modal-title" id="IBUpdateModalLabel" style="font-size: 20px;" >입고 수정</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action='/IBUpdate' method="post" id="form-IB-Update" onSubmit="return false">
@@ -178,32 +174,39 @@ if (IBWhere == null) {
                             <div class="IB-Update">
                                 <div class="IB-name">공급처ID</div>
                                 <div><input type="text" name="IB_Company_ID" id='IB_Company_ID<c:out value="${IBSelectOne.IB_ID}" />'
-                                    value='<c:out value="${IBSelectOne.IB_Company_ID}" />' autocomplete="off" required disabled></div>
+                                    autocomplete="off" required disabled></div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">자재ID</div>
-                                <div><input type="text" name="IB_MATERIAL_ID" id='IB_MATERIAL_ID<c:out value="${IBSelectOne.IB_ID}" />'
-                                    value='<c:out value="${IBSelectOne.IB_MATERIAL_ID}" />' autocomplete="off" required disabled></div>
+                                <div>
+                                    <input type="text" name="IB_MATERIAL_ID" id='IB_MATERIAL_ID<c:out value="${IBSelectOne.IB_ID}" />'
+                                        autocomplete="off" required disabled>
+                                    </div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">공급수량</div>
-                                <div><input type="text" name="IB_Quantity" id='IB_Quantity<c:out value="${IBSelectOne.IB_ID}" />'
-                                    value='<c:out value="${IBSelectOne.IB_Quantity}" />' autocomplete="off" required disabled></div>
+                                <div>
+                                    <input type="text" name="IB_Quantity" id='IB_Quantity<c:out value="${IBSelectOne.IB_ID}" />'
+                                        autocomplete="off" required disabled>
+                                </div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">검수수량</div>
-                                <div><input type="text" name="IB_Test_Quantity" id='IB_Test_Quantity'
-                                    placeholder="검수수량" value='<c:out value="${IBSelectOne.IB_Test_Quantity}" />' autocomplete="off"></div>
+                                <div>
+                                    <input type="text" name="IB_Test_Quantity" id='IB_Test_Quantity'
+                                        placeholder="검수수량" autocomplete="off">
+                                </div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">불량수량</div>
-                                <div><input type="text" name="IB_Defective_Quantity" id='IB_Defective_Quantity<c:out value="${IBSelectOne.IB_ID}" />'
-                                    placeholder="불량수량" value='<c:out value="${IBSelectOne.IB_Defective_Quantity}" />' autocomplete="off"></div>
+                                <div>
+                                    <input type="text" name="IB_Defective_Quantity" id='IB_Defective_Quantity<c:out value="${IBSelectOne.IB_ID}" />'
+                                        placeholder="불량수량" autocomplete="off">
+                                </div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">진행상태</div>
                                 <select class="IB-Status-name" name="IB_Status" id='IB_Status<c:out value="${IBSelectOne.IB_ID}" />' >
-                                    <option value='<c:out value="${IBSelectOne.IB_Status}" />'><c:out value="${IBSelectOne.IB_Status}" /></option>
                                     <option value="입고요청">입고요청</option>
                                     <option value="부분입고">부분입고</option>
                                     <option value="입고완료">입고완료</option>
@@ -213,33 +216,37 @@ if (IBWhere == null) {
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">불량기록날짜</div>
-                                <div><input class="IB-name-date" type="date" name="IB_Defective_Date" id='IB_Defective_Date<c:out value="${IBSelectOne.IB_ID}" />'
-                                    placeholder="불량기록날짜" value='<c:out value="${IBSelectOne.IB_Defective_Date}" />' autocomplete="off"></div>
+                                <div>
+                                    <input class="IB-name-date" type="date" name="IB_Defective_Date" id='IB_Defective_Date<c:out value="${IBSelectOne.IB_ID}" />'
+                                        placeholder="불량기록날짜" autocomplete="off">
+                                </div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">입고예정날짜</div>
-                                <div><input type="text" name="IB_Expected_Date" id='IB_Expected_Date<c:out value="${IBSelectOne.IB_ID}" />'
-                                    value='<c:out value="${IBSelectOne.IB_Expected_Date}" />' autocomplete="off" required disabled></div>
+                                <div>
+                                    <input type="text" name="IB_Expected_Date" id='IB_Expected_Date<c:out value="${IBSelectOne.IB_ID}" />'
+                                        autocomplete="off" required disabled>
+                                </div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">입고완료날짜</div>
-                                <div><input class="IB-name-date" type="date" name='IB_Complete_Date_date'
-                                    id="IB_Complete_Date_date" value='<c:out value="${IBSelectOne.IB_Complete_Date}" />' autocomplete="off"></div>
+                                <div>
+                                    <input class="IB-name-date" type="date" name='IB_Complete_Date_date'
+                                        id="IB_Complete_Date_date" autocomplete="off">
+                                </div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">입고완료시간</div>
-                                <div><input class="IB-name-date" type="time" name="IB_Complete_Date_time"
-                                    id="IB_Complete_Date_time" autocomplete="off"></div>
+                                <div>
+                                    <input class="IB-name-date" type="time" name="IB_Complete_Date_time"
+                                        id="IB_Complete_Date_time" autocomplete="off">
+                                </div>
                             </div>
                             <div class="IB-Update">
                                 <div class="IB-name">비고</div>
-                                <div><input class="IB-Update-Note" type="text" name="IB_Note" id='IB_Note<c:out value="${IBSelectOne.IB_ID}" />'
-                                    value='<c:out value="${IBSelectOne.IB_Note}" />'></div>
-                            </div>
-                            <div class="IB-Update">
-                                <input id="btn-insert" type="submit" value="수정" class="btn btn-light"
-                                    onClick="javascript: prevCheckTextBox();"
-                                    style="width: 100px; height: 40px; border: 1px solid #999; font-size: 18px;">
+                                <div>
+                                    <input class="IB-Update-Note" type="text" name="IB_Note" id='IB_Note<c:out value="${IBSelectOne.IB_ID}" />'>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -309,6 +316,26 @@ if (IBWhere == null) {
 
 	// 확인창
 	function IBInsert() {
+        if (!$('#IB_Company_ID_').val()) {
+            alert('거래처를 선택해주세요.');
+            $('#IB_Company_ID_').focus();
+            return;
+        }
+        if (!$('#IB_MATERIAL_ID_').val()) {
+            alert('자재를 선택해주세요.');
+            $('#IB_MATERIAL_ID_').focus();
+            return;
+        }
+        if (!$('#IB_Quantity_').val()) {
+            alert('공급수량을 입력하세요.');
+            $('#IB_Quantity_').focus();
+            return;
+        }
+        if (!$('#IB_Expected_Date_').val()) {
+            alert('공급예정날짜를 입력하세요.');
+            $('#IB_Expected_Date_').focus();
+            return;
+        }
         if (confirm('등록하시겠습니까?')) {
             document.getElementById('form-IB-INSERT').submit();
         } else {
