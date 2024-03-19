@@ -24,10 +24,18 @@ public class MemberServiceImpl implements MemberService{
     // 멤버 정보 조회
     @Override
     public MemberDTO selectMemberInfo(String MEMBER_ID) {
-        MemberDTO selectMemberInfo = memberMapper.selectMember(MEMBER_ID);
-        return selectMemberInfo;
+        return memberMapper.selectMember(MEMBER_ID);
     }
 
+    @Override
+    public void insertMember(MemberDTO memberDTO) {
+        memberMapper.insertMember(memberDTO);
+    }
+
+    @Override
+    public boolean  selectMemberId(String MEMBER_ID) {
+        return memberMapper.selectMemberId(MEMBER_ID);
+    }
 
 
 }
