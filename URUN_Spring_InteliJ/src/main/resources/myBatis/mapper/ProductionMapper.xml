@@ -32,11 +32,11 @@
         HAVING  1=1
         <!-- 제품이름검색 -->
         <if test="search_ITEM_NAME != null and search_ITEM_NAME != '' ">
-            AND ITEM_NAME LIKE '%' || #{search_ITEM_NAME} || '%'
+            AND UPPER(ITEM_NAME) LIKE '%' || UPPER(#{search_ITEM_NAME}) || '%'
         </if>
         <!-- 제품코드검색 -->
         <if test="search_ITEM_ID != null and search_ITEM_ID != '' ">
-            AND PROCESS_ITEM_ID LIKE '%' || #{search_ITEM_ID} || '%'
+            AND UPPER(PROCESS_ITEM_ID) LIKE '%' || UPPER(#{search_ITEM_ID}) || '%'
         </if>
         <!-- 생산시작날짜검색 -->
         <if test="search_START_DATE1 != null and search_START_DATE1 != ''
@@ -52,6 +52,56 @@
         </if>
         ORDER BY p.PROCESS_ID DESC
     </select>
+
+    <!--  생산계획수정  -->
+    <update id="ProcessUpdate">
+        UPDATE PROCESS
+        SET PROCESS_Status = #{PROCESS_Status},
+            PROCESS_END_DATE = to_date( #{PROCESS_END_DATE},'YYYY-MM-DD HH24:MI:SS')
+        WHERE PROCESS_ID = #{PROCESS_ID}
+    </update>
+
+    <!--  당일작업등록  -->
+    <insert id="WorkInsert">
+        INSERT INTO WORK (  WORK_PROCESS_ID,
+                            WORK_Plan_Quantity,
+                            WORK_ITEM_Quantity,
+                            WORK_Defective_Quantity,
+                            WORK_Defective_Reason )
+        VALUES (${PROCESS_ID_2}, #{WORK_Plan_Quantity_2}, #{WORK_ITEM_Quantity_2}, #{WORK_Defective_Quantity_2}, #{WORK_Defective_Reason_2})
+    </insert>
+    <insert id="WInventoryInsert">
+        INSERT INTO INVENTORY (INVENTORY_ITEM_ID, INVENTORY_WORK_ID, INVENTORY_Quantity)
+        SELECT p.PROCESS_ITEM_ID, w.WORK_ID, w.WORK_ITEM_Quantity
+        FROM WORK w
+        INNER JOIN PROCESS p
+            ON w.WORK_PROCESS_ID = p.PROCESS_ID
+        WHERE w.WORK_Plan_Quantity = #{WORK_Plan_Quantity_2}
+            AND w.WORK_ITEM_Quantity = #{WORK_ITEM_Quantity_2}
+            AND w.WORK_Defective_Quantity = #{WORK_Defective_Quantity_2}
+            AND w.WORK_Defective_Reason = #{WORK_Defective_Reason_2}
+    </insert>
+    <update id="WorkUpdate">
+        UPDATE WORK
+        SET WORK_INVENTORY_ID = (SELECT i.INVENTORY_ID
+                                FROM WORK w, INVENTORY i
+                                WHERE w.WORK_ID =  i.INVENTORY_WORK_ID
+                                    AND w.WORK_Plan_Quantity = #{WORK_Plan_Quantity_2}
+                                    AND w.WORK_ITEM_Quantity = #{WORK_ITEM_Quantity_2}
+                                    AND w.WORK_Defective_Quantity = #{WORK_Defective_Quantity_2}
+                                    AND w.WORK_Defective_Reason = #{WORK_Defective_Reason_2})
+        WHERE WORK_Plan_Quantity = #{WORK_Plan_Quantity_2}
+            AND WORK_ITEM_Quantity = #{WORK_ITEM_Quantity_2}
+            AND WORK_Defective_Quantity = #{WORK_Defective_Quantity_2}
+            AND WORK_Defective_Reason = #{WORK_Defective_Reason_2}
+    </update>
+
+    <!--  생산계획등록  -->
+    <insert id="ProcessInsert">
+        INSERT INTO PROCESS( PROCESS_ITEM_ID, PROCESS_Plan_Quantity, PROCESS_START_DATE, PROCESS_LINE)
+        VALUES (#{PROCESS_ITEM_ID_1}, #{PROCESS_Plan_Quantity_1}, to_date(#{PROCESS_START_DATE_1},'YYYY-MM-DD'), #{PROCESS_LINE_1})
+    </insert>
+
 
     <!--  생산 불량 현황 조회  -->
     <select id="getStatusList" resultType="kr.co.urun.dto.ProductionDTO">
@@ -74,7 +124,7 @@
         HAVING 1=1
         <!-- 제품이름검색 -->
         <if test="search_ITEM_NAME != null and search_ITEM_NAME != '' ">
-            AND ITEM_NAME LIKE '%' || #{search_ITEM_NAME} || '%'
+            AND UPPER(ITEM_NAME) LIKE '%' || UPPER(#{search_ITEM_NAME}) || '%'
         </if>
         <!-- 제품코드검색 -->
         <if test="search_ITEM_ID != null and search_ITEM_ID != '' ">

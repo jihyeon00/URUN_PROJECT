@@ -17,13 +17,10 @@
     <title>URUN-출고 현황</title>
 </head>
 <body>
-<%
-String OBWhere = request.getParameter("OBWhere");
-if (OBWhere == null) {
-	OBWhere = "";
-}
-%>
-<%@ include file="./include/sidebar.jsp" %>
+<jsp:include page="./include/sidebar.jsp">
+ <jsp:param name="MEMBER_ID" value="${selectMemberInfo.MEMBER_ID}" />
+ <jsp:param name="EMPLOYEE_NAME" value="${selectMemberInfo.EMPLOYEE_NAME}" />
+</jsp:include>
 <div class="container-OB">
 		<div class="title">
 			<h1>|  출고 현황</h1>
@@ -105,10 +102,10 @@ if (OBWhere == null) {
                    <div class="modal-body">
                         <div class="write">
                             <div class="OB-Insert">
-                                <div class="OB-name">납품처ID</div>
+                                <div class="OB-name">거래처 이름</div>
                                 <div>
                                     <select name="OB_Company_ID_" id="OB_Company_ID_" class="form-control">
-                                        <option selected>공급처 선택</option>
+                                        <option selected>거래처 선택</option>
                                         <c:forEach var="OB" items = "${OBCompanyList}">
                                             <option value='<c:out value="${OB.COMPANY_ID}"/>'><c:out value="${OB.COMPANY_NAME}"/>
                                         </c:forEach>
@@ -116,7 +113,7 @@ if (OBWhere == null) {
                                 </div>
                             </div>
                             <div class="OB-Insert">
-                                <div class="OB-name">제품ID</div>
+                                <div class="OB-name">제품 이름</div>
                                 <div>
                                     <select name="OB_ITEM_ID_" id="OB_ITEM_ID_" class="form-control">
                                         <option selected>제품 선택</option>
@@ -156,7 +153,7 @@ if (OBWhere == null) {
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="OBUpdateModalLabel" style="font-size: 20px;" >입고 수정</h1>
+                    <h1 class="modal-title" id="OBUpdateModalLabel" style="font-size: 20px;" >출고 수정</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action='/OBUpdate' method="post" id="form-OB-Update" onSubmit="return false">
@@ -165,53 +162,62 @@ if (OBWhere == null) {
                         <div class="write-OB-update">
                             <div class="OB-Update">
                                 <div class="OB-name">공급처ID</div>
-                                <div><input type="text" name="OB_Company_ID" id='OB_Company_ID<c:out value="${OBSelectOne.OB_ID}" />'
-                                    value='<c:out value="${OBSelectOne.OB_Company_ID}" />' autocomplete="off" required disabled></div>
+                                <div>
+                                    <input type="text" name="OB_Company_ID" id='OB_Company_ID<c:out value="${OBSelectOne.OB_ID}" />'
+                                        value='<c:out value="${OBSelectOne.OB_Company_ID}" />' autocomplete="off" required disabled>
+                                </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">제품ID</div>
-                                <div><input type="text" name="OB_ITEM_ID" id='OB_ITEM_ID<c:out value="${OBSelectOne.OB_ID}" />'
-                                    value='<c:out value="${OBSelectOne.OB_ITEM_ID}" />' autocomplete="off" required disabled></div>
+                                <div>
+                                    <input type="text" name="OB_ITEM_ID" id='OB_ITEM_ID<c:out value="${OBSelectOne.OB_ID}" />'
+                                        value='<c:out value="${OBSelectOne.OB_ITEM_ID}" />' autocomplete="off" required disabled>
+                                </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">공급수량</div>
-                                <div><input type="text" name="OB_Quantity" id='OB_Quantity<c:out value="${OBSelectOne.OB_ID}" />'
-                                    value='<c:out value="${OBSelectOne.OB_Quantity}" />' autocomplete="off" required disabled></div>
+                                <div>
+                                    <input type="text" name="OB_Quantity" id='OB_Quantity<c:out value="${OBSelectOne.OB_ID}" />'
+                                        value='<c:out value="${OBSelectOne.OB_Quantity}" />' autocomplete="off" required disabled>
+                                </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">진행상태</div>
                                 <select class="OB-Status-name" name="OB_Status" id='OB_Status<c:out value="${OBSelectOne.OB_ID}" />' >
                                     <option value='<c:out value="${OBSelectOne.OB_Status}" />'><c:out value="${OBSelectOne.OB_Status}" /></option>
                                     <option value="출고예정">출고예정</option>
+                                    <option value="검수완료">검수완료</option>
                                     <option value="출고진행중">출고진행중</option>
                                     <option value="출고완료">출고완료</option>
                                 </select>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">출고예정날짜</div>
-                                <div><input type="text" name="OB_Expected_Date" id='OB_Expected_Date<c:out value="${OBSelectOne.OB_ID}" />'
-                                    value='<c:out value="${OBSelectOne.OB_Expected_Date}" />' autocomplete="off" required disabled></div>
+                                <div>
+                                    <input type="text" name="OB_Expected_Date" id='OB_Expected_Date<c:out value="${OBSelectOne.OB_ID}" />'
+                                        value='<c:out value="${OBSelectOne.OB_Expected_Date}" />' autocomplete="off" required disabled>
+                                </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">출고완료날짜</div>
-                                <div><input class="OB-name-date" type="date" name='OB_Complete_Date_date'
-                                    id="OB_Complete_Date_date" value='<c:out value="${OBSelectOne.OB_Complete_Date}" />' autocomplete="off"></div>
+                                <div>
+                                    <input class="OB-name-date" type="date" name='OB_Complete_Date_date'
+                                        id="OB_Complete_Date_date" value='<c:out value="${OBSelectOne.OB_Complete_Date}" />' autocomplete="off">
+                                </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">출고완료시간</div>
-                                <div><input class="OB-name-date" type="time" name="OB_Complete_Date_time"
-                                    id="OB_Complete_Date_time" autocomplete="off"></div>
+                                <div>
+                                    <input class="OB-name-date" type="time" name="OB_Complete_Date_time"
+                                        id="OB_Complete_Date_time" autocomplete="off">
+                                </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">비고</div>
-                                <div><input class="OB-Update-Note" type="text" name="OB_Note" id='OB_Note<c:out value="${OBSelectOne.OB_ID}" />'
-                                    value='<c:out value="${OBSelectOne.OB_Note}" />'></div>
+                                <div>
+                                    <input class="OB-Update-Note" type="text" name="OB_Note" id='OB_Note<c:out value="${OBSelectOne.OB_ID}" />'>
+                                </div>
                             </div>
-                            <!-- <div class="OB-Update">
-                                <input id="btn-insert" type="submit" value="수정" class="btn btn-light"
-                                    onClick="javascript: prevCheckTextBox();"
-                                    style="width: 100px; height: 40px; border: 1px solid #999; font-size: 18px;">
-                            </div> -->
                         </div>
                     </div>
                 </form>
@@ -249,6 +255,26 @@ if (OBWhere == null) {
 
 	// 확인창
     function OBInsert() {
+        if (!$('#OB_Company_ID_').val()) {
+            alert('거래처를 선택해주세요.');
+            $('#IB_Company_ID_').focus();
+            return;
+        }
+        if (!$('#IB_MATERIAL_ID_').val()) {
+            alert('자재를 선택해주세요.');
+            $('#IB_MATERIAL_ID_').focus();
+            return;
+        }
+        if (!$('#IB_Quantity_').val()) {
+            alert('공급수량을 입력하세요.');
+            $('#IB_Quantity_').focus();
+            return;
+        }
+        if (!$('#IB_Expected_Date_').val()) {
+            alert('공급예정날짜를 입력하세요.');
+            $('#IB_Expected_Date_').focus();
+            return;
+        }
         if (confirm('등록하시겠습니까?')) {
             document.getElementById('form-OB-INSERT').submit();
         } else {
