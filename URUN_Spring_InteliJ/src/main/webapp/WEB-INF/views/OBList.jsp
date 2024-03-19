@@ -105,7 +105,7 @@
                                 <div class="OB-name">거래처 이름</div>
                                 <div>
                                     <select name="OB_Company_ID_" id="OB_Company_ID_" class="form-control">
-                                        <option selected>거래처 선택</option>
+                                        <option value="" selected>거래처 선택</option>
                                         <c:forEach var="OB" items = "${OBCompanyList}">
                                             <option value='<c:out value="${OB.COMPANY_ID}"/>'><c:out value="${OB.COMPANY_NAME}"/>
                                         </c:forEach>
@@ -116,7 +116,7 @@
                                 <div class="OB-name">제품 이름</div>
                                 <div>
                                     <select name="OB_ITEM_ID_" id="OB_ITEM_ID_" class="form-control">
-                                        <option selected>제품 선택</option>
+                                        <option value="" selected>제품 선택</option>
                                         <c:forEach var="OB" items = "${OBItemList}">
                                             <option value='<c:out value="${OB.ITEM_ID}" />'><c:out value="${OB.ITEM_NAME}"/></option>
                                         </c:forEach>
@@ -125,11 +125,17 @@
                             </div>
                             <div class="OB-Insert">
                                 <div class="OB-name">납품수량</div>
-                                <div><input type="text" name="OB_Quantity_" id="OB_Quantity_" placeholder="납품수량" autocomplete="off" required></div>
+                                <div>
+                                    <input type="text" name="OB_Quantity_" id="OB_Quantity_" placeholder="납품수량"
+                                        autocomplete="off" required>
+                                </div>
                             </div>
                             <div class="OB-Insert">
                                 <div class="OB-name">납품예정날짜</div>
-                                <div><input class="OB-name-date" type="date" name="OB_Expected_Date_" id="OB_Expected_Date_" autocomplete="off" required></div>
+                                <div>
+                                    <input class="OB-name-date" type="date" name="OB_Expected_Date_"
+                                        id="OB_Expected_Date_" autocomplete="off" value="" required>
+                                </div>
                             </div>
                             <!-- <div class="OB-Insert">
                                 <input id="btn-insert" type="submit" value="등록" class="btn btn-light" onClick="javascript: OBInsert();" style="width: 100px; height: 40px; border: 1px solid #999; font-size: 18px;">
@@ -164,27 +170,27 @@
                                 <div class="OB-name">공급처ID</div>
                                 <div>
                                     <input type="text" name="OB_Company_ID" id='OB_Company_ID<c:out value="${OBSelectOne.OB_ID}" />'
-                                        value='<c:out value="${OBSelectOne.OB_Company_ID}" />' autocomplete="off" required disabled>
+                                        autocomplete="off" required disabled>
                                 </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">제품ID</div>
                                 <div>
                                     <input type="text" name="OB_ITEM_ID" id='OB_ITEM_ID<c:out value="${OBSelectOne.OB_ID}" />'
-                                        value='<c:out value="${OBSelectOne.OB_ITEM_ID}" />' autocomplete="off" required disabled>
+                                        autocomplete="off" required disabled>
                                 </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">공급수량</div>
                                 <div>
                                     <input type="text" name="OB_Quantity" id='OB_Quantity<c:out value="${OBSelectOne.OB_ID}" />'
-                                        value='<c:out value="${OBSelectOne.OB_Quantity}" />' autocomplete="off" required disabled>
+                                        autocomplete="off" required disabled>
                                 </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">진행상태</div>
                                 <select class="OB-Status-name" name="OB_Status" id='OB_Status<c:out value="${OBSelectOne.OB_ID}" />' >
-                                    <option value='<c:out value="${OBSelectOne.OB_Status}" />'><c:out value="${OBSelectOne.OB_Status}" /></option>
+                                    <option value="출고예정">출고예정</option>
                                     <option value="출고예정">출고예정</option>
                                     <option value="검수완료">검수완료</option>
                                     <option value="출고진행중">출고진행중</option>
@@ -195,14 +201,14 @@
                                 <div class="OB-name">출고예정날짜</div>
                                 <div>
                                     <input type="text" name="OB_Expected_Date" id='OB_Expected_Date<c:out value="${OBSelectOne.OB_ID}" />'
-                                        value='<c:out value="${OBSelectOne.OB_Expected_Date}" />' autocomplete="off" required disabled>
+                                        autocomplete="off" required disabled>
                                 </div>
                             </div>
                             <div class="OB-Update">
                                 <div class="OB-name">출고완료날짜</div>
                                 <div>
                                     <input class="OB-name-date" type="date" name='OB_Complete_Date_date'
-                                        id="OB_Complete_Date_date" value='<c:out value="${OBSelectOne.OB_Complete_Date}" />' autocomplete="off">
+                                        id="OB_Complete_Date_date" autocomplete="off">
                                 </div>
                             </div>
                             <div class="OB-Update">
@@ -257,22 +263,27 @@
     function OBInsert() {
         if (!$('#OB_Company_ID_').val()) {
             alert('거래처를 선택해주세요.');
-            $('#IB_Company_ID_').focus();
+            $('#OB_Company_ID').focus();
             return;
         }
-        if (!$('#IB_MATERIAL_ID_').val()) {
-            alert('자재를 선택해주세요.');
-            $('#IB_MATERIAL_ID_').focus();
+        if (!$('#OB_ITEM_ID_').val()) {
+            alert('제품을 선택해주세요.');
+            $('#OB_ITEM_ID_').focus();
             return;
         }
-        if (!$('#IB_Quantity_').val()) {
-            alert('공급수량을 입력하세요.');
-            $('#IB_Quantity_').focus();
+        if (!$('#OB_Quantity_').val()) {
+            alert('납품수량을 입력하세요.');
+            $('#OB_Quantity_').focus();
             return;
         }
-        if (!$('#IB_Expected_Date_').val()) {
-            alert('공급예정날짜를 입력하세요.');
-            $('#IB_Expected_Date_').focus();
+        if (!/^\d+$/.test( $('#OB_Quantity_').val() )) {
+            alert('납품수량은 숫자만 입력하세요.');
+            $('#OB_Quantity_').focus();
+            return;
+        }
+        if (!$('#OB_Expected_Date_').val()) {
+            alert('납품예정날짜를 입력하세요.');
+            $('#OB_Expected_Date_').focus();
             return;
         }
         if (confirm('등록하시겠습니까?')) {

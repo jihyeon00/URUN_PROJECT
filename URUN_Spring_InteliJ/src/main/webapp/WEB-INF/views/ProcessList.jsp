@@ -161,7 +161,7 @@
                        </div>
                        <div class="PROCESS-Insert">
                            <div class="PROCESS-name">생산시작날짜</div>
-                           <div><input class="PROCESS-name-date" type="date" name="PROCESS_START_DATE_1" id="PROCESS_START_DATE_1" autocomplete="off" required></div>
+                           <div><input class="PROCESS-name-date" type="date" name="PROCESS_START_DATE_1" id="PROCESS_START_DATE_1" autocomplete="off"required></div>
                        </div>
                        <div class="PROCESS-Insert">
                            <div class="PROCESS-name">생산라인</div>
@@ -195,19 +195,27 @@
                    <div class="work-insert-case">
                        <div class="work-insert-detail">
                            <div class="detail-name">당일계획수량</div>
-                           <div><input class="detail-text" type="text" name="WORK_Plan_Quantity_2" id="WORK_Plan_Quantity_2" autocomplete="off"></div>
+                           <div>
+                                <input class="detail-text" type="text" name="WORK_Plan_Quantity_2" id="WORK_Plan_Quantity_2" autocomplete="off">
+                           </div>
                        </div>
                        <div class="work-insert-detail">
                            <div class="detail-name">당일생산수량</div>
-                           <div><input class="detail-text" type="text" name="WORK_ITEM_Quantity_2" id="WORK_ITEM_Quantity_2" autocomplete="off"></div>
+                           <div>
+                                <input class="detail-text" type="text" name="WORK_ITEM_Quantity_2" id="WORK_ITEM_Quantity_2" autocomplete="off">
+                           </div>
                        </div>
                        <div class="work-insert-detail">
                            <div class="detail-name">당일불량수량</div>
-                           <div><input class="detail-text" type="text" name="WORK_Defective_Quantity_2" id="WORK_Defective_Quantity_2" autocomplete="off"></div>
+                           <div>
+                                <input class="detail-text" type="text" name="WORK_Defective_Quantity_2" id="WORK_Defective_Quantity_2" autocomplete="off">
+                           </div>
                        </div>
                        <div class="work-insert-detail">
                            <div class="detail-name">불량사유</div>
-                           <div><input class="detail-text" type="text" name="WORK_Defective_Reason_2" id="WORK_Defective_Reason_2" autocomplete="off"></div>
+                           <div>
+                                <input class="detail-text" type="text" name="WORK_Defective_Reason_2" id="WORK_Defective_Reason_2" autocomplete="off">
+                           </div>
                        </div>
                    </div>
                </div>
@@ -237,12 +245,21 @@
             $('#PROCESS_ITEM_ID_1').focus();
             return;
         }
+        if (!/^\d+$/.test( $('#PROCESS_ITEM_ID_1').val() )) {
+            alert('제품코드는 숫자만 입력하세요.');
+            $('#PROCESS_ITEM_ID_1').focus();
+            return;
+        }
         if (!$('#PROCESS_Plan_Quantity_1').val()) {
             alert('계획수량을 입력하세요.');
             $('#PROCESS_Plan_Quantity_1').focus();
             return;
         }
-
+        if (!/^\d+$/.test( $('#PROCESS_Plan_Quantity_1').val() )) {
+            alert('계획수량은 숫자만 입력하세요.');
+            $('#PROCESS_Plan_Quantity_1').focus();
+            return;
+        }
         if (!$('#PROCESS_START_DATE_1').val()) {
             alert('생산시작날짜를 입력하세요.');
             $('#PROCESS_START_DATE_1').focus();
@@ -281,14 +298,27 @@
             $('#WORK_Plan_Quantity_2').focus();
             return;
         }
+        if (!/^\d+$/.test( $('#WORK_Plan_Quantity_2').val() )) {
+            alert('당일계획수량은 숫자만 입력하세요.');
+            $('#WORK_Plan_Quantity_2').focus();
+            return;
+        }
         if (!$('#WORK_ITEM_Quantity_2').val()) {
             alert('당일생산수량을 입력하세요.');
             $('#WORK_ITEM_Quantity_2').focus();
             return;
+        if (!/^\d+$/.test( $('#WORK_ITEM_Quantity_2').val() )) {
+            alert('당일생산수량은 숫자만 입력하세요.');
+            $('#WORK_ITEM_Quantity_2').focus();
+            return;
         }
-
         if (!$('#WORK_Defective_Quantity_2').val()) {
             alert('당일불량수량을 입력하세요.');
+            $('#WORK_Defective_Quantity_2').focus();
+            return;
+        }
+        }if (!/^\d+$/.test( $('#WORK_Defective_Quantity_2').val() )) {
+            alert('당일불량수량은 숫자만 입력하세요.');
             $('#WORK_Defective_Quantity_2').focus();
             return;
         }
