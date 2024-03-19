@@ -59,4 +59,11 @@ public class ProductionServiceImpl implements ProductionService {
 		List<ProductionDTO> StatusList = mapper.getStatusList(cri);
 		return StatusList;
 	}
+
+	/*** 생산현황 조회 ***/
+	@Override
+	public List<ProductionDTO> getStatusLists() {
+		List<ProductionDTO> StatusLists = mapper.getStatusLists();
+		return StatusLists;
+	}
 }

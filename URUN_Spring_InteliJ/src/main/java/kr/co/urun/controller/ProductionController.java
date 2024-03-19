@@ -34,6 +34,7 @@ public class ProductionController {
         MemberDTO selectMemberInfo = memberService.selectMemberInfo(MEMBER_ID);
         model.addAttribute("selectMemberInfo", selectMemberInfo);
 
+        // 아이템 리스트
         List<OBDTO> selectItem = obService.OBItemList();
         model.addAttribute("selectItem", selectItem);
 

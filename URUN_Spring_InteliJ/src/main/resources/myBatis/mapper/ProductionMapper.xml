@@ -143,6 +143,20 @@
                     AND TO_DATE(#{search_END_DATE2}, 'yyyy-mm-dd')
         </if>
         ORDER BY p.PROCESS_ID DESC
-
+    </select>
+    <!--  생산 현황 조회  -->
+    <select id="getStatusLists" resultType="kr.co.urun.dto.ProductionDTO">
+        SELECT  i.ITEM_NAME,
+                p.PROCESS_ITEM_ID,
+                p.PROCESS_Plan_Quantity,
+                <!-- PROCESS_ID 의 (총 생산수, 총 불량수, 불량률) -->
+                SUM(w.WORK_Item_Quantity) as WORK_Item_Quantity,
+                SUM(w.WORK_Defective_Quantity) as WORK_Defective_Quantity,
+                round(NVL(SUM(w.WORK_Defective_Quantity)/DECODE(SUM(w.WORK_Item_Quantity), 0, null, SUM(w.WORK_Item_Quantity)), 0),3) AS PROCESS_defect_rate
+        FROM    PROCESS p, WORK w, ITEM i
+        WHERE   p.PROCESS_ID = w.WORK_PROCESS_ID
+            AND p.PROCESS_ITEM_ID = i.ITEM_ID
+        GROUP BY w.WORK_PROCESS_ID, i.ITEM_NAME, p.PROCESS_ITEM_ID, p.PROCESS_ID,  p.PROCESS_Plan_Quantity
+        ORDER BY p.PROCESS_ID DESC
     </select>
 </mapper>

@@ -23,4 +23,8 @@ public interface ProductionMapper {
 
     /*** 생산불량현황 조회 ***/
     List<ProductionDTO> getStatusList(Criteria cri);
+
+    /*** 생산현황 조회 ***/
+    List<ProductionDTO> getStatusLists();
+
 }
