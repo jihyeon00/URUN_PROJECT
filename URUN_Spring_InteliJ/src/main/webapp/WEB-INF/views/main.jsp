@@ -77,8 +77,8 @@
 				<tbody>
 				<c:forEach items="${selectStatusList}" var="selectStatusList">
 					<tr>
-						<td><c:out value="${selectStatusList.ITEM_NAME}"/></td>
 						<td><c:out value="${selectStatusList.PROCESS_ITEM_ID}"/></td>
+						<td><c:out value="${selectStatusList.ITEM_NAME}"/></td>
 						<td><c:out value="${selectStatusList.PROCESS_Plan_Quantity}"/></td>
 						<td><c:out value="${selectStatusList.WORK_Item_Quantity}"/></td>
                         <td><c:out value="${selectStatusList.WORK_Defective_Quantity}"/></td>
