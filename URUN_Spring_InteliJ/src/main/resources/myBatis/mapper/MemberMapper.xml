@@ -7,4 +7,11 @@
         FROM EMPLOYEES e LEFT join MEMBER m on e.EMPLOYEE_ID=m.MEMBER_EMPLOYEE_ID
         WHERE e.EMPLOYEE_ID = #{MEMBER_ID}
     </select>
+    <insert id="insertMember" parameterType="kr.co.urun.dto.MemberDTO">
+        INSERT INTO MEMBER(MEMBER_ID, MEMBER_PW, MEMBER_EMPLOYEE_ID)
+        VALUES (#{MEMBER_ID},#{MEMBER_PW},#{MEMBER_ID})
+    </insert>
+    <select id="selectMemberId" resultType="boolean">
+        SELECT count(MEMBER_ID) as memCount FROM MEMBER WHERE MEMBER_ID = #{MEMBER_ID}
+    </select>
 </mapper>

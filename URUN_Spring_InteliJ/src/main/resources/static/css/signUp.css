@@ -17,9 +17,12 @@ body{
 	border-radius: 10px;
 }
 .sign-form h2 {
-	font-size: 28px; 
 	color: rgb(0, 0, 0);
 	text-align: center;
+	font-size: 28px;	
+	font-weight: 800;
+	padding-top: 25px;
+	padding-bottom: 10px;
 }
 
 .signUp{
@@ -32,6 +35,7 @@ body{
   height: 200px;
   border: 1px solid #999;
   padding: 10px;
+  font-size: 13px;
 }
 
 .sign-btn {
@@ -95,17 +99,7 @@ body{
 	font-weight: 600;
 }
 
-.signUp .sign-area #signUpMemberId{
-	padding: 10px;
-	width: 243px;
-	background: #F8FAFB;
-	border: 1px solid #999;
-	border-radius: 10px;
-	font-family: Inter;
-	font-weight: 400;
-	font-size: 15px;
-}
-.signUp .sign-area input[type="password"]{
+.signUp .sign-area #MEMBER_ID{
 	padding: 10px;
 	width: 300px;
 	background: #F8FAFB;
@@ -114,4 +108,20 @@ body{
 	font-family: Inter;
 	font-weight: 400;
 	font-size: 15px;
+}
+.signUp .sign-area input[type="password"],
+.signUp .sign-area #MEMBER_ID{
+	padding: 10px;
+	width: 300px;
+	background: #F8FAFB;
+	border: 1px solid #999;
+	border-radius: 10px;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 15px;
+}
+.signUpLabel{
+	font-size:15px; 
+	padding-left: 170px;
+	display: none;
 }
