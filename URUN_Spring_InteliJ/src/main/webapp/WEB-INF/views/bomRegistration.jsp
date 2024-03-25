@@ -157,7 +157,7 @@
 	</div><!-- End Modal -->
 <script>
 function materialInsert(MATERIAL_ID){
-    // 댓글 상세조회
+    // 자재 상세조회
     $.get("/bomRest/" + MATERIAL_ID , function(result) {
     	//console.log("bom_MATERIAL_ID:", result.material_ID);
     	$('#MATERIAL_ID').val(result.material_ID);
