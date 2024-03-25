@@ -16,7 +16,10 @@
 <%@page import="kr.co.urun.config.*"%>
 <%@page import="kr.co.urun.dto.*"%>
 <%@page import="kr.co.urun.mapper.*"%>
-<%@ include file="./include/sidebar.jsp"%>
+<jsp:include page="./include/sidebar.jsp">
+ <jsp:param name="MEMBER_ID" value="${selectMemberInfo.MEMBER_ID}" />
+ <jsp:param name="EMPLOYEE_NAME" value="${selectMemberInfo.EMPLOYEE_NAME}" />
+</jsp:include>
 <% request.setCharacterEncoding("UTF-8");%>
 <!-- 메인화면 -->
 	<div class="wrap">

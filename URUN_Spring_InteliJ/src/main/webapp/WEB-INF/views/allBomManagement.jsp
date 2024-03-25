@@ -13,7 +13,10 @@
 <script src="/resources/js/main.js"></script>
 </head>
 <body>
-<%@ include file="./include/sidebar.jsp"%>
+<jsp:include page="./include/sidebar.jsp">
+ <jsp:param name="MEMBER_ID" value="${selectMemberInfo.MEMBER_ID}" />
+ <jsp:param name="EMPLOYEE_NAME" value="${selectMemberInfo.EMPLOYEE_NAME}" />
+</jsp:include>
 <!-- 메인화면 -->
 	<div class="wrap">
 		<div class="title">
