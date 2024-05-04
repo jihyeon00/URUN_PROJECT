@@ -33,14 +33,14 @@
   - **ORM**: Mybatis
   - **DevOps**: Maven, Git, GitHub
   - **Tools**: Discord, GoogleDrive, StarUML
-### 🧑‍🤝‍🧑 멤버 구성
-#### JDBC
+## 🧑‍🤝‍🧑 멤버 구성
+### JDBC
 |팀원명|프로필|담당업무|
 |---|---|---|
 |[배지현(팀장)](https://github.com/jihyeon00)|<p align="center"><img src="https://avatars.githubusercontent.com/u/120089047?v=4" width="100"></p>|로그인, 회원가입, BOM관리, 공지사항, 재고관리|
 |[이시연(팀원)](https://github.com/sieoh)|<p align="center"><img src="https://avatars.githubusercontent.com/u/151722461?v=4" width="100"></p>|생산관리, 입출고관리|
 
-#### SpringBoot
+### SpringBoot
 |팀원명|프로필|담당업무|
 |---|---|---|
 |[배지현(팀장)](https://github.com/jihyeon00)|<p align="center"><img src="https://avatars.githubusercontent.com/u/120089047?v=4" width="100"></p>|로그인, 회원가입, BOM관리|
