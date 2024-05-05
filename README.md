@@ -141,8 +141,24 @@
 <br><br>
 
 <h3>JDBC와 SpringBoot의 차이점</h3>
-- ㅇㅇㅇ
-- ㅇㅇㅇ
+   - 로그인 및 회원가입
+      ⓐ 접근 제한 추가<br>
+      ⓑ 회원가입 내 윈도우창이 아닌 모달창을 활용해 구현<br>
+
+   - 재고 조회
+      ⓐ 검색 기능의 세분화<br>
+      
+   - 생산
+      ⓐ 당일작업등록을 prompt가 아닌 모달창을 활용해 구현<br>
+      ⓑ 당일작업등록한 내역 조회 및 수정 기능 추가<br>
+      
+   - BOM관리
+      ⓐ BOM 등록 시 자재 목록에서의 자재 검색과 자재 추가를 prompt가 아닌 모달창을 활용해 구현<br>
+
+   - 입출고
+      ⓐ 페이징 처리<br>
+
+<br><br>
 
 ## 🔧 아키텍처
  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/b72c51ab-8661-45f4-a747-c5dea4aceada" alt="JDBC 아키텍처">
