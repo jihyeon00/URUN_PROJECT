@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1de41a33-ec2e-45f3-9342-87bcff9b23a0" width="400">
+  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1de41a33-ec2e-45f3-9342-87bcff9b23a0" width="100">
   <br>
   생산 DATA SCM WEB 프로그램
 </h1>
