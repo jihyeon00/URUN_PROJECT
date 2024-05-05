@@ -140,6 +140,10 @@
 
 <br><br>
 
+<h3>JDBC와 SpringBoot의 차이점</h3>
+- ㅇㅇㅇ
+- ㅇㅇㅇ
+
 ## 🔧 아키텍처
  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/b72c51ab-8661-45f4-a747-c5dea4aceada" alt="JDBC 아키텍처">
  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/9aab7a74-b39e-4e99-b08e-ba35816f3d1b" alt="SpringBoot 아키텍처">
