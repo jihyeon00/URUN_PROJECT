@@ -1,3 +1,4 @@
+![URUN_logo](https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/569d4fe1-e62a-4cc2-b85a-ecbd95c61bb2)
 # URUN : 생산 DATA SCM WEB 프로그램
 
 ## 📌 목차
