@@ -9,6 +9,7 @@
 4. [🔧 아키텍처](#-아키텍처)
 5. [🏗️ ERD](#-ERD)
 6. [📃 화면설계](#-화면설계)
+7. [🎞 구동영상](#-구동영상)
       <br><br>
 
 ## 🖥️ 프로젝트 개요
@@ -108,5 +109,9 @@
 ## 📃 화면설계
 [Figma 확인하기](https://www.figma.com/file/qdclA9y7siy4rawtx1Cq02/URUN-%EC%83%9D%EC%82%B0-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9B%B9-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8?type=design&node-id=0%3A1&mode=design&t=5uWlYIOIstjV8ADu-1)
 ![URUN_FIGMA_화면설계](https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/3a3fa17f-5419-4fb8-ae27-88882162b3f2)
+<br><br>
+
+## 🎞 구동영상
+
 <br><br>
 
