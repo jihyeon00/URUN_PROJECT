@@ -1,5 +1,8 @@
-![URUN_logo](https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/569d4fe1-e62a-4cc2-b85a-ecbd95c61bb2)
-# URUN : 생산 DATA SCM WEB 프로그램
+<div align:center>
+      <img src="https://github.com/jihyeon00/CNR_FURNITURE/assets/120089047/be0d3185-ce03-4e08-a777-5a3264c0c370" alt="Cozy&Rest Furniture" width="400">
+      <br>
+      # URUN : 생산 DATA SCM WEB 프로그램
+</div>
 
 ## 📌 목차
 1. [🖥️ 프로젝트 개요](#-프로젝트-개요)
