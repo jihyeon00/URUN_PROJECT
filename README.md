@@ -1,5 +1,4 @@
 <h1 align="center">
-  <br>
   <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c54209aa-86d9-41ae-b71f-5db89a881e0e" width="400">
 </h1>
 
