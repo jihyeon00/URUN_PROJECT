@@ -79,8 +79,51 @@
     </ul>
   </div>
 </details>
+
 <details>
-  <summary><b>2. 생산</b> (👈 Click)</summary>
+  <summary><b>2. 공지사항</b> (👈 Click)</summary>
+  <div markdown="1">
+    <ul>
+      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
+      <li>부서별 접근 가능한 페이지가 다르다.
+        <ol>
+          <li>
+            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
+          </li>
+          <li>
+            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary><b>3. 재고조회</b> (👈 Click)</summary>
+  <div markdown="1">
+    <ul>
+      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
+      <li>부서별 접근 가능한 페이지가 다르다.
+        <ol>
+          <li>
+            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
+          </li>
+          <li>
+            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary><b>4. 생산</b> (👈 Click)</summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -100,7 +143,7 @@
   </div>
 </details>
 <details>
-  <summary><b>3. BOM관리</b> (👈 Click)</summary>
+  <summary><b>5. BOM관리</b> (👈 Click)</summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -120,7 +163,7 @@
   </div>
 </details>
 <details>
-  <summary><b>4. 입출고</b> (👈 Click)</summary>
+  <summary><b>6. 입출고</b> (👈 Click)</summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
