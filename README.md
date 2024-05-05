@@ -112,9 +112,9 @@
 <br><br>
 
 ## 🎞 구동영상
-[[JDBC 구동영상]](https://drive.google.com/file/d/1YabD7sza3Jy5C5ptHmdqlSYdouQcwrK5/view?usp=sharing)
+- [[JDBC 구동영상]](https://drive.google.com/file/d/1YabD7sza3Jy5C5ptHmdqlSYdouQcwrK5/view?usp=sharing)
 <br>
-[[SpringBoot 구동영상]]()
+- [[SpringBoot 구동영상]]()
 <br><br>
 
 ## 🗨️ JDBC 자체 평가 의견
