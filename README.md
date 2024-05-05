@@ -31,9 +31,9 @@
 |---|---|---|
 |JAVA|`JAVA 11`|`JAVA 17`|
 |IDE|Eclipse|IntelliJ, STS4|
-|Framework|-|Springboot(3.1.10)|
+|Framework| |Springboot(3.1.10)|
 |DataBase|Oracle DB(ojdbc8)|Oracle DB(ojdbc8)|
-|ORM|-|Mybatis|
+|ORM| |Mybatis|
 |DevOps|Git, GitHub|Maven, Git, GitHub|
 |Tools|Discord, GoogleDrive, StarUML, Figma|Discord, GoogleDrive, StarUML, Figma|
   
