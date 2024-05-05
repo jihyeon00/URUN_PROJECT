@@ -26,20 +26,24 @@
   - 선정 이유: 매트리스, 신발, 의류 등의 주제를 생각했으며, 그 중 생산 DATA를 보다 쉽게 이용할 수 있는 운동화를 선정
 ### 📁프로젝트 구현 내용
   - 운동화 생산 계획과 당일 작업, BOM, 입출고 등 생산 관리에 필요한 기능과 비지니스 로직 구현
-### ⚙️ JDBC 개발환경 및 도구
-  - `JAVA 11`
+### ⚙️ 개발환경 및 도구
+|JDBC|SpringBoot|
+|---|---|
+|- `JAVA 11`
   - **IDE**: Eclipse 
   - **DataBase**: Oracle DB(ojdbc8)
   - **DevOps**: Git, GitHub
   - **Tools**: Discord, GoogleDrive, StarUML, Figma
-### ⚙️ SpringBoot 개발환경 및 도구
-  - `JAVA 17`
+|- `JAVA 17`
   - **IDE**: IntelliJ, STS4
   - **Framework**: Springboot(3.1.10)
   - **DataBase**: Oracle DB(ojdbc8)
   - **ORM**: Mybatis
   - **DevOps**: Maven, Git, GitHub
   - **Tools**: Discord, GoogleDrive, StarUML, Figma
+|
+### ⚙️  개발환경 및 도구
+  
 ## 🧑‍🤝‍🧑 멤버 구성
 ### JDBC
 |팀원명|프로필|담당업무|
