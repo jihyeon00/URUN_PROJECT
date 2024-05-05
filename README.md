@@ -35,7 +35,7 @@
 |DataBase|Oracle DB(ojdbc8)|Oracle DB(ojdbc8)|
 |ORM|-|Mybatis|
 |DevOps|Git, GitHub|Maven, Git, GitHub|
-|Tools|Discord, GoogleDrive, StarUML, Figma|Discord, GoogleDrive, StarUML, Figma|
+|Tools|Discord, GoogleDrive, StarUML, Figma|
   
 ## 🧑‍🤝‍🧑 멤버 구성
 ### JDBC
