@@ -99,7 +99,7 @@
 
 ## 🏗️ ERD
 DB와 ERD <br>
-![semi_project4_테이블](https://github.com/jihyeon00/production_data_web_project/assets/120089047/63d8d831-7f47-48f7-a921-1f1dda0a3861)
+![URUN_ERD](https://github.com/jihyeon00/CNR_FURNITURE/assets/120089047/bb66929b-7efc-48ac-84dc-e00471c0a577)
 <br><br>
 
 ## 📃 화면설계
