@@ -60,7 +60,7 @@
 
 <h3>JDBC</h3>
 <details>
-  <summary><b>1. 로그인 및 회원가입</b> (👈 Click)</summary>
+  <summary><b>1. 로그인 및 회원가입</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -81,7 +81,7 @@
 </details>
 
 <details>
-  <summary><b>2. 공지사항</b> (👈 Click)</summary>
+  <summary><b>2. 공지사항</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -102,7 +102,7 @@
 </details>
 
 <details>
-  <summary><b>3. 재고조회</b> (👈 Click)</summary>
+  <summary><b>3. 재고조회</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -123,7 +123,7 @@
 </details>
 
 <details>
-  <summary><b>4. 생산</b> (👈 Click)</summary>
+  <summary><b>4. 생산</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -143,7 +143,7 @@
   </div>
 </details>
 <details>
-  <summary><b>5. BOM관리</b> (👈 Click)</summary>
+  <summary><b>5. BOM관리</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -163,7 +163,7 @@
   </div>
 </details>
 <details>
-  <summary><b>6. 입출고</b> (👈 Click)</summary>
+  <summary><b>6. 입출고</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -187,7 +187,7 @@
 
 <h3>SpringBoot</h3>
 <details>
-  <summary><b>1. 로그인 및 회원가입</b> (👈 Click)</summary>
+  <summary><b>1. 로그인 및 회원가입</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -207,7 +207,7 @@
   </div>
 </details>
 <details>
-  <summary><b>2. 생산</b> (👈 Click)</summary>
+  <summary><b>2. 생산</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -227,7 +227,7 @@
   </div>
 </details>
 <details>
-  <summary><b>3. BOM관리</b> (👈 Click)</summary>
+  <summary><b>3. BOM관리</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -247,7 +247,7 @@
   </div>
 </details>
 <details>
-  <summary><b>4. 입출고</b> (👈 Click)</summary>
+  <summary><b>4. 입출고</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -272,7 +272,7 @@
 <h3>JDBC와 SpringBoot의 차이점</h3>
 
 <details>
-  <summary><b>1. 로그인 및 회원가입</b> (👈 Click)</summary>
+  <summary><b>1. 로그인 및 회원가입</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -292,7 +292,7 @@
   </div>
 </details>
 <details>
-  <summary><b>2. 생산</b> (👈 Click)</summary>
+  <summary><b>2. 생산</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -312,7 +312,7 @@
   </div>
 </details>
 <details>
-  <summary><b>3. BOM관리</b> (👈 Click)</summary>
+  <summary><b>3. BOM관리</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -332,7 +332,7 @@
   </div>
 </details>
 <details>
-  <summary><b>4. 입출고</b> (👈 Click)</summary>
+  <summary><b>4. 입출고</b> </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
