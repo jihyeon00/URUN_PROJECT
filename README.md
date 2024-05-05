@@ -97,9 +97,7 @@
 <br><br>
 
 ## 🔧 아키텍처
- <h4>JDBC</h4>
  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/67e3eb72-cbc1-48d4-bf7d-7366277239cb" alt="JDBC 아키텍처">
- <h4>SpringBoot</h4>
  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/04c800a1-af76-4af7-b4de-eee23a570892" alt="SpringBoot 아키텍처">
 <br><br>
 
