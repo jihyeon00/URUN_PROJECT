@@ -186,8 +186,12 @@
 <details>
   <summary><b>1. 로그인 및 회원가입</b> </summary>
   <div markdown="1">
-    <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/ba7943ac-d81d-4a13-8ca3-9bd09789faa2" alt="로그인">
-    <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/73dee87d-1bfa-4837-aa02-4171348dc80a" alt="회원가입">
+    <ul>
+      <li><h3>로그인</h3></li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/ba7943ac-d81d-4a13-8ca3-9bd09789faa2" alt="로그인">
+      <li><h3>회원가입</h3></li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/73dee87d-1bfa-4837-aa02-4171348dc80a" alt="회원가입">
+    </ul>
   </div>
 </details>
 <details>
