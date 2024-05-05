@@ -16,7 +16,7 @@
 ## 🖥️ 프로젝트 개요
 ### :calendar: 개발기간
   <h4>- JDBC : 2024년 1월 29일 ~ 2월 14일 </h4>
-  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/4f8f74a4-524d-4abf-865d-c899c1a12244" alt="JDBC 일정표" width="400">
+  <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/4f8f74a4-524d-4abf-865d-c899c1a12244" alt="JDBC 일정표">
   <h4>- SpringBoot : 2024년 3월 11일 ~ 3월 19일</h4>
   <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d8a39adc-dbc2-4848-b195-6dd963a8ced1" alt="SpringBoot 일정표">
     
@@ -188,9 +188,9 @@
   <div markdown="1">
     <ul>
       <li><h3>로그인</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/ba7943ac-d81d-4a13-8ca3-9bd09789faa2" alt="로그인">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/ba7943ac-d81d-4a13-8ca3-9bd09789faa2" alt="로그인"  width="700">
       <li><h3>회원가입</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/73dee87d-1bfa-4837-aa02-4171348dc80a" alt="회원가입">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/73dee87d-1bfa-4837-aa02-4171348dc80a" alt="회원가입"  width="700">
     </ul>
   </div>
 </details>
