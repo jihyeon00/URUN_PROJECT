@@ -25,7 +25,7 @@
   - **IDE**: Eclipse 
   - **DataBase**: Oracle DB(ojdbc8)
   - **DevOps**: Git, GitHub
-  - **Tools**: Discord, GoogleDrive, StarUML
+  - **Tools**: Discord, GoogleDrive, StarUML, Figma
 ### ⚙️ SpringBoot 개발환경 및 도구
   - `JAVA 17`
   - **IDE**: IntelliJ, STS4
@@ -33,7 +33,7 @@
   - **DataBase**: Oracle DB(ojdbc8)
   - **ORM**: Mybatis
   - **DevOps**: Maven, Git, GitHub
-  - **Tools**: Discord, GoogleDrive, StarUML
+  - **Tools**: Discord, GoogleDrive, StarUML, Figma
 ## 🧑‍🤝‍🧑 멤버 구성
 ### JDBC
 |팀원명|프로필|담당업무|
@@ -53,7 +53,7 @@
 운동화를 생산하고 제조하는 업체에서 사용하는 SCM 시스템 프로그램을 제공한다.
 
 <details>
-  <summary><b>1. 로그인 & 접근제한</b> (👈 Click)</summary>
+  <summary><b>1. 로그인 & 세션유지</b> (👈 Click)</summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
