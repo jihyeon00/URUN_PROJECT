@@ -55,7 +55,7 @@
 ## 📕 주요기능
 운동화를 생산하고 제조하는 업체에서 사용하는 SCM 시스템 프로그램을 제공한다.
 
-<h3>JDBC</h3>
+<h3>JDBC(수정필요)</h3>
 <details>
   <summary><b>1. 로그인 및 회원가입</b> </summary>
   <div markdown="1">
@@ -182,7 +182,7 @@
 
 <br><br>
 
-<h3>SpringBoot</h3>
+<h3>SpringBoot(수정필요)</h3>
 <details>
   <summary><b>1. 로그인 및 회원가입</b> </summary>
   <div markdown="1">
@@ -243,7 +243,7 @@
 
 <br><br>
 
-<h3>JDBC와 SpringBoot의 차이점</h3>
+<h3>JDBC와 SpringBoot의 차이점(수정필요)</h3>
 
 <details>
   <summary><b>1. 로그인 및 회원가입</b> </summary>
