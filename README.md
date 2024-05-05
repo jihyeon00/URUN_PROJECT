@@ -27,22 +27,15 @@
 ### 📁프로젝트 구현 내용
   - 운동화 생산 계획과 당일 작업, BOM, 입출고 등 생산 관리에 필요한 기능과 비지니스 로직 구현
 ### ⚙️ 개발환경 및 도구
-|JDBC|SpringBoot|
-|---|---|
-|- `JAVA 11`
-  - **IDE**: Eclipse 
-  - **DataBase**: Oracle DB(ojdbc8)
-  - **DevOps**: Git, GitHub
-  - **Tools**: Discord, GoogleDrive, StarUML, Figma
-|- `JAVA 17`
-  - **IDE**: IntelliJ, STS4
-  - **Framework**: Springboot(3.1.10)
-  - **DataBase**: Oracle DB(ojdbc8)
-  - **ORM**: Mybatis
-  - **DevOps**: Maven, Git, GitHub
-  - **Tools**: Discord, GoogleDrive, StarUML, Figma
-|
-### ⚙️  개발환경 및 도구
+|-|JDBC|SpringBoot|
+|---|---|---|
+|JAVA|- `JAVA 11`|- `JAVA 17`|
+|IDE|Eclipse|IntelliJ, STS4|
+|Framework|-|Springboot(3.1.10)|
+|DataBase|Oracle DB(ojdbc8)|Oracle DB(ojdbc8)|
+|ORM|-|Mybatis|
+|DevOps|Git, GitHub|Maven, Git, GitHub|
+|Tools|Discord, GoogleDrive, StarUML, Figma|Discord, GoogleDrive, StarUML, Figma|
   
 ## 🧑‍🤝‍🧑 멤버 구성
 ### JDBC
