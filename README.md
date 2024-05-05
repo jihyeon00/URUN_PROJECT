@@ -14,8 +14,6 @@
   #### - JDBC : 2024년 1월 29일 ~ 2월 14일
   <br>
   <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/4f8f74a4-524d-4abf-865d-c899c1a12244" alt="JDBC 일정표">
-  ![URUN_일정표]()
-  <br>
   #### - SpringBoot : 2024년 3월 11일 ~ 3월 19일
   <br>
   <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d8a39adc-dbc2-4848-b195-6dd963a8ced1" alt="SpringBoot 일정표">
