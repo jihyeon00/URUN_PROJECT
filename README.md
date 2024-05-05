@@ -27,7 +27,7 @@
 ### 📁프로젝트 구현 내용
   - 운동화 생산 계획과 당일 작업, BOM, 입출고 등 생산 관리에 필요한 기능과 비지니스 로직 구현
 ### ⚙️ 개발환경 및 도구
-|-|JDBC|SpringBoot|
+|   |JDBC|SpringBoot|
 |---|---|---|
 |JAVA|`JAVA 11`|`JAVA 17`|
 |IDE|Eclipse|IntelliJ, STS4|
