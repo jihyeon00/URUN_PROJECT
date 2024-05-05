@@ -60,7 +60,7 @@
 
 <h3>JDBC</h3>
 <details>
-  <summary><b>1. 로그인 & 세션유지</b> (👈 Click)</summary>
+  <summary><b>1. 로그인 및 회원가입</b> (👈 Click)</summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -79,17 +79,60 @@
     </ul>
   </div>
 </details>
-
 <details>
-  <summary><b>2. 마이페이지</b> (👈 Click)</summary>
+  <summary><b>2. 생산</b> (👈 Click)</summary>
   <div markdown="1">
     <ul>
-      <li>'직원이름'과 '직원아이디'는 수정할 수 없다.</li>
-      <li>'비밀번호', '전화번호'는 수정할 수 있다.
+      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
+      <li>부서별 접근 가능한 페이지가 다르다.
         <ol>
           <li>
-            비밀번호, 전화번호 수정 시 포맷을 맞추도록 했다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/7449c4dd-4328-4408-9483-82ddf8c29686" alt="직원정보수정">
+            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
+          </li>
+          <li>
+            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</details>
+<details>
+  <summary><b>3. BOM관리</b> (👈 Click)</summary>
+  <div markdown="1">
+    <ul>
+      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
+      <li>부서별 접근 가능한 페이지가 다르다.
+        <ol>
+          <li>
+            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
+          </li>
+          <li>
+            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</details>
+<details>
+  <summary><b>4. 입출고</b> (👈 Click)</summary>
+  <div markdown="1">
+    <ul>
+      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
+      <li>부서별 접근 가능한 페이지가 다르다.
+        <ol>
+          <li>
+            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
+          </li>
+          <li>
+            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
           </li>
         </ol>
       </li>
@@ -101,7 +144,7 @@
 
 <h3>SpringBoot</h3>
 <details>
-  <summary><b>1. 로그인 & 세션유지</b> (👈 Click)</summary>
+  <summary><b>1. 로그인 및 회원가입</b> (👈 Click)</summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -120,17 +163,60 @@
     </ul>
   </div>
 </details>
-
 <details>
-  <summary><b>2. 마이페이지</b> (👈 Click)</summary>
+  <summary><b>2. 생산</b> (👈 Click)</summary>
   <div markdown="1">
     <ul>
-      <li>'직원이름'과 '직원아이디'는 수정할 수 없다.</li>
-      <li>'비밀번호', '전화번호'는 수정할 수 있다.
+      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
+      <li>부서별 접근 가능한 페이지가 다르다.
         <ol>
           <li>
-            비밀번호, 전화번호 수정 시 포맷을 맞추도록 했다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/7449c4dd-4328-4408-9483-82ddf8c29686" alt="직원정보수정">
+            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
+          </li>
+          <li>
+            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</details>
+<details>
+  <summary><b>3. BOM관리</b> (👈 Click)</summary>
+  <div markdown="1">
+    <ul>
+      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
+      <li>부서별 접근 가능한 페이지가 다르다.
+        <ol>
+          <li>
+            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
+          </li>
+          <li>
+            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</details>
+<details>
+  <summary><b>4. 입출고</b> (👈 Click)</summary>
+  <div markdown="1">
+    <ul>
+      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
+      <li>부서별 접근 가능한 페이지가 다르다.
+        <ol>
+          <li>
+            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
+          </li>
+          <li>
+            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
+            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
           </li>
         </ol>
       </li>
