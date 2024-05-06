@@ -96,8 +96,14 @@
     <ul>
       <li>공지사항 목록을 조회할 수 있으며 해당 페이지는 페이징 처리가 되어 있다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c43ede80-d3c6-4831-b9b1-2fb2c7166654" alt="공지사항 리스트">
+    </ul>
+    <h3>공지사항 내용</h3>
+    <ul>
       <li>공지사항 항목을 클릭 시 세부내용을 조회하고 윗글, 아랫글을 통해 다른 글로 이동할 수 있다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/483fc0ea-2299-4377-8cc9-d91192cd6fa7" alt="공지사항 세부내용">
+    </ul>
+    <h3>공지사항 등록</h3>
+    <ul>
       <li>공지사항 목록에서 등록 버튼 클릭 시 등록화면으로 넘어가며 하단 등록 버튼을 통해 등록할 수 있다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/43ce8595-74b5-45ea-913f-0e9b8b347da1" alt="공지사항 등록">
     </ul>
@@ -118,7 +124,7 @@
   <summary><b>4. 생산 [이시연] </b> </summary>
   <div markdown="1">
     <ul>
-       <h3>생산계획등록</h3>
+      <h3>생산계획등록</h3>
         <ul>
           <li>제품 생산을 위해 작업계획을 등록할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1f544834-d190-43c6-85dc-9c2a66df11d7" alt="생산계획등록">
