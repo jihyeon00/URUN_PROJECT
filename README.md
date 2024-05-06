@@ -62,13 +62,13 @@
   <div markdown="1">
     <h3>회원가입</h3>
     <ul>
-      <li>사원번호가 Employees 테이블에 존재하고 member 테이블에 존재하지 않아야 회원가입이 가능하다.</li>
-      <li>조회 시 idCheck.jsp가 새 창으로 열리고</li>
-      <li>사원번호는 8자, 비밀번호와 비밀번호 확인은 6자로 고정하였다.</li>
-      <li>사원번호/비밀번호/비밀번호확인 미입력과 약관 동의 미체크 시 회원가입 불가능하다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="회원가입1">
-      <li>로그인 실패 시, Config의 오류 메시지를 받아서 View로 반환한다.</li>
-      <img src="https://github.com/heyJSH/CNR_FURNITURE/assets/150403977/3f8d1bc2-bba2-482c-bb1c-787e56066516" alt="로그인2">
+      <li>사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열리고 사원번호는 8자, 비밀번호와 비밀번호 확인은 6자로 입력할 수 있다.</li>
+      <li>사원번호/비밀번호/비밀번호확인 미입력과 약관 동의 미체크 시 회원가입이 불가능하다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp">
+      <li>조회 시 입력한 사원번호의 값이 넘어오며, 2가지 조건 통과 시 회원가입이 가능하다.</li><br>
+      ⓐ Employee 회사 직원 테이블에 있어야 한다.<br>
+      ⓑ Member 회원 테이블에 없어야 한다.<br>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c4629d64-8dee-4226-9059-e176c811e9c2" alt="idCheck.jsp">
     </ul>
     <br>
     <h3>비밀번호 재설정</h3>
