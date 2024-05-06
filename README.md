@@ -91,7 +91,7 @@
   <div markdown="1">
     <h3>공지사항목록</h3>
     <ul>
-      <li>공지사항 목록은 페이징 처리와 목록을 조회할 수 있다.</li>
+      <li>공지사항 목록을 조회할 수 있으며 해당 페이지는 페이징 처리가 되어 있다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c43ede80-d3c6-4831-b9b1-2fb2c7166654" alt="공지사항 리스트">
       <li>공지사항 항목을 클릭 시 세부내용을 조회하고 윗글, 아랫글을 통해 다른 글로 이동할 수 있다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/483fc0ea-2299-4377-8cc9-d91192cd6fa7" alt="공지사항 세부내용">
@@ -105,19 +105,8 @@
   <summary><b>3. 재고조회</b> </summary>
   <div markdown="1">
     <ul>
-      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
-      <li>부서별 접근 가능한 페이지가 다르다.
-        <ol>
-          <li>
-            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
-          </li>
-          <li>
-            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
-          </li>
-        </ol>
-      </li>
+      <li>자재/제품 재고 조회는 자재/제품의 재고를 조회할 수 있으며 해당 페이지는 페이징 처리가 되어 있다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/f0505eac-ead6-4c8f-9187-4f005faafd31" alt="재고조회">
     </ul>
   </div>
 </details>
