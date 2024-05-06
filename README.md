@@ -114,6 +114,7 @@
   <summary><b>3. 재고조회 [배지현] </b> </summary>
   <div markdown="1">
     <h3>자재/제품 재고조회</h3>
+    <br>
     <ul>
       <li>자재/제품의 재고를 조회할 수 있으며 해당 페이지는 페이징 처리가 되어 있다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/f0505eac-ead6-4c8f-9187-4f005faafd31" alt="재고조회">
