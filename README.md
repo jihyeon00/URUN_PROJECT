@@ -124,12 +124,10 @@
             <ul>
               <li>진행상태 및 생산종료날짜 수정</li>
               <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/0a67b0b3-169f-49cb-8561-490d5ea8571e" alt="생산작업관리 진행상태 수정" width="400">
+              <li>prompt 창을 이용한 당일작업등록</li>
+              <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/118ff79a-0930-46ff-8780-9294dc528795" alt="생산작업관리 진행상태 수정" width="400">
             </ul>
-          
-          
-          
         </ul>
-      </li>
     </ul>
   </div>
 </details>
