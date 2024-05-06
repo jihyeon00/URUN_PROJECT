@@ -76,11 +76,11 @@
     <h3>로그인</h3>
     <ul>
       <li>입력한 로그인의 데이터가 Member 테이블에 존재 시 로그인을 성공한다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1bff47f4-92ac-4374-a19f-e84d333e4ce3" alt="signIn.jsp">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/49596e83-12e7-4f83-a2df-6bf69543c8e6" alt="signIn.jsp">
       <li>MemberDAO의 selectMemberInfo 에서 session에 저장할 member_id와 employeeName을 받아온다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c97fa763-8114-4908-876d-2cda8b7827f5" alt="signInOk.jsp">
       <li>로그인 성공 시 메인화면의 상단에 로그인한 사람의 정보가 뜬다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d78de27f-5ba2-451d-bd54-724c2ec2b489" alt="header.jsp">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/e6fc04de-824f-48a3-a6ed-dd47792e32bd" alt="header.jsp">
     </ul>
   </div>
 </details>
