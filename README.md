@@ -123,7 +123,7 @@
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/af3f7b04-8bf2-47a5-948d-6a77c9dce24e" alt="생산작업관리 실행">
             <ul>
               <li>진행상태 및 생산종료날짜 수정</li>
-              <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/0a67b0b3-169f-49cb-8561-490d5ea8571e" alt="생산작업관리 진행상태 수정">
+              <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/0a67b0b3-169f-49cb-8561-490d5ea8571e" alt="생산작업관리 진행상태 수정" width="400">
             </ul>
           
           
