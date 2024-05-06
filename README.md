@@ -57,7 +57,7 @@
 
 <h3>JDBC(수정필요)</h3>
 <details>
-  <summary><b>1. 로그인 및 회원가입 [배지현] </b> (👈 Click)</summary>
+  <summary><b>1. 로그인 및 회원가입 [배지현] </b> </summary>
   <br>
   <div markdown="1">
     <h3>회원가입</h3>
@@ -89,7 +89,7 @@
 </details>
 
 <details>
-  <summary><b>2. 공지사항 [배지현] </b> (👈 Click)</summary>
+  <summary><b>2. 공지사항 [배지현] </b> </summary>
   <br>
   <div markdown="1">
     <h3>공지사항목록</h3>
@@ -105,7 +105,7 @@
 </details>
 
 <details>
-  <summary><b>3. 재고조회 [배지현] </b> (👈 Click)</summary>
+  <summary><b>3. 재고조회 [배지현] </b> </summary>
   <div markdown="1">
     <ul>
       <li>자재/제품 재고 조회는 자재/제품의 재고를 조회할 수 있으며 해당 페이지는 페이징 처리가 되어 있다.</li>
@@ -115,7 +115,7 @@
 </details>
 
 <details>
-  <summary><b>4. 생산 [이시연] </b> (👈 Click)</summary>
+  <summary><b>4. 생산 [이시연] </b> </summary>
   <div markdown="1">
     <ul>
        <li>생산계획등록</li>
@@ -146,7 +146,7 @@
 </details>
 
 <details>
-  <summary><b>5. BOM관리 [배지현] </b> (👈 Click) </summary>
+  <summary><b>5. BOM관리 [배지현] </b>  </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -166,7 +166,7 @@
   </div>
 </details>
 <details>
-  <summary><b>6. 입출고 [이시연] </b> (👈 Click) </summary>
+  <summary><b>6. 입출고 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -190,7 +190,7 @@
 
 <h3>SpringBoot(수정필요)</h3>
 <details>
-  <summary><b>1. 로그인 및 회원가입 [배지현] </b> (👈 Click)</summary>
+  <summary><b>1. 로그인 및 회원가입 [배지현] </b> </summary>
   <div markdown="1">
     <ul>
       <li><h3>로그인</h3></li>
@@ -201,7 +201,7 @@
   </div>
 </details>
 <details>
-  <summary><b>2. 생산 [이시연] </b> (👈 Click) </summary>
+  <summary><b>2. 생산 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -221,7 +221,7 @@
   </div>
 </details>
 <details>
-  <summary><b>3. BOM관리 [배지현] </b> (👈 Click)</summary>
+  <summary><b>3. BOM관리 [배지현] </b> </summary>
   <div markdown="1">
    <ul>
       <li><h3>전체BOM관리와 세부 BOM관리</h3></li>
@@ -232,7 +232,7 @@
   </div>
 </details>
 <details>
-  <summary><b>4. 입출고 [이시연] </b> (👈 Click) </summary>
+  <summary><b>4. 입출고 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
       <li><h3>입출고 등록</h3></li>
@@ -252,7 +252,7 @@
 <h3>JDBC와 SpringBoot의 차이점(수정필요)</h3>
 
 <details>
-  <summary><b>1. 로그인 및 회원가입 [배지현] </b> (👈 Click) </summary>
+  <summary><b>1. 로그인 및 회원가입 [배지현] </b>  </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -272,7 +272,7 @@
   </div>
 </details>
 <details>
-  <summary><b>2. 생산 [이시연] </b> (👈 Click) </summary>
+  <summary><b>2. 생산 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -292,7 +292,7 @@
   </div>
 </details>
 <details>
-  <summary><b>3. BOM관리 [배지현] </b> (👈 Click) </summary>
+  <summary><b>3. BOM관리 [배지현] </b>  </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
@@ -312,7 +312,7 @@
   </div>
 </details>
 <details>
-  <summary><b>4. 입출고 [이시연] </b> (👈 Click) </summary>
+  <summary><b>4. 입출고 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
       <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
