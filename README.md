@@ -68,7 +68,7 @@
       <li>조회 시 입력한 사원번호의 값이 넘어오며, 2가지 조건 통과 시 회원가입이 가능하다.</li>
       ⓐ Employee 회사 직원 테이블에 있어야 한다.<br>
       ⓑ Member 회원 테이블에 없어야 한다.<br>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c4629d64-8dee-4226-9059-e176c811e9c2" alt="idCheck.jsp">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1ec30bc9-418d-4df1-b0db-5f354d8cc91a" alt="idCheck.jsp">
       <li>signIn.jsp 의 prevCheckTextBox()의 유효성 검사를 통과 후 Form을 전송한다.
 </li>
     </ul>
