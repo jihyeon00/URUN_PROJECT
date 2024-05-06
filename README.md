@@ -55,7 +55,7 @@
 ## 📕 주요기능
 운동화를 생산하고 제조하는 업체에서 사용하는 SCM 시스템 프로그램을 제공한다.
 
-<h3>JDBC(수정필요)</h3>
+<h3>JDBC</h3>
 <details>
   <summary><b>1. 로그인 및 회원가입 [배지현] </b> </summary>
   <br>
@@ -118,12 +118,12 @@
   <summary><b>4. 생산 [이시연] </b> </summary>
   <div markdown="1">
     <ul>
-       <li>생산계획등록</li>
+       <h3>생산계획등록</h3>
         <ul>
           <li>제품 생산을 위해 작업계획을 등록할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1f544834-d190-43c6-85dc-9c2a66df11d7" alt="생산계획등록">
         </ul>
-      <li>생산작업관리</li>
+      <h3>생산작업관리</h3>
         <ul>
           <li>제품명, 제품코드, 생산시작날짜, 생산종료날짜를 선택해 검색할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c66671cb-65fe-4758-9850-0df3430b2348" alt="생산작업관리 검색바">
@@ -136,7 +136,7 @@
               <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/118ff79a-0930-46ff-8780-9294dc528795" alt="생산작업관리 당일작업등록" width="500">
             </ul>
         </ul>
-      <li>생산불량조회</li>
+      <h3>생산불량조회</h3>
         <ul>
           <li>생산작업관리에서 당일작업등록 시 불량수량을 입력할 경우 생산 불량현황에서 확인이 가능하다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c658228c-565f-47de-a451-f56e066b845d" alt="생산불량조회">
@@ -149,7 +149,7 @@
   <summary><b>5. BOM관리 [배지현] </b>  </summary>
   <div markdown="1">
     <ul>
-      <li>전체 BOM 관리(allBomManagement.jsp)</li>
+      <h3>전체 BOM 관리(allBomManagement.jsp)</h3>
         <ul>
           <li>검색창에 검색하고 싶은 데이터(BOMID, 제품ID, 제품명, 자재명, 컬러, 사이즈)를 입력하여 검색 할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/968c312e-6f80-49de-a99c-0b11cd32e5e8" alt="BOM관리 검색바">
@@ -159,14 +159,14 @@
           </ul>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/17b7dc99-1e28-42f5-924f-8fe6c3dbc874" alt="전체BOM관리">
         </ul>
-       <li>상세 BOM 관리(oneBomManagement.jsp)</li>
+       <h3>상세 BOM 관리(oneBomManagement.jsp)</h3>
         <ul>
           <li>get 방식으로 form을 전송하여 BOMID(=제품ID)에 따른 자재목록을 조회할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/edb39535-bd5c-4b18-8125-813057288795" alt="상세BOM관리 조회" width="700">
           <li>post 방식으로 form을 전송하여 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/42c48a02-d281-425c-8dd4-8b1b1c4d57ab" alt="상세BOM관리 자재삭제" width="500">
         </ul>
-      <li>BOM 등록(bomRegistration.jsp)</li>
+      <h3>BOM 등록(bomRegistration.jsp)</h3>
         <ul>
           <li>상세 BOM 관리의 삭제처럼 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d2027689-3ded-4ffb-9fd4-28cb1907d8d7" alt="BOM등록 자재삭제" width="700">
@@ -181,19 +181,19 @@
   <summary><b>6. 입출고 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
-      <li>입/출고 등록</li>
+      <h3>입/출고 등록</h3>
         <ul>
           <li>예정 정보를 등록하여 입/출고를 등록할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/83d1d6e2-6cf4-4181-bc11-11c3c7cd3331" alt="입/출고 등록" width="500">
         </ul>
-       <li>입/출고 현황 조회</li>
+       <h3>입/출고 현황 조회</h3>
         <ul>
           <li>위 상단바를 통해 각 진행상태별 현황을 조회할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d4b87e25-51c1-4c2b-ad59-13ae5850669d" alt="입/출고 현황 조회">
           <li>수정 버튼을 클릭하여 입/출고 내역을 수정할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/af3ab318-5cce-425f-a49e-2c6914c13b3d" alt="입/출고 현황 조회2">
         </ul>
-      <li>입/출고 수정</li>
+      <h3>입/출고 수정</h3>
         <ul>
           <li>납품완료일, 완료시간, 진행상태, 비고를 입력하여 수정할 수 있다.</li>
           <li>이때, 납품처ID, 제품ID, 납품수량, 납품예정일은 수정할 수 없다.</li>
