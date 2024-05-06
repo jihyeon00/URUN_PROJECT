@@ -169,9 +169,9 @@
       <li>BOM 등록(bomRegistration.jsp)</li>
         <ul>
           <li>상세 BOM 관리의 삭제처럼 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d2027689-3ded-4ffb-9fd4-28cb1907d8d7" alt="BOM등록 자재삭제">
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d2027689-3ded-4ffb-9fd4-28cb1907d8d7" alt="BOM등록 자재삭제" width="700">
           <li>추가 버튼 클릭시 prompt를 이용하여 자재를 추가할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가">
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가" width="700">
         </ul>
     </ul>
   </div>
