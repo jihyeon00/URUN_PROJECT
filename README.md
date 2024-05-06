@@ -165,23 +165,29 @@
     </ul>
   </div>
 </details>
+
 <details>
   <summary><b>6. 입출고 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
-      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
-      <li>부서별 접근 가능한 페이지가 다르다.
-        <ol>
-          <li>
-            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
-          </li>
-          <li>
-            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
-          </li>
-        </ol>
-      </li>
+      <li>입/출고 등록</li>
+        <ul>
+          <li>예정 정보를 등록하여 입/출고를 등록할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/83d1d6e2-6cf4-4181-bc11-11c3c7cd3331" alt="입/출고 등록">
+        </ul>
+       <li>입/출고 현황 조회</li>
+        <ul>
+          <li>위 상단바를 통해 각 진행상태별 현황을 조회할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d4b87e25-51c1-4c2b-ad59-13ae5850669d" alt="입/출고 현황 조회">
+          <li>수정 버튼을 클릭하여 입/출고 내역을 수정할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/af3ab318-5cce-425f-a49e-2c6914c13b3d" alt="입/출고 현황 조회2">
+        </ul>
+      <li>입/출고 수정</li>
+        <ul>
+          <li>납품완료일, 완료시간, 진행상태, 비고를 입력하여 수정할 수 있다.</li>
+          <li>이때, 납품처ID, 제품ID, 납품수량, 납품예정일은 수정할 수 없다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/a23fc66f-5054-4bfa-b534-2173b23e8613" alt="입/출고 수정">
+        </ul>
     </ul>
   </div>
 </details>
