@@ -62,12 +62,15 @@
   <div markdown="1">
     <h3>회원가입</h3>
     <ul>
-      <li>사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열리고 사원번호는 8자, 비밀번호와 비밀번호 확인은 6자 이상 10자 이내로 입력할 수 있다.</li>
+      <li>사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열리고 </li>
+      <li>사원번호는 8자, 비밀번호와 비밀번호 확인은 6자 이상 10자 이내로 입력할 수 있다.</li>
       <li>사원번호/비밀번호/비밀번호확인 미입력과 약관 동의 미체크 시 회원가입이 불가능하다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp">
       <li>조회 시 입력한 사원번호의 값이 넘어오며, 2가지 조건 통과 시 회원가입이 가능하다.</li>
-      ⓐ Employee 회사 직원 테이블에 있어야 한다.<br>
-      ⓑ Member 회원 테이블에 없어야 한다.<br>
+      <ul>
+        <li>Employee 회사 직원 테이블에 있어야 한다.</li>
+        <li>Member 회원 테이블에 없어야 한다.</li>
+      </ul>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1ec30bc9-418d-4df1-b0db-5f354d8cc91a" alt="idCheck.jsp">
       <li>signIn.jsp 의 prevCheckTextBox()의 유효성 검사를 통과 후 Form을 전송한다.
 </li>
