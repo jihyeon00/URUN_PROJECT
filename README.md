@@ -229,19 +229,27 @@
   <summary><b>2. 생산 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
-      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
-      <li>부서별 접근 가능한 페이지가 다르다.
-        <ol>
-          <li>
-            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
-          </li>
-          <li>
-            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
-          </li>
-        </ol>
-      </li>
+      <h3>생산계획등록</h3>
+      <ul>
+        <li>제품 생산을 위해 작업계획을 등록할 수 있다.</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/107cb657-660c-4739-bf2c-bd9b009ee49e" alt="생산계획등록">
+      </ul>
+      <h3>생산작업관리</h3>
+      <ul>
+        <li>제품명, 제품코드, 생산시작날짜, 생산종료날짜를 선택해 검색할 수 있다.</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c66671cb-65fe-4758-9850-0df3430b2348" alt="생산작업관리 검색바">
+        <li>검색해 나온 결과를 이용해 당일작업을 등록하거나 진행상태와 생산종료날짜를 수정할 수 있다.</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/af3f7b04-8bf2-47a5-948d-6a77c9dce24e" alt="생산작업관리 실행">
+        <li>진행상태 및 생산종료날짜 수정</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/0a67b0b3-169f-49cb-8561-490d5ea8571e" alt="생산작업관리 진행상태 수정" width="500">
+        <li>모달창을 이용한 당일작업등록</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/a651c953-88ab-4e82-bbc0-c637c367bb0e" alt="생산작업관리 당일작업등록">
+      </ul>
+      <h3>생산불량조회</h3>
+      <ul>
+        <li>생산작업관리에서 당일작업등록 시 불량수량을 입력할 경우 생산 불량현황에서 확인이 가능하다.</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/bb9c6505-3967-4bd8-83bd-21af6f057aa5" alt="생산불량조회">
+      </ul>
     </ul>
   </div>
 </details>
