@@ -232,7 +232,7 @@
       <h3>생산계획등록</h3>
       <ul>
         <li>제품 생산을 위해 작업계획을 등록할 수 있다.</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/107cb657-660c-4739-bf2c-bd9b009ee49e" alt="생산계획등록">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/107cb657-660c-4739-bf2c-bd9b009ee49e" alt="생산계획등록" width="700">
       </ul>
       <h3>생산작업관리</h3>
       <ul>
@@ -243,12 +243,12 @@
         <li>진행상태 및 생산종료날짜 수정</li>
         <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/0a67b0b3-169f-49cb-8561-490d5ea8571e" alt="생산작업관리 진행상태 수정" width="500">
         <li>모달창을 이용한 당일작업등록</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/a651c953-88ab-4e82-bbc0-c637c367bb0e" alt="생산작업관리 당일작업등록">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/a651c953-88ab-4e82-bbc0-c637c367bb0e" alt="생산작업관리 당일작업등록" width="700">
       </ul>
       <h3>생산불량조회</h3>
       <ul>
         <li>생산작업관리에서 당일작업등록 시 불량수량을 입력할 경우 생산 불량현황에서 확인이 가능하다.</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/bb9c6505-3967-4bd8-83bd-21af6f057aa5" alt="생산불량조회">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/bb9c6505-3967-4bd8-83bd-21af6f057aa5" alt="생산불량조회" width="700">
       </ul>
     </ul>
   </div>
@@ -308,19 +308,14 @@
   <summary><b>2. 생산 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
-      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
-      <li>부서별 접근 가능한 페이지가 다르다.
-        <ol>
-          <li>
-            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
-          </li>
-          <li>
-            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
-          </li>
-        </ol>
-      </li>
+      <li>생산계획등록창을 모달창으로 변경</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1f544834-d190-43c6-85dc-9c2a66df11d7" alt="생산계획등록" width="300">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/3e0f1fde-8e53-4447-ab2b-0c1a4c6d7880" alt="생산계획등록-모달" width="500">
+      <li>작일작업등록을 prompt창을 모달창으로 변경</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/118ff79a-0930-46ff-8780-9294dc528795" alt="생산작업관리 당일작업등록" width="400">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/a651c953-88ab-4e82-bbc0-c637c367bb0e" alt="생산작업관리 당일작업등록" width="400">
     </ul>
   </div>
 </details>
@@ -348,19 +343,14 @@
   <summary><b>4. 입출고 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
-      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
-      <li>부서별 접근 가능한 페이지가 다르다.
-        <ol>
-          <li>
-            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
-          </li>
-          <li>
-            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
-          </li>
-        </ol>
-      </li>
+      <li>입/출고 등록창을 모달창으로 변경</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/83d1d6e2-6cf4-4181-bc11-11c3c7cd3331" alt="입/출고 등록" width="300">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/b1942753-7ed3-4bbb-8ec3-245aeed77ecd" alt="입/출고 등록-모달" width="500">
+      <li>입/출고 수정창을 모달창으로 변경</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/a23fc66f-5054-4bfa-b534-2173b23e8613" alt="입/출고 수정" width="300">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/e6bae0f3-0e35-4cc7-af17-aeadb5e590b3" alt="입/출고 수정-모달" width="500">
     </ul>
   </div>
 </details>
