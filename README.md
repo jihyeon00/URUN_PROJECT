@@ -57,22 +57,29 @@
 
 <h3>JDBC(수정필요)</h3>
 <details>
-  <summary><b>1. 로그인 및 회원가입</b> </summary>
+  <summary><b>1. 로그인 및 회원가입 [배지현] </b> (👈 Click)</summary>
+  <br>
   <div markdown="1">
+    <h3>회원가입</h3>
     <ul>
-      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
-      <li>부서별 접근 가능한 페이지가 다르다.
-        <ol>
-          <li>
-            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
-          </li>
-          <li>
-            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
-          </li>
-        </ol>
-      </li>
+      <li>사원번호가 Employees 테이블에 존재하고 member 테이블에 존재하지 않아야 회원가입이 가능하다.</li>
+      <li>조회 시 idCheck.jsp가 새 창으로 열리고</li>
+      <li>사원번호는 8자, 비밀번호와 비밀번호 확인은 6자로 고정하였다.</li>
+      <li>사원번호/비밀번호/비밀번호확인 미입력과 약관 동의 미체크 시 회원가입 불가능하다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="회원가입1">
+      <li>로그인 실패 시, Config의 오류 메시지를 받아서 View로 반환한다.</li>
+      <img src="https://github.com/heyJSH/CNR_FURNITURE/assets/150403977/3f8d1bc2-bba2-482c-bb1c-787e56066516" alt="로그인2">
+    </ul>
+    <br>
+    <h3>비밀번호 재설정</h3>
+    <ul>
+      <li>메일을 통해 일회용 인증코드를 전송하여 본인확인 후 비밀번호를 변경(재설정)할 수 있다.</li>
+      <li>비밀번호 재설정 화면은 다음과 같다.</li>
+      <img src="https://github.com/heyJSH/CNR_FURNITURE/assets/150403977/e5b90d48-379d-429a-ad38-3faa2ea6507d" alt="비밀번호 재설정1">
+      <li>비밀번호 재설정 인증 이메일</li>
+      <img src="https://github.com/heyJSH/CNR_FURNITURE/assets/150403977/746fb881-1959-4698-b0f7-04f35f20fe85" alt="비밀번호 재설정2">
+      <li>비밀번호 재설정 인증번호를 입력 후, 비밀번호를 변경(재설정)할 수 있다.</li>
+      <img src="https://github.com/heyJSH/CNR_FURNITURE/assets/150403977/60d917a5-9d5b-457d-a9ff-caff9fd6c735" alt="비밀번호 재설정3">
     </ul>
   </div>
 </details>
