@@ -149,19 +149,30 @@
   <summary><b>5. BOM관리 [배지현] </b>  </summary>
   <div markdown="1">
     <ul>
-      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
-      <li>부서별 접근 가능한 페이지가 다르다.
-        <ol>
-          <li>
-            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
-          </li>
-          <li>
-            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
-          </li>
-        </ol>
-      </li>
+      <li>전체 BOM 관리(allBomManagement.jsp)</li>
+        <ul>
+          <li>검색창에 검색하고 싶은 데이터(BOMID, 제품ID, 제품명, 자재명, 컬러, 사이즈)를 입력하여 검색 할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/968c312e-6f80-49de-a99c-0b11cd32e5e8" alt="BOM관리 검색바">
+          <li>BOMID(=제품ID)에 따른 자재명(자재수량)을 오라클의 listagg를 이용해 간략히 보여준다.</li>
+          <ul>
+            <li>또한, 자재명에 쓰여있는 내용을 클릭 할 경우 해당 BOMID의 상세BOM관리 페이지로 이동한다.</li>
+          </ul>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/17b7dc99-1e28-42f5-924f-8fe6c3dbc874" alt="전체BOM관리">
+        </ul>
+       <li>상세 BOM 관리(oneBomManagement.jsp)</li>
+        <ul>
+          <li>get 방식으로 form을 전송하여 BOMID(=제품ID)에 따른 자재목록을 조회할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/edb39535-bd5c-4b18-8125-813057288795" alt="상세BOM관리 조회">
+          <li>post 방식으로 form을 전송하여 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/42c48a02-d281-425c-8dd4-8b1b1c4d57ab" alt="상세BOM관리 자재삭제">
+        </ul>
+      <li>BOM 등록(bomRegistration.jsp)</li>
+        <ul>
+          <li>상세 BOM 관리의 삭제처럼 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d2027689-3ded-4ffb-9fd4-28cb1907d8d7" alt="BOM등록 자재삭제">
+          <li>추가 버튼 클릭시 prompt를 이용하여 자재를 추가할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가">
+        </ul>
     </ul>
   </div>
 </details>
@@ -173,7 +184,7 @@
       <li>입/출고 등록</li>
         <ul>
           <li>예정 정보를 등록하여 입/출고를 등록할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/83d1d6e2-6cf4-4181-bc11-11c3c7cd3331" alt="입/출고 등록">
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/83d1d6e2-6cf4-4181-bc11-11c3c7cd3331" alt="입/출고 등록" width="500">
         </ul>
        <li>입/출고 현황 조회</li>
         <ul>
