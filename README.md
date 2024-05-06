@@ -164,7 +164,7 @@
           <li>get 방식으로 form을 전송하여 BOMID(=제품ID)에 따른 자재목록을 조회할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/edb39535-bd5c-4b18-8125-813057288795" alt="상세BOM관리 조회">
           <li>post 방식으로 form을 전송하여 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/42c48a02-d281-425c-8dd4-8b1b1c4d57ab" alt="상세BOM관리 자재삭제">
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/42c48a02-d281-425c-8dd4-8b1b1c4d57ab" alt="상세BOM관리 자재삭제" width="500">
         </ul>
       <li>BOM 등록(bomRegistration.jsp)</li>
         <ul>
