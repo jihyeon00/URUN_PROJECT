@@ -90,41 +90,7 @@
 </details>
 
 <details>
-  <summary><b>2. 공지사항 [배지현] </b> </summary>
-  <br>
-  <div markdown="1">
-    <h3>공지사항목록</h3>
-    <ul>
-      <li>공지사항 목록을 조회할 수 있으며 해당 페이지는 페이징 처리가 되어 있다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c43ede80-d3c6-4831-b9b1-2fb2c7166654" alt="공지사항 리스트">
-    </ul>
-    <h3>공지사항 내용</h3>
-    <ul>
-      <li>공지사항 항목을 클릭 시 세부내용을 조회하고 윗글, 아랫글을 통해 다른 글로 이동할 수 있다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/483fc0ea-2299-4377-8cc9-d91192cd6fa7" alt="공지사항 세부내용">
-    </ul>
-    <h3>공지사항 등록</h3>
-    <ul>
-      <li>공지사항 목록에서 등록 버튼 클릭 시 등록화면으로 넘어가며 하단 등록 버튼을 통해 등록할 수 있다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/43ce8595-74b5-45ea-913f-0e9b8b347da1" alt="공지사항 등록">
-    </ul>
-  </div>
-</details>
-
-<details>
-  <summary><b>3. 재고조회 [배지현] </b> </summary>
-  <div markdown="1">
-    <h3>자재/제품 재고조회</h3>
-    <br>
-    <ul>
-      <li>자재/제품의 재고를 조회할 수 있으며 해당 페이지는 페이징 처리가 되어 있다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/f0505eac-ead6-4c8f-9187-4f005faafd31" alt="재고조회">
-    </ul>
-  </div>
-</details>
-
-<details>
-  <summary><b>4. 생산 [이시연] </b> </summary>
+  <summary><b>2. 생산 [이시연] </b> </summary>
   <div markdown="1">
     <ul>
       <h3>생산계획등록</h3>
@@ -155,7 +121,7 @@
 </details>
 
 <details>
-  <summary><b>5. BOM관리 [배지현] </b>  </summary>
+  <summary><b>3. BOM관리 [배지현] </b>  </summary>
   <div markdown="1">
     <ul>
       <h3>전체 BOM 관리(allBomManagement.jsp)</h3>
@@ -187,7 +153,7 @@
 </details>
 
 <details>
-  <summary><b>6. 입출고 [이시연] </b>  </summary>
+  <summary><b>4. 입출고 [이시연] </b>  </summary>
   <div markdown="1">
     <ul>
       <h3>입/출고 등록</h3>
@@ -214,35 +180,30 @@
 
 <br><br>
 
-<h3>SpringBoot(수정필요)</h3>
+<h3>SpringBoot</h3>
 <details>
   <summary><b>1. 로그인 및 회원가입 [배지현] </b> </summary>
   <br>
   <div markdown="1">
     <h3>회원가입</h3>
     <ul>
-      <li>사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열리고 </li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/9bf32f2e-ff49-4c46-a611-a7aadfb7e197" alt="idCheck.jsp">
+      <li>사원번호를 입력하고 focusout 시 중복체크를 진행한다. </li>
       <li>사원번호는 8자, 비밀번호와 비밀번호 확인은 6자 이상 10자 이내로 입력할 수 있다.</li>
       <li>사원번호/비밀번호/비밀번호확인 미입력과 약관 동의 미체크 시 회원가입이 불가능하다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp">
-      <li>조회 시 입력한 사원번호의 값이 넘어오며, 2가지 조건 통과 시 회원가입이 가능하다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_회원가입">
+      <li>ajax를 이용해 회원가입을 진행할 수 있도록 한다.</li>
       <ul>
-        <li>Employee 회사 직원 테이블에 있어야 한다.</li>
-        <li>Member 회원 테이블에 없어야 한다.</li>
+        <li>조회 시 입력한 사원번호의 값이 넘어오며, Member 회원 테이블에 없어야 한다.</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/497e5846-215e-4551-9106-0f3666c26ffe" alt="idCheck">
       </ul>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1ec30bc9-418d-4df1-b0db-5f354d8cc91a" alt="idCheck">
-      <li>signIn.jsp 의 prevCheckTextBox()의 유효성 검사를 통과 후 Form을 전송한다.
-</li>
     </ul>
     <br>
     <h3>로그인</h3>
     <ul>
       <li>입력한 로그인의 데이터가 Member 테이블에 존재 시 로그인을 성공한다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/49596e83-12e7-4f83-a2df-6bf69543c8e6" alt="signIn.jsp">
-      <li>MemberDAO의 selectMemberInfo 에서 session에 저장할 member_id와 employeeName을 받아온다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c97fa763-8114-4908-876d-2cda8b7827f5" alt="signInOk.jsp">
-      <li>로그인 성공 시 메인화면의 상단에 로그인한 사람의 정보가 뜬다.</li>
+      <li>jsp:include page 를 이용해 main.jsp → sidebar.jsp → header.jsp 순으로 세션 값을 넘겨주어 메인화면의 상단에 로그인한 사람의 정보가 뜬다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d2885a64-388d-40ef-8445-b40df0fc9489" alt="jsp:include page">
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/e6fc04de-824f-48a3-a6ed-dd47792e32bd" alt="header.jsp">
     </ul>
   </div>
