@@ -216,15 +216,37 @@
 <h3>SpringBoot(수정필요)</h3>
 <details>
   <summary><b>1. 로그인 및 회원가입 [배지현] </b> </summary>
+  <br>
   <div markdown="1">
+    <h3>회원가입</h3>
     <ul>
-      <li><h3>로그인</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/ba7943ac-d81d-4a13-8ca3-9bd09789faa2" alt="로그인"  width="700">
-      <li><h3>회원가입</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/73dee87d-1bfa-4837-aa02-4171348dc80a" alt="회원가입"  width="700">
+      <li>사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열리고 </li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/2e39bb93-5860-4dcb-998b-7f00698e3124" alt="idCheck.jsp">
+      <li>사원번호는 8자, 비밀번호와 비밀번호 확인은 6자 이상 10자 이내로 입력할 수 있다.</li>
+      <li>사원번호/비밀번호/비밀번호확인 미입력과 약관 동의 미체크 시 회원가입이 불가능하다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp">
+      <li>조회 시 입력한 사원번호의 값이 넘어오며, 2가지 조건 통과 시 회원가입이 가능하다.</li>
+      <ul>
+        <li>Employee 회사 직원 테이블에 있어야 한다.</li>
+        <li>Member 회원 테이블에 없어야 한다.</li>
+      </ul>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1ec30bc9-418d-4df1-b0db-5f354d8cc91a" alt="idCheck">
+      <li>signIn.jsp 의 prevCheckTextBox()의 유효성 검사를 통과 후 Form을 전송한다.
+</li>
+    </ul>
+    <br>
+    <h3>로그인</h3>
+    <ul>
+      <li>입력한 로그인의 데이터가 Member 테이블에 존재 시 로그인을 성공한다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/49596e83-12e7-4f83-a2df-6bf69543c8e6" alt="signIn.jsp">
+      <li>MemberDAO의 selectMemberInfo 에서 session에 저장할 member_id와 employeeName을 받아온다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c97fa763-8114-4908-876d-2cda8b7827f5" alt="signInOk.jsp">
+      <li>로그인 성공 시 메인화면의 상단에 로그인한 사람의 정보가 뜬다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/e6fc04de-824f-48a3-a6ed-dd47792e32bd" alt="header.jsp">
     </ul>
   </div>
 </details>
+
 <details>
   <summary><b>2. 생산 [이시연] </b>  </summary>
   <div markdown="1">
