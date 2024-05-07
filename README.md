@@ -302,6 +302,22 @@
   </div>
 </details>
 
+<details>
+  <summary><b>4. 입출고 [이시연] </b>  </summary>
+  <div markdown="1">
+    <ul>
+      <li><h3>입출고 등록</h3></li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d03ea3be-84a7-453c-a965-df54db62a1a1" alt="입고등록"  width="700">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/ab0cdfa6-af1b-450c-94b0-504f10e3a3e1" alt="출고등록"  width="700">
+      <li><h3>입출고 수정</h3></li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/2b6f85d9-56df-42fd-91ac-6b8b294a18e2" alt="출고수정(1)"  width="700">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c9c53963-d464-4496-b3b4-5ef73248fd28" alt="출고수정(2)"  width="700">
+      <li><h3>입출고 조회</h3></li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/7ad3ba37-f4c8-4573-aa75-617d033adc0b" alt="입고현황"  width="700">
+    </ul>
+  </div>
+</details>
+
 <br>
 
 <h3>JDBC와 SpringBoot의 차이점(수정필요)</h3>
