@@ -285,7 +285,7 @@
         </ul>
        <h3>상세 BOM 관리(oneBomManagement.jsp)</h3>
         <ul>
-          <li>=BOMID(=제품ID)에 따른 자재목록을 조회할 수 있다.</li>
+          <li>BOMID(=제품ID)에 따른 자재목록을 조회할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/edb39535-bd5c-4b18-8125-813057288795" alt="상세BOM관리 조회" width="700">
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/f15bc6f0-fb43-4349-9b67-557e4bb8d9ba" alt="상세BOM관리 조회" width="500">
           <li>선택한 자재를 삭제할 수 있다.</li>
@@ -370,47 +370,32 @@
 <details>
   <summary><b>3. BOM관리 [배지현] </b>  </summary>
   <div markdown="1">
-   <h3>상세 BOM 관리(oneBomManagement.jsp)</h3>
-      <h4>JDBC</h4>
-        <ul>
-          <li>get 방식으로 form을 전송하여 BOMID(=제품ID)에 따른 자재목록을 조회할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/edb39535-bd5c-4b18-8125-813057288795" alt="상세BOM관리 조회" width="700">
-          <li>post 방식으로 form을 전송하여 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/42c48a02-d281-425c-8dd4-8b1b1c4d57ab" alt="상세BOM관리 자재삭제" width="500">
-        </ul>
-      <h4>SPRINGBOOT</h4>
-        <ul>
-          <li>=BOMID(=제품ID)에 따른 자재목록을 조회할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/edb39535-bd5c-4b18-8125-813057288795" alt="상세BOM관리 조회" width="700">
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/f15bc6f0-fb43-4349-9b67-557e4bb8d9ba" alt="상세BOM관리 조회" width="500">
-          <li>선택한 자재를 삭제할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/98d95e7a-87d2-4893-8c10-8aa96fe7752f" alt="상세BOM관리 자재삭제" width="500">
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/937980dc-84be-42cf-a287-f8bf0775b6ec" alt="상세BOM관리 자재삭제" width="500">
-        </ul>
+    <h3>상세 BOM 관리(oneBomManagement.jsp)</h3>
+      <ul>
+        <li>JDBC는 form전송과 삭제 로직을 작성한 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.<</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/42c48a02-d281-425c-8dd4-8b1b1c4d57ab" alt="상세BOM관리 자재삭제" width="500">
+        <li>SpringBoot는 Controller를 통해 선택한 자재를 삭제할 수 있다. </li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_회원가입" width="600">
+      </ul>
     <br>
     <h3>BOM 등록(bomRegistration.jsp)</h3>
-      <h4>JDBC</h4>
+      <h4>BOMID 에 따른 자재목록</h4>
         <ul>
+          <li>JDBC는 BOMID(=제품ID)에 따른 자재목록을 조회하며 한 제품ID의 자재목록을 검색하지 않아도 조회 할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/e2c6ad20-203d-4a73-8e5e-ff2d5c03ce51" alt="JDBC_BOM등록 조회" width="700">
+          <li>SpringBoot는 제품ID를 검색하지 않을 경우 BOM 내역이 뜨지 않도록 한다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/de4f3f6e-a06e-4e55-aa93-751b7551c4f9" alt="SPRINGBOOT_BOM등록 조회" width="700">
           <li>상세 BOM 관리의 삭제처럼 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
           <li>추가 버튼 클릭시 prompt를 이용하여 자재를 추가할 수 있다.</li>
           <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가" width="700">
         </ul>
-      <h4>SPRINGBOOT</h4>
+      <h4>자재추가</h4>
       <ul>
-         <li>제품ID를 검색하지 않을 경우 BOM 내역이 뜨지 않도록 한다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/de4f3f6e-a06e-4e55-aa93-751b7551c4f9" alt="BOM등록 제품검색" width="700">
-          <li>제품ID를 검색 시 BOM 내역이 뜨고 삭제 버튼 클릭 시 /materialDelete로 Post 전송을 통해 삭제한다.</li>
-          <ul>
-            <li>검색을 통해 받은 제품ID의 내역 중 삭제를 원하는 자재ID 의 값을 받아 삭제를 진행한다. </li>
-          </ul>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/49c68c38-bc0d-4aee-b0d4-2eb9c6ea7c98" alt="BOM등록 자재삭제" width="700">
-          <li>아래 자재 목록 중 추가 하려는 자재의 추가 버튼을 클릭 시 AJAX로 Get요청을 보내 해당 자재의 정보를 보여주고 입력할 수 있는 모달창이 열린다.</li>
-          <ul>
-            <li>추가수량을 필수로 입력하도록 하며</li>
-            <li>추가 버튼 클릭 시 /materialInsert 로 전송하여 자재를 추가한다.</li>
-          </ul>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/62bb9e30-8fc8-4699-ba0f-1e33833d2b6a" alt="BOM등록 자재추가" width="700">
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/798d99a8-e9ea-482c-b2dd-2e36d5c0bf41" alt="BOM등록 자재추가 ajax" width="700">
+        <li>JDBC는 추가 버튼 클릭시 prompt를 이용하여 자재를 추가할 수 있다.</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가" width="700">
+        <li>SpringBoot는 아래 자재 목록 중 추가 하려는 자재의 추가 버튼을 클릭 시 해당 자재의 정보를 보여주고 입력할 수 있는 모달창이 열린다.</li>
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/62bb9e30-8fc8-4699-ba0f-1e33833d2b6a" alt="SPRINGBOOT_BOM등록 자재추가" width="700">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/798d99a8-e9ea-482c-b2dd-2e36d5c0bf41" alt="SPRINGBOOT_BOM등록 자재추가 ajax" width="700">
       </ul>
   </div>
 </details>
