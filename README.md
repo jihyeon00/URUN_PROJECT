@@ -331,7 +331,7 @@
 
 <br>
 
-<h3>JDBC와 SpringBoot의 차이점(수정필요)</h3>
+<h3>JDBC와 SpringBoot의 차이점</h3>
 
 <details>
   <summary><b>1. 로그인 및 회원가입 [배지현] </b>  </summary>
@@ -340,11 +340,18 @@
     <ul>
       <li>JDBC는 사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열려 중복체크를 진행한다.</li>
       <li>SpringBoot는 사원번호를 입력하고 focusout 시 중복체크를 진행한다. </li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp" width="400">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp" width="300">
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_회원가입">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_회원가입" width="300">
     </ul>
     <h3>로그인</h3>
+    <ul>
+      <li>JDBC는 MemberDAO의 selectMemberInfo 에서 session에 저장할 member_id와 employeeName을 받아온다.</li>
+      <li>SpringBoot는 jsp:include page 를 이용해 main.jsp → sidebar.jsp → header.jsp 순으로 세션 값을 넘겨주어 메인화면의 상단에 로그인한 사람의 정보가 뜬다.</li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c97fa763-8114-4908-876d-2cda8b7827f5" alt="JDBC_로그인" width="300">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_로그인" width="300">
+    </ul>
   </div>
 </details>
 <details>
