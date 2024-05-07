@@ -204,7 +204,7 @@
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/49596e83-12e7-4f83-a2df-6bf69543c8e6" alt="signIn.jsp">
       <li>jsp:include page 를 이용해 main.jsp → sidebar.jsp → header.jsp 순으로 세션 값을 넘겨주어 메인화면의 상단에 로그인한 사람의 정보가 뜬다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d2885a64-388d-40ef-8445-b40df0fc9489" alt="jsp:include page">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/e6fc04de-824f-48a3-a6ed-dd47792e32bd" alt="header.jsp">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c64dcd10-785d-46a4-9572-6fc62565ec24" alt="header.jsp" width="400">
     </ul>
   </div>
 </details>
