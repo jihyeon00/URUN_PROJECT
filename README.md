@@ -63,6 +63,7 @@
     <h3>회원가입</h3>
     <ul>
       <li>사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열리고 </li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/9bf32f2e-ff49-4c46-a611-a7aadfb7e197" alt="idCheck.jsp">
       <li>사원번호는 8자, 비밀번호와 비밀번호 확인은 6자 이상 10자 이내로 입력할 수 있다.</li>
       <li>사원번호/비밀번호/비밀번호확인 미입력과 약관 동의 미체크 시 회원가입이 불가능하다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp">
@@ -221,7 +222,7 @@
     <h3>회원가입</h3>
     <ul>
       <li>사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열리고 </li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/2e39bb93-5860-4dcb-998b-7f00698e3124" alt="idCheck.jsp">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/9bf32f2e-ff49-4c46-a611-a7aadfb7e197" alt="idCheck.jsp">
       <li>사원번호는 8자, 비밀번호와 비밀번호 확인은 6자 이상 10자 이내로 입력할 수 있다.</li>
       <li>사원번호/비밀번호/비밀번호확인 미입력과 약관 동의 미체크 시 회원가입이 불가능하다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp">
