@@ -373,9 +373,10 @@
     <h3>상세 BOM 관리(oneBomManagement.jsp)</h3>
       <ul>
         <li>JDBC는 form전송과 삭제 로직을 작성한 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.<</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/42c48a02-d281-425c-8dd4-8b1b1c4d57ab" alt="상세BOM관리 자재삭제" width="500">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/42c48a02-d281-425c-8dd4-8b1b1c4d57ab" alt="JDBC_상세BOM관리 자재삭제" width="500">
         <li>SpringBoot는 Controller를 통해 선택한 자재를 삭제할 수 있다. </li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_회원가입" width="600">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/98d95e7a-87d2-4893-8c10-8aa96fe7752f" alt="SPRINGBOOT_상세BOM관리 자재삭제" width="500">
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/937980dc-84be-42cf-a287-f8bf0775b6ec" alt="SPRINGBOOT_상세BOM관리 자재삭제" width="500">
       </ul>
     <br>
     <h3>BOM 등록(bomRegistration.jsp)</h3>
