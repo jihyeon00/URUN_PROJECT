@@ -210,7 +210,7 @@
   </div>
 </details>
 
-<br><br>
+<br>
 
 <h3>SpringBoot</h3>
 <details>
@@ -273,30 +273,36 @@
   <summary><b>3. BOM관리 [배지현] </b> </summary>
   <div markdown="1">
    <ul>
-      <li><h3>전체BOM관리와 세부 BOM관리</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/05d06c1a-8260-43ba-8e51-e2dc20b494a8" alt="전체BOM관리와 세부 BOM관리"  width="700">
-      <li><h3>BOM등록</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/59230383-3ea3-4638-9442-5bde6986a272" alt="BOM등록"  width="700">
-    </ul>
-  </div>
-</details>
-<details>
-  <summary><b>4. 입출고 [이시연] </b>  </summary>
-  <div markdown="1">
-    <ul>
-      <li><h3>입출고 등록</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d03ea3be-84a7-453c-a965-df54db62a1a1" alt="입고등록"  width="700">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/ab0cdfa6-af1b-450c-94b0-504f10e3a3e1" alt="출고등록"  width="700">
-      <li><h3>입출고 수정</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/2b6f85d9-56df-42fd-91ac-6b8b294a18e2" alt="출고수정(1)"  width="700">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c9c53963-d464-4496-b3b4-5ef73248fd28" alt="출고수정(2)"  width="700">
-      <li><h3>입출고 조회</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/7ad3ba37-f4c8-4573-aa75-617d033adc0b" alt="입고현황"  width="700">
+      <h3>전체 BOM 관리(allBomManagement.jsp)</h3>
+        <ul>
+          <li>검색창에 검색하고 싶은 데이터(BOMID, 제품ID, 제품명, 자재명, 컬러, 사이즈)를 입력하여 검색 할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/968c312e-6f80-49de-a99c-0b11cd32e5e8" alt="BOM관리 검색바">
+          <li>BOMID(=제품ID)에 따른 자재명(자재수량)을 오라클의 listagg를 이용해 간략히 보여준다.</li>
+          <ul>
+            <li>또한, 자재명에 쓰여있는 내용을 클릭 할 경우 해당 BOMID의 상세BOM관리 페이지로 이동한다.</li>
+          </ul>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/17b7dc99-1e28-42f5-924f-8fe6c3dbc874" alt="전체BOM관리">
+        </ul>
+       <h3>상세 BOM 관리(oneBomManagement.jsp)</h3>
+        <ul>
+          <li>=BOMID(=제품ID)에 따른 자재목록을 조회할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/edb39535-bd5c-4b18-8125-813057288795" alt="상세BOM관리 조회" width="700">
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/f15bc6f0-fb43-4349-9b67-557e4bb8d9ba" alt="상세BOM관리 조회" width="500">
+          <li>선택한 자재를 삭제할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/98d95e7a-87d2-4893-8c10-8aa96fe7752f" alt="상세BOM관리 자재삭제" width="500">
+        </ul>
+      <h3>BOM 등록(bomRegistration.jsp)</h3>
+        <ul>
+          <li>상세 BOM 관리의 삭제처럼 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d2027689-3ded-4ffb-9fd4-28cb1907d8d7" alt="BOM등록 자재삭제" width="700">
+          <li>추가 버튼 클릭시 prompt를 이용하여 자재를 추가할 수 있다.</li>
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가" width="700">
+        </ul>
     </ul>
   </div>
 </details>
 
-<br><br>
+<br>
 
 <h3>JDBC와 SpringBoot의 차이점(수정필요)</h3>
 
