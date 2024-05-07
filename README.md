@@ -339,14 +339,14 @@
     <h3>회원가입</h3>
     <ul>
       <li>JDBC는 사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열려 중복체크를 진행한다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="JDBC_회원가입" width="600">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="JDBC_회원가입">
       <li>SpringBoot는 사원번호를 입력하고 focusout 시 중복체크를 진행한다. </li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_회원가입" width="600">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_회원가입">
     </ul>
     <h3>로그인</h3>
     <ul>
       <li>JDBC는 MemberDAO의 selectMemberInfo 에서 session에 저장할 member_id와 employeeName을 받아온다.</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c97fa763-8114-4908-876d-2cda8b7827f5" alt="JDBC_로그인" width="300">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c97fa763-8114-4908-876d-2cda8b7827f5" alt="JDBC_로그인" width="600">
       <li>SpringBoot는 jsp:include page 를 이용해 main.jsp → sidebar.jsp → header.jsp 순으로 세션 값을 넘겨주어 메인화면의 상단에 로그인한 사람의 정보가 뜬다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_로그인" width="300">
     </ul>
@@ -382,20 +382,17 @@
       <h4>BOMID 에 따른 자재목록</h4>
         <ul>
           <li>JDBC는 BOMID(=제품ID)에 따른 자재목록을 조회하며 한 제품ID의 자재목록을 검색하지 않아도 조회 할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/e2c6ad20-203d-4a73-8e5e-ff2d5c03ce51" alt="JDBC_BOM등록 조회" width="700">
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/e2c6ad20-203d-4a73-8e5e-ff2d5c03ce51" alt="JDBC_BOM등록 조회" width="600">
           <li>SpringBoot는 제품ID를 검색하지 않을 경우 BOM 내역이 뜨지 않도록 한다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/de4f3f6e-a06e-4e55-aa93-751b7551c4f9" alt="SPRINGBOOT_BOM등록 조회" width="700">
-          <li>상세 BOM 관리의 삭제처럼 deleteOneBomMaterial.jsp를 통해 선택한 자재를 삭제할 수 있다.</li>
-          <li>추가 버튼 클릭시 prompt를 이용하여 자재를 추가할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가" width="700">
+          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/de4f3f6e-a06e-4e55-aa93-751b7551c4f9" alt="SPRINGBOOT_BOM등록 조회" width="600">
         </ul>
       <h4>자재추가</h4>
       <ul>
         <li>JDBC는 추가 버튼 클릭시 prompt를 이용하여 자재를 추가할 수 있다.</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가" width="700">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/284e4d28-24c5-45ea-a86c-303c6f636926" alt="BOM등록 자재추가" width="600">
         <li>SpringBoot는 아래 자재 목록 중 추가 하려는 자재의 추가 버튼을 클릭 시 해당 자재의 정보를 보여주고 입력할 수 있는 모달창이 열린다.</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/62bb9e30-8fc8-4699-ba0f-1e33833d2b6a" alt="SPRINGBOOT_BOM등록 자재추가" width="700">
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/798d99a8-e9ea-482c-b2dd-2e36d5c0bf41" alt="SPRINGBOOT_BOM등록 자재추가 ajax" width="700">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/62bb9e30-8fc8-4699-ba0f-1e33833d2b6a" alt="SPRINGBOOT_BOM등록 자재추가" width="600">
+        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/798d99a8-e9ea-482c-b2dd-2e36d5c0bf41" alt="SPRINGBOOT_BOM등록 자재추가 ajax" width="600">
       </ul>
   </div>
 </details>
