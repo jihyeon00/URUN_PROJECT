@@ -336,21 +336,15 @@
 <details>
   <summary><b>1. 로그인 및 회원가입 [배지현] </b>  </summary>
   <div markdown="1">
+    <h3>회원가입</h3>
     <ul>
-      <li>직원 번호가 데이터에 있으면 로그인이 가능하다.</li>
-      <li>부서별 접근 가능한 페이지가 다르다.
-        <ol>
-          <li>
-            ex1) 생산팀은 로그인 시 `재고현황`, `제조관리`만 보여준다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/83eb1444-d06f-4b7c-a750-cfb08b1dee16" alt="생산팀 접근가능한 메뉴">
-          </li>
-          <li>
-            ex2) 관리팀은 모든 페이지에 접근할 수 있다. <br>
-            <img src="https://github.com/heyJSH/Project-Meal_Kit_SpringBoot/assets/150403977/2c487107-703d-44df-b55d-2712ea79ae70" alt="관리팀 접근가능한 메뉴">
-          </li>
-        </ol>
-      </li>
+      <li>JDBC는 사원번호 입력 후 조회 버튼 클릭 시 idCheck.jsp가 새 창으로 열려 중복체크를 진행한다.</li>
+      <li>SpringBoot는 사원번호를 입력하고 focusout 시 중복체크를 진행한다. </li>
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/bd2728bd-c550-4442-b36b-fe012eb6548f" alt="signUp.jsp" width="400">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
+      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_회원가입">
     </ul>
+    <h3>로그인</h3>
   </div>
 </details>
 <details>
