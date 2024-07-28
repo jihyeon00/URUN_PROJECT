@@ -57,7 +57,7 @@
 
 <h3>JDBC</h3>
 <details>
-  <summary><b>1. 로그인 및 회원가입 [배지현] </b> </summary>
+  <summary><b>로그인 및 회원가입 [배지현] </b> </summary>
   <br>
   <div markdown="1">
     <h3>회원가입</h3>
@@ -89,7 +89,7 @@
 </details>
 
 <details>
-  <summary><b>2. 공지사항 [배지현] </b> </summary>
+  <summary><b>공지사항 [배지현] </b> </summary>
   <br>
   <div markdown="1">
     <h3>공지사항목록</h3>
@@ -122,38 +122,7 @@
 </details>
 
 <details>
-  <summary><b>4. 생산 [이시연] </b> </summary>
-  <div markdown="1">
-    <ul>
-      <h3>생산계획등록</h3>
-        <ul>
-          <li>제품 생산을 위해 작업계획을 등록할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1f544834-d190-43c6-85dc-9c2a66df11d7" alt="생산계획등록">
-        </ul>
-      <h3>생산작업관리</h3>
-        <ul>
-          <li>제품명, 제품코드, 생산시작날짜, 생산종료날짜를 선택해 검색할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c66671cb-65fe-4758-9850-0df3430b2348" alt="생산작업관리 검색바">
-          <li>검색해 나온 결과를 이용해 당일작업을 등록하거나 진행상태와 생산종료날짜를 수정할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/af3f7b04-8bf2-47a5-948d-6a77c9dce24e" alt="생산작업관리 실행">
-            <ul>
-              <li>진행상태 및 생산종료날짜 수정</li>
-              <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/0a67b0b3-169f-49cb-8561-490d5ea8571e" alt="생산작업관리 진행상태 수정" width="500">
-              <li>prompt 창을 이용한 당일작업등록</li>
-              <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/118ff79a-0930-46ff-8780-9294dc528795" alt="생산작업관리 당일작업등록" width="500">
-            </ul>
-        </ul>
-      <h3>생산불량조회</h3>
-        <ul>
-          <li>생산작업관리에서 당일작업등록 시 불량수량을 입력할 경우 생산 불량현황에서 확인이 가능하다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c658228c-565f-47de-a451-f56e066b845d" alt="생산불량조회">
-        </ul>
-    </ul>
-  </div>
-</details>
-
-<details>
-  <summary><b>5. BOM관리 [배지현] </b>  </summary>
+  <summary><b>BOM관리 [배지현] </b>  </summary>
   <div markdown="1">
     <ul>
       <h3>전체 BOM 관리(allBomManagement.jsp)</h3>
@@ -184,37 +153,11 @@
   </div>
 </details>
 
-<details>
-  <summary><b>6. 입출고 [이시연] </b>  </summary>
-  <div markdown="1">
-    <ul>
-      <h3>입/출고 등록</h3>
-        <ul>
-          <li>예정 정보를 등록하여 입/출고를 등록할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/83d1d6e2-6cf4-4181-bc11-11c3c7cd3331" alt="입/출고 등록" width="500">
-        </ul>
-       <h3>입/출고 현황 조회</h3>
-        <ul>
-          <li>위 상단바를 통해 각 진행상태별 현황을 조회할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d4b87e25-51c1-4c2b-ad59-13ae5850669d" alt="입/출고 현황 조회">
-          <li>수정 버튼을 클릭하여 입/출고 내역을 수정할 수 있다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/af3ab318-5cce-425f-a49e-2c6914c13b3d" alt="입/출고 현황 조회2">
-        </ul>
-      <h3>입/출고 수정</h3>
-        <ul>
-          <li>납품완료일, 완료시간, 진행상태, 비고를 입력하여 수정할 수 있다.</li>
-          <li>이때, 납품처ID, 제품ID, 납품수량, 납품예정일은 수정할 수 없다.</li>
-          <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/a23fc66f-5054-4bfa-b534-2173b23e8613" alt="입/출고 수정">
-        </ul>
-    </ul>
-  </div>
-</details>
-
 <br>
 
 <h3>SpringBoot</h3>
 <details>
-  <summary><b>1. 로그인 및 회원가입 [배지현] </b> </summary>
+  <summary><b>로그인 및 회원가입 [배지현] </b> </summary>
   <br>
   <div markdown="1">
     <h3>회원가입</h3>
@@ -242,35 +185,7 @@
 </details>
 
 <details>
-  <summary><b>2. 생산 [이시연] </b>  </summary>
-  <div markdown="1">
-    <ul>
-      <h3>생산계획등록</h3>
-      <ul>
-        <li>제품 생산을 위해 작업계획을 등록할 수 있다.</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/107cb657-660c-4739-bf2c-bd9b009ee49e" alt="생산계획등록" width="700">
-      </ul>
-      <h3>생산작업관리</h3>
-      <ul>
-        <li>제품명, 제품코드, 생산시작날짜, 생산종료날짜를 선택해 검색할 수 있다.</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c66671cb-65fe-4758-9850-0df3430b2348" alt="생산작업관리 검색바">
-        <li>검색해 나온 결과를 이용해 당일작업을 등록하거나 진행상태와 생산종료날짜를 수정할 수 있다.</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/af3f7b04-8bf2-47a5-948d-6a77c9dce24e" alt="생산작업관리 실행">
-        <li>진행상태 및 생산종료날짜 수정</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/0a67b0b3-169f-49cb-8561-490d5ea8571e" alt="생산작업관리 진행상태 수정" width="500">
-        <li>모달창을 이용한 당일작업등록</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/a651c953-88ab-4e82-bbc0-c637c367bb0e" alt="생산작업관리 당일작업등록" width="700">
-      </ul>
-      <h3>생산불량조회</h3>
-      <ul>
-        <li>생산작업관리에서 당일작업등록 시 불량수량을 입력할 경우 생산 불량현황에서 확인이 가능하다.</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/bb9c6505-3967-4bd8-83bd-21af6f057aa5" alt="생산불량조회" width="700">
-      </ul>
-    </ul>
-  </div>
-</details>
-<details>
-  <summary><b>3. BOM관리 [배지현] </b> </summary>
+  <summary><b>BOM관리 [배지현] </b> </summary>
   <div markdown="1">
    <ul>
       <h3>전체 BOM 관리(allBomManagement.jsp)</h3>
@@ -313,28 +228,12 @@
   </div>
 </details>
 
-<details>
-  <summary><b>4. 입출고 [이시연] </b>  </summary>
-  <div markdown="1">
-    <ul>
-      <li><h3>입출고 등록</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/d03ea3be-84a7-453c-a965-df54db62a1a1" alt="입고등록"  width="700">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/ab0cdfa6-af1b-450c-94b0-504f10e3a3e1" alt="출고등록"  width="700">
-      <li><h3>입출고 수정</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/2b6f85d9-56df-42fd-91ac-6b8b294a18e2" alt="출고수정(1)"  width="700">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c9c53963-d464-4496-b3b4-5ef73248fd28" alt="출고수정(2)"  width="700">
-      <li><h3>입출고 조회</h3></li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/7ad3ba37-f4c8-4573-aa75-617d033adc0b" alt="입고현황"  width="700">
-    </ul>
-  </div>
-</details>
-
 <br>
 
 <h3>JDBC와 SpringBoot의 차이점</h3>
 
 <details>
-  <summary><b>1. 로그인 및 회원가입 [배지현] </b>  </summary>
+  <summary><b>로그인 및 회원가입 [배지현] </b>  </summary>
   <div markdown="1">
     <h3>회원가입</h3>
     <ul>
@@ -349,21 +248,6 @@
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/c97fa763-8114-4908-876d-2cda8b7827f5" alt="JDBC_로그인" width="600">
       <li>SpringBoot는 jsp:include page 를 이용해 main.jsp → sidebar.jsp → header.jsp 순으로 세션 값을 넘겨주어 메인화면의 상단에 로그인한 사람의 정보가 뜬다.</li>
       <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1a9b5a6e-f93b-4e57-a2e3-8937e9bfa3ff" alt="springBoot_로그인" width="300">
-    </ul>
-  </div>
-</details>
-<details>
-  <summary><b>2. 생산 [이시연] </b>  </summary>
-  <div markdown="1">
-    <ul>
-      <li>생산계획등록창을 모달창으로 변경</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/1f544834-d190-43c6-85dc-9c2a66df11d7" alt="생산계획등록" width="300">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/3e0f1fde-8e53-4447-ab2b-0c1a4c6d7880" alt="생산계획등록-모달" width="500">
-      <li>작일작업등록을 prompt창을 모달창으로 변경</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/118ff79a-0930-46ff-8780-9294dc528795" alt="생산작업관리 당일작업등록" width="400">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/a651c953-88ab-4e82-bbc0-c637c367bb0e" alt="생산작업관리 당일작업등록" width="400">
     </ul>
   </div>
 </details>
@@ -397,21 +281,6 @@
       </ul>
   </div>
 </details>
-<details>
-  <summary><b>4. 입출고 [이시연] </b>  </summary>
-  <div markdown="1">
-    <ul>
-      <li>입/출고 등록창을 모달창으로 변경</li>
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/83d1d6e2-6cf4-4181-bc11-11c3c7cd3331" alt="입/출고 등록" width="300">
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
-        <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/b1942753-7ed3-4bbb-8ec3-245aeed77ecd" alt="입/출고 등록-모달" width="400">
-      <li>입/출고 수정창을 모달창으로 변경</li>
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/120089047/a23fc66f-5054-4bfa-b534-2173b23e8613" alt="입/출고 수정" width="300">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/087a7554-1f54-4cca-a8be-3f81db1d98f0" alt="화살표"  width="100">
-      <img src="https://github.com/jihyeon00/URUN_SCM_PROJECT/assets/151722461/e6bae0f3-0e35-4cc7-af17-aeadb5e590b3" alt="입/출고 수정-모달" width="400">
-    </ul>
-  </div>
-</details>
 
 <br><br>
 
@@ -432,7 +301,7 @@
 ## 🎞 구동영상
 [[🖥 JDBC 구동영상]](https://drive.google.com/file/d/1YabD7sza3Jy5C5ptHmdqlSYdouQcwrK5/view?usp=sharing)
 <br>
-[[💻 SpringBoot 구동영상]]()
+[[💻 SpringBoot 구동영상]](https://drive.google.com/file/d/1OqN4DfWtvRcj4MSxZfOxnZrDp4B3nSaD/view?usp=sharing)
 <br><br>
 
 ## 📑 개선사항
